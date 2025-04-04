@@ -26,12 +26,221 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { type InvestmentType, INVESTMENT_TYPES } from "@/components/initial-setup-modal"
 import { OBJECTIVE_TYPES, type ObjectiveType } from "@/lib/objective-types"
-import { calculateInvestmentProgress } from "@/lib/investment-calculator"
+import { calculateInvestmentProgress, calcularMesesParaObjetivo } from "@/lib/investment-calculator"
 import { ThemeToggle } from "@/components/theme-toggle"
 import AnimatedBackground from "@/components/animated-background"
 import { fetchInvestmentStrategies, type InvestmentStrategyType, type BrokerType } from "@/lib/google-sheets"
 import { getStrategyIcon } from "@/components/investment-icons"
 // import WelcomePageScrollFix from "@/components/welcome-page-scroll-fix"
+// import InvestmentProjectionCard from "@/components/investment-projection-card"
+
+interface InvestmentProjectionCardProps {
+  selectedPeriod: string;
+  estimatedMonths: number;
+  calculateForPeriod: (months: number) => {
+    months: number;
+    withInvestment: number;
+    withoutInvestment: number;
+    marketContribution: number;
+  };
+  initialAmount: number;
+  monthlyContribution: number;
+  getSelectedAnnualRate: () => number;
+  formatCurrency: (value: number) => string;
+}
+
+function InvestmentProjectionCard({
+  selectedPeriod,
+  estimatedMonths,
+  calculateForPeriod,
+  initialAmount,
+  monthlyContribution,
+  getSelectedAnnualRate,
+  formatCurrency
+}: InvestmentProjectionCardProps) {
+  const [localSelectedPeriod, setLocalSelectedPeriod] = useState(selectedPeriod);
+  const [data, setData] = useState({
+    withInvestment: 0,
+    withoutInvestment: 0,
+    marketContribution: 0,
+    months: 0
+  });
+
+  useEffect(() => {
+    console.log("localSelectedPeriod", localSelectedPeriod)
+    const months = localSelectedPeriod === '1month' ? 1 :
+                  localSelectedPeriod === '6months' ? 6 :
+                  localSelectedPeriod === '1year' ? 12 :
+                  localSelectedPeriod === '3years' ? 36 :
+                  localSelectedPeriod === '5years' ? 60 :
+                  localSelectedPeriod === '10years' ? 120 :
+                  localSelectedPeriod === 'total' ? estimatedMonths : 1;
+    console.log("months", months)
+    setData(calculateForPeriod(months));
+    console.log("data", data)
+  }, [localSelectedPeriod, estimatedMonths, calculateForPeriod]);
+
+  console.log("RENDERING data", data)
+
+  const rendimientoPorcentaje = data.withInvestment > 0 ? 
+    ((data.marketContribution / data.withInvestment) * 100).toFixed(1) + '%' : '0%';
+
+  return (
+    <div className="p-5 rounded-lg border border-finance-gray-200 dark:border-finance-gray-700 bg-white dark:bg-finance-gray-900">
+      {/* Botones de selección de período */}
+      <div className="flex flex-wrap gap-2 mb-4">
+        {[
+          { label: '1 mes', value: '1month', months: 1 },
+          { label: '6 meses', value: '6months', months: 6 },
+          { label: '1 año', value: '1year', months: 12 },
+          { label: '3 años', value: '3years', months: 36 },
+          { label: '5 años', value: '5years', months: 60 },
+          { label: '10 años', value: '10years', months: 120 },
+          { label: 'Meses totales de la inversión', value: 'total', months: estimatedMonths }
+        ].map(period => (
+          <button
+            key={period.value}
+            onClick={() => {setLocalSelectedPeriod(period.value); console.log("period", period.value)}}
+            className={`px-3 py-2 text-sm rounded-md transition-colors ${
+              localSelectedPeriod === period.value
+                ? 'bg-finance-green-500 text-white dark:text-finance-gray-800'
+                : 'bg-finance-gray-100 dark:bg-finance-gray-800 text-finance-gray-700 dark:text-finance-gray-300 hover:bg-finance-green-50 dark:hover:bg-finance-green-900/20'
+            }`}
+          >
+            {period.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="flex justify-between items-center border-b border-finance-gray-200 dark:border-finance-gray-700 pb-3 mb-4">
+        <h5 className="font-medium text-lg text-finance-gray-800 dark:text-white">
+          Proyección a {data.months === 1 ? '1 mes' : data.months === 12 ? '1 año' : data.months === 36 ? '3 años' : data.months === 60 ? '5 años' : data.months === 120 ? '10 años' : `${data.months} meses`}
+        </h5>
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-finance-gray-500 dark:text-finance-gray-400">Rendimiento:</span>
+          <span className="text-finance-green-600 dark:text-finance-green-400 font-bold text-lg">
+            {rendimientoPorcentaje}
+          </span>
+        </div>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="p-4 rounded-lg bg-finance-gray-50 dark:bg-finance-gray-800/50">
+          <p className="text-sm text-finance-gray-600 dark:text-finance-gray-400 mb-1">Capital acumulado</p>
+          <p className="text-2xl font-bold text-finance-gray-800 dark:text-white">
+            {/* {formatCurrency(data.withInvestment).replace('ARS', '').replace('.00', '')} */}
+            {data.withInvestment}
+          </p>
+        </div>
+        
+        <div className="p-4 rounded-lg bg-finance-gray-50 dark:bg-finance-gray-800/50">
+          <p className="text-sm text-finance-gray-600 dark:text-finance-gray-400 mb-1">Aportes realizados</p>
+          <p className="text-2xl font-bold text-finance-gray-700 dark:text-finance-gray-300">
+            {formatCurrency(data.withoutInvestment).replace('ARS', '').replace('.00', '')}
+          </p>
+        </div>
+        
+        <div className="p-4 rounded-lg bg-finance-green-50 dark:bg-finance-green-900/20">
+          <p className="text-sm text-finance-gray-600 dark:text-finance-gray-400 mb-1">Rendimiento generado</p>
+          <p className="text-2xl font-bold text-finance-green-600 dark:text-finance-green-400">
+            {formatCurrency(data.marketContribution).replace('ARS', '').replace('.00', '')}
+          </p>
+        </div>
+      </div>
+      
+      {/* Vista para móviles - Más compacta */}
+      <div className="md:hidden mt-4 pt-4 border-t border-finance-gray-200 dark:border-finance-gray-700">
+        <h6 className="text-sm font-medium text-finance-gray-600 dark:text-finance-gray-400 mb-2">Resumen móvil</h6>
+        <div className="space-y-3">
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-finance-gray-600 dark:text-finance-gray-300">Capital total:</span>
+            <span className="text-base font-medium text-finance-gray-800 dark:text-white">
+              {formatCurrency(data.withInvestment).replace('ARS ', '$')}
+            </span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-finance-gray-600 dark:text-finance-gray-300">Tus aportes:</span>
+            <span className="text-base font-medium text-finance-gray-700 dark:text-finance-gray-300">
+              {formatCurrency(data.withoutInvestment).replace('ARS ', '$')}
+            </span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-finance-gray-600 dark:text-finance-gray-300">Rendimiento:</span>
+            <span className="text-base font-medium text-finance-green-600 dark:text-finance-green-400">
+              {formatCurrency(data.marketContribution).replace('ARS ', '$')} ({rendimientoPorcentaje})
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      {/* Barra de progreso que muestra la proporción entre aportes y rendimiento */}
+      <div className="mt-6">
+        <div className="flex justify-between text-xs mb-1">
+          <span className="text-finance-gray-600 dark:text-finance-gray-400">
+            Tu dinero: {((data.withoutInvestment / data.withInvestment) * 100).toFixed(0)}%
+          </span>
+          <span className="text-finance-green-600 dark:text-finance-green-400">
+            Rendimiento: {((data.marketContribution / data.withInvestment) * 100).toFixed(0)}%
+          </span>
+        </div>
+        <div className="h-3 w-full bg-finance-gray-100 dark:bg-finance-gray-800 rounded-full overflow-hidden flex">
+          {/* Parte que representa el dinero del usuario */}
+          <div 
+            className="h-full bg-finance-gray-400 dark:bg-finance-gray-600" 
+            style={{ 
+              width: `${(data.withoutInvestment / data.withInvestment) * 100}%`,
+              transition: 'width 0.5s ease-in-out'
+            }}
+          ></div>
+          {/* Parte que representa el rendimiento */}
+          <div 
+            className="h-full bg-finance-green-500" 
+            style={{ 
+              width: `${(data.marketContribution / data.withInvestment) * 100}%`,
+              transition: 'width 0.5s ease-in-out'
+            }}
+          ></div>
+        </div>
+        <div className="mt-2 text-xs text-finance-gray-500 dark:text-finance-gray-400">
+          <p>Capital total: {formatCurrency(data.withInvestment)}</p>
+          <p>• {formatCurrency(data.withoutInvestment)} de tus aportes</p>
+          <p>• {formatCurrency(data.marketContribution)} de rendimiento</p>
+        </div>
+      </div>
+      
+      {/* Detalles adicionales */}
+      <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+        <div>
+          <p className="text-finance-gray-600 dark:text-finance-gray-400 mb-1">Capital inicial</p>
+          <p className="font-medium text-finance-gray-800 dark:text-white">
+            {formatCurrency(initialAmount).replace('ARS', '').replace('.00', '')}
+          </p>
+        </div>
+        
+        <div>
+          <p className="text-finance-gray-600 dark:text-finance-gray-400 mb-1">Aporte mensual</p>
+          <p className="font-medium text-finance-gray-800 dark:text-white">
+            {formatCurrency(monthlyContribution).replace('ARS', '').replace('.00', '')}
+          </p>
+        </div>
+        
+        <div>
+          <p className="text-finance-gray-600 dark:text-finance-gray-400 mb-1">Tasa anual</p>
+          <p className="font-medium text-finance-green-600 dark:text-finance-green-400">
+            {getSelectedAnnualRate()}%
+          </p>
+        </div>
+        
+        <div>
+          <p className="text-finance-gray-600 dark:text-finance-gray-400 mb-1">Tasa mensual</p>
+          <p className="font-medium text-finance-green-600 dark:text-finance-green-400">
+            {(getSelectedAnnualRate() / 12).toFixed(2)}%
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 interface WelcomePageProps {
   onComplete?: (data: {
@@ -118,36 +327,6 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
   const currentDate = new Date()
   const currentYear = currentDate.getFullYear()
 
-  // Crear un array con los últimos 24 meses para seleccionar el mes de inicio
-  const last24Months = useMemo(() => {
-    return Array.from({ length: 24 }, (_, i) => {
-      const date = subMonths(currentDate, i)
-      const formattedDate = format(date, "yyyy-MM")
-      const label = format(date, "MMMM yyyy", { locale: es })
-
-      return {
-        value: formattedDate,
-        label: label,
-        date,
-      }
-    })
-  }, [currentDate])
-
-  // Crear un array con los últimos 12 meses
-  const last12Months = useMemo(() => {
-    return Array.from({ length: 12 }, (_, i) => {
-      const monthIndex = currentDate.getMonth() - i
-      const year = currentYear + Math.floor(monthIndex / 12)
-      const month = ((monthIndex % 12) + 12) % 12 // Asegura que sea positivo
-      return {
-        month: month + 1, // Convertir a 1-12
-        year,
-        label: format(new Date(year, month, 1), "MMMM yyyy", { locale: es }),
-        index: i + 1, // Para identificar el mes en la lista (1-12)
-      }
-    })
-  }, [currentDate, currentYear])
-
   // Actualizar el monto objetivo cuando cambia el tipo de objetivo
   const handleObjectiveTypeChange = useCallback((value: string) => {
     setObjectiveType(value)
@@ -197,10 +376,6 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
   //     }
   //   })
   // }, [])
-
-  const handleStartMonthChange = useCallback((value: string) => {
-    setStartMonth(value)
-  }, [])
 
   const handleInvestmentTypeChange = useCallback((value: string) => {
     setInvestmentType(value)
@@ -255,22 +430,16 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
         ? brokers.reduce((prev, current) => (prev.annualRate > current.annualRate) ? prev : current)
         : null;
     
-    // Obtener la tasa mensual
+    // Obtener la tasa anual y convertirla a mensual decimal
     const annualRatePercentage = broker ? broker.annualRate : brokers[0]?.annualRate || 0;
-    const monthlyRatePercentage = broker ? broker.monthlyRate : brokers[0]?.monthlyRate || 0;
-    
-    // La tasa mensual debe estar en formato decimal (entre 0 y 1)
-    // Si es mayor a 1, asumimos que está en porcentaje y convertimos
-    const monthlyRateDecimal = monthlyRatePercentage > 1 
-      ? monthlyRatePercentage / 100 
-      : monthlyRatePercentage;
+    const monthlyRateDecimal = annualRatePercentage / 100 / 12; // Convertir tasa anual a mensual decimal
     
     const target = targetAmount || config?.baseTargetAmount || 0;
     const initial = initialAmount;
     
     // Verificar que la tasa sea válida
     if (monthlyRateDecimal < 0 || monthlyRateDecimal > 1) {
-      console.error('Tasa mensual inválida:', monthlyRateDecimal, 'Original:', monthlyRatePercentage);
+      console.error('Tasa mensual inválida:', monthlyRateDecimal, 'Original:', annualRatePercentage);
     }
     
     // Verificar casos especiales
@@ -291,32 +460,20 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
     
     // Calcular tiempo estimado con la función de investment-calculator
     try {
-      const result = calculateInvestmentProgress(
-        {
-          targetAmount: target,
-          monthlyContribution: monthlyContribution,
-          monthlyInterestRate: monthlyRateDecimal,
-        },
-        1000, // Máximo de meses a calcular, valor fijo
-        [], // Sin aportes completados
-        initial,
-      );
+      const result = calcularMesesParaObjetivo(initial, target, monthlyContribution, monthlyRateDecimal)
       
       // Registrar cálculos para depuración
       console.log('Debug - Parámetros del cálculo de tiempo estimado:', {
         objetivo: target,
         capitalInicial: initial,
         aporteMensual: monthlyContribution,
-        tasaMensualDecimal: monthlyRateDecimal,
         tasaAnual: annualRatePercentage,
-        mesesCalculados: result.monthsToTarget,
-        montoFinal: result.currentAmount.toFixed(0)
+        tasaMensual: monthlyRateDecimal,
+        mesesCalculados: result.meses,
+        montoFinal: result.saldoFinal.toFixed(0)
       });
       
-      // Limitar el resultado para evitar valores extremadamente grandes
-      const calculatedAmount = Math.min(result.currentAmount, targetAmount * 10);
-      
-      return result.monthsToTarget;
+      return result.meses;
     } catch (error) {
       console.error('Error al calcular tiempo estimado:', error);
       return Infinity;
@@ -372,11 +529,6 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
   
   // Calcular rendimientos para diferentes períodos
   const calculateForPeriod = useCallback((months: number) => {
-    // Para períodos muy largos, usar el período total estimado
-    if (months > estimatedMonths && estimatedMonths > 0) {
-      months = estimatedMonths;
-    }
-    
     // Calcular el aporte total sin rendimiento para el período
     const totalContribsForPeriod = initialAmount + (monthlyContribution * months);
     
@@ -390,40 +542,46 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
       };
     }
     
-    // Obtener la tasa mensual
-    const monthlyRatePercentage = selectedStrategy ? 
-      selectedBroker ? 
-        selectedStrategy.brokers.find(b => b.name === selectedBroker)?.monthlyRate || 0 : 
-        selectedStrategy.brokers[0]?.monthlyRate || 0 
-      : 0;
-    
-    // La tasa mensual debe estar en formato decimal (entre 0 y 1)
-    // Si es mayor a 1, asumimos que está en porcentaje y convertimos
-    const monthlyRateDecimal = monthlyRatePercentage > 1 
-      ? monthlyRatePercentage / 100 
-      : monthlyRatePercentage;
-    
     try {
-      // Usar calculateInvestmentProgress para calcular el crecimiento para el período
-      const result = calculateInvestmentProgress(
-        {
-          targetAmount: targetAmount * 10, // Usar un valor grande pero seguro
-          monthlyContribution: monthlyContribution,
-          monthlyInterestRate: monthlyRateDecimal,
-        },
-        months, // Calcular solo para el número de meses específico
-        [], // Sin aportes completados
-        initialAmount,
-      );
+      // Obtener la tasa anual y convertirla a mensual decimal
+      const annualRate = getSelectedAnnualRate();
+      const monthlyRateDecimal = annualRate / 100 / 12; // Convertir tasa anual a mensual decimal
       
-      // Limitar el resultado para evitar valores extremadamente grandes
-      const calculatedAmount = Math.min(result.currentAmount, targetAmount * 10);
+      console.log('Debug - Parámetros del cálculo:', {
+        meses: months,
+        tasaAnual: annualRate,
+        tasaMensual: monthlyRateDecimal,
+        aporteMensual: monthlyContribution,
+        capitalInicial: initialAmount
+      });
+      
+      // Calcular el valor futuro del capital inicial con interés compuesto
+      const initialAmountFV = initialAmount * Math.pow(1 + monthlyRateDecimal, months);
+      
+      // Calcular el valor futuro de los aportes mensuales con interés compuesto
+      // Usando la fórmula de valor futuro de una anualidad: PMT * ((1 + r)^n - 1) / r
+      const contributionsFV = monthlyContribution * ((Math.pow(1 + monthlyRateDecimal, months) - 1) / monthlyRateDecimal);
+      
+      // El valor futuro total es la suma de ambos componentes
+      const futureValue = initialAmountFV + contributionsFV;
+      
+      console.log('Debug - Resultados:', {
+        valorFuturoCapitalInicial: initialAmountFV,
+        valorFuturoAportes: contributionsFV,
+        valorFuturoTotal: futureValue,
+        aportesTotales: totalContribsForPeriod,
+        rendimiento: futureValue - totalContribsForPeriod
+      });
+      
+      // Redondear los valores para evitar problemas de precisión
+      const roundedFutureValue = Math.round(futureValue);
+      const marketContribution = Math.round(futureValue - totalContribsForPeriod);
       
       return {
         months: months,
-        withInvestment: Math.round(calculatedAmount),
+        withInvestment: roundedFutureValue,
         withoutInvestment: totalContribsForPeriod,
-        marketContribution: Math.round(calculatedAmount - totalContribsForPeriod)
+        marketContribution: marketContribution
       };
     } catch (error) {
       console.error('Error al calcular rendimiento para periodo:', months, error);
@@ -434,7 +592,7 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
         marketContribution: 0
       };
     }
-  }, [estimatedMonths, initialAmount, monthlyContribution, selectedStrategy, selectedBroker, getSelectedAnnualRate, targetAmount]);
+  }, [initialAmount, monthlyContribution, getSelectedAnnualRate]);
   
   // Datos para el período seleccionado
   const periodData = useMemo(() => {
@@ -459,7 +617,7 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
   const withoutInvestmentValue = useMemo(() => {
     // Ahora calculamos cuánto se habría acumulado sin inversión 
     // en el mismo tiempo que toma alcanzar el objetivo con inversión
-    return initialAmount + (monthlyContribution * estimatedMonths);
+    return comparisonData.withoutInvestment;
   }, [initialAmount, monthlyContribution, estimatedMonths]);
 
   // Valor acumulado con inversión cuando se alcanza el objetivo
@@ -472,8 +630,7 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
   // Rendimiento acumulado (diferencia entre valor con inversión y contribuciones totales)
   const investmentReturn = useMemo(() => {
     // Contribuciones totales hasta llegar al objetivo con inversión
-    const totalContributions = initialAmount + (monthlyContribution * estimatedMonths);
-    return withInvestmentValue - totalContributions;
+    return withInvestmentValue - comparisonData.withoutInvestment;
   }, [initialAmount, monthlyContribution, estimatedMonths, withInvestmentValue]);
 
   // Porcentaje del rendimiento sobre el capital total
@@ -639,12 +796,7 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
   }, [contactEmail, contactPhone, contactMessage, termsAccepted, investmentType, selectedBroker, targetAmount, monthlyContribution, objectiveType, selectedAdvisor]);
 
   return (
-    <div className="min-h-screen bg-transparent py-8 px-4 dark:bg-finance-gray-900/50 transition-colors duration-300">
-      <AnimatedBackground />
-      <div className="absolute right-4 top-4 z-10">
-        <ThemeToggle />
-      </div>
-
+    <div className="min-h-screen bg-transparent py-8 px-4 dark:bg-finance-gray-900/50 transition-colors duration-300">      
       <div className="w-full max-w-4xl mx-auto">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <div className="mb-8 text-center">
@@ -1274,7 +1426,7 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
                                 {formatCurrency(withInvestmentValue)}
                               </span>
                               <p className="text-xs text-finance-gray-500 dark:text-finance-gray-400 mt-1">
-                                Con rendimiento del {getSelectedAnnualRate()}% anual
+                                Con rendimiento del {getSelectedAnnualRate()}% anual e interes compuesto
                               </p>
                             </td>
                             <td className="px-4 py-4">
@@ -1514,6 +1666,11 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
                             Intenta seleccionar un período más largo para ver el verdadero impacto del rendimiento compuesto.
                           </p>
                         )}
+
+                        <p className="text-finance-gray-700 dark:text-finance-gray-300">
+                          <strong>Nota:</strong> Este cálculo es una estimación y puede variar según el rendimiento real de la inversión, inflación, etc. Esto es solo un ejercicio
+                          de planificación y no una recomendación de inversión pero muestra el poder del interés compuesto en un escenario ideal a largo plazo.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -1760,161 +1917,18 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
                   </h4>
                   
                   {/* Botones de selección de período */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {[
-                      { label: '1 mes', value: '1month', months: 1 },
-                      { label: '6 meses', value: '6months', months: 6 },
-                      { label: '1 año', value: '1year', months: 12 },
-                      { label: '3 años', value: '3years', months: 36 },
-                      { label: '5 años', value: '5years', months: 60 },
-                      { label: '10 años', value: '10years', months: 120 }
-                    ].map(period => (
-                      <button
-                        key={period.value}
-                        onClick={() => setSelectedPeriod(period.value)}
-                        className={`px-3 py-2 text-sm rounded-md transition-colors ${
-                          selectedPeriod === period.value
-                            ? 'bg-finance-green-500 text-white dark:text-finance-gray-800'
-                            : 'bg-finance-gray-100 dark:bg-finance-gray-800 text-finance-gray-700 dark:text-finance-gray-300 hover:bg-finance-green-50 dark:hover:bg-finance-green-900/20'
-                        }`}
-                      >
-                        {period.label}
-                      </button>
-                    ))}
-                  </div>
+                 
                   
                   {/* Tarjeta interactiva única */}
-                  {(() => {
-                    // Obtener los meses basados en el período seleccionado
-                    let months = 1;
-                    switch (selectedPeriod) {
-                      case '1month': months = 1; break;
-                      case '6months': months = 6; break;
-                      case '1year': months = 12; break;
-                      case '3years': months = 36; break;
-                      case '5years': months = 60; break;
-                      case '10years': months = 120; break;
-                      case 'total': months = estimatedMonths; break;
-                      default: months = 1;
-                    }
-                    
-                    // Calcular datos para el período seleccionado
-                    const data = calculateForPeriod(months);
-                    const rendimientoPorcentaje = data.withInvestment > 0 ? 
-                      ((data.marketContribution / data.withInvestment) * 100).toFixed(1) + '%' : '0%';
-                    
-                    return (
-                      <div className="p-5 rounded-lg border border-finance-gray-200 dark:border-finance-gray-700 bg-white dark:bg-finance-gray-900">
-                        <div className="flex justify-between items-center border-b border-finance-gray-200 dark:border-finance-gray-700 pb-3 mb-4">
-                          <h5 className="font-medium text-lg text-finance-gray-800 dark:text-white">
-                            Proyección a {months === 1 ? '1 mes' : months === 12 ? '1 año' : months === 36 ? '3 años' : months === 60 ? '5 años' : months === 120 ? '10 años' : `${months} meses`}
-                          </h5>
-                          <div className="flex items-center gap-2">
-                            <span className="text-xs text-finance-gray-500 dark:text-finance-gray-400">Rendimiento:</span>
-                            <span className="text-finance-green-600 dark:text-finance-green-400 font-bold text-lg">
-                              {rendimientoPorcentaje}
-                            </span>
-                          </div>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                          <div className="p-4 rounded-lg bg-finance-gray-50 dark:bg-finance-gray-800/50">
-                            <p className="text-sm text-finance-gray-600 dark:text-finance-gray-400 mb-1">Capital acumulado</p>
-                            <p className="text-2xl font-bold text-finance-gray-800 dark:text-white">
-                              {formatCurrency(data.withInvestment).replace('ARS', '').replace('.00', '')}
-                            </p>
-                          </div>
-                          
-                          <div className="p-4 rounded-lg bg-finance-gray-50 dark:bg-finance-gray-800/50">
-                            <p className="text-sm text-finance-gray-600 dark:text-finance-gray-400 mb-1">Aportes realizados</p>
-                            <p className="text-2xl font-bold text-finance-gray-700 dark:text-finance-gray-300">
-                              {formatCurrency(data.withoutInvestment).replace('ARS', '').replace('.00', '')}
-                            </p>
-                          </div>
-                          
-                          <div className="p-4 rounded-lg bg-finance-green-50 dark:bg-finance-green-900/20">
-                            <p className="text-sm text-finance-gray-600 dark:text-finance-gray-400 mb-1">Rendimiento generado</p>
-                            <p className="text-2xl font-bold text-finance-green-600 dark:text-finance-green-400">
-                              {formatCurrency(data.marketContribution).replace('ARS', '').replace('.00', '')}
-                            </p>
-                          </div>
-                        </div>
-                        
-                        {/* Vista para móviles - Más compacta */}
-                        <div className="md:hidden mt-4 pt-4 border-t border-finance-gray-200 dark:border-finance-gray-700">
-                          <h6 className="text-sm font-medium text-finance-gray-600 dark:text-finance-gray-400 mb-2">Resumen móvil</h6>
-                          <div className="space-y-3">
-                            <div className="flex justify-between items-center">
-                              <span className="text-sm text-finance-gray-600 dark:text-finance-gray-300">Capital total:</span>
-                              <span className="text-base font-medium text-finance-gray-800 dark:text-white">
-                                {formatCurrency(data.withInvestment).replace('ARS ', '$')}
-                              </span>
-                            </div>
-                            <div className="flex justify-between items-center">
-                              <span className="text-sm text-finance-gray-600 dark:text-finance-gray-300">Tus aportes:</span>
-                              <span className="text-base font-medium text-finance-gray-700 dark:text-finance-gray-300">
-                                {formatCurrency(data.withoutInvestment).replace('ARS ', '$')}
-                              </span>
-                            </div>
-                            <div className="flex justify-between items-center">
-                              <span className="text-sm text-finance-gray-600 dark:text-finance-gray-300">Rendimiento:</span>
-                              <span className="text-base font-medium text-finance-green-600 dark:text-finance-green-400">
-                                {formatCurrency(data.marketContribution).replace('ARS ', '$')} ({rendimientoPorcentaje})
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        {/* Barra de progreso que muestra la proporción entre aportes y rendimiento */}
-                        <div className="mt-6">
-                          <div className="flex justify-between text-xs mb-1">
-                            <span className="text-finance-gray-600 dark:text-finance-gray-400">Tu dinero: {((data.withoutInvestment / data.withInvestment) * 100).toFixed(0)}%</span>
-                            <span className="text-finance-green-600 dark:text-finance-green-400">Rendimiento: {((data.marketContribution / data.withInvestment) * 100).toFixed(0)}%</span>
-                          </div>
-                          <div className="h-3 w-full bg-finance-gray-100 dark:bg-finance-gray-800 rounded-full overflow-hidden">
-                            <div 
-                              className="h-full bg-finance-green-500" 
-                              style={{ 
-                                width: `${(data.marketContribution / data.withInvestment) * 100}%`,
-                                transition: 'width 0.5s ease-in-out'
-                              }}
-                            ></div>
-                          </div>
-                        </div>
-                        
-                        {/* Detalles adicionales */}
-                        <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                          <div>
-                            <p className="text-finance-gray-600 dark:text-finance-gray-400 mb-1">Capital inicial</p>
-                            <p className="font-medium text-finance-gray-800 dark:text-white">
-                              {formatCurrency(initialAmount).replace('ARS', '').replace('.00', '')}
-                            </p>
-                          </div>
-                          
-                          <div>
-                            <p className="text-finance-gray-600 dark:text-finance-gray-400 mb-1">Aporte mensual</p>
-                            <p className="font-medium text-finance-gray-800 dark:text-white">
-                              {formatCurrency(monthlyContribution).replace('ARS', '').replace('.00', '')}
-                            </p>
-                          </div>
-                          
-                          <div>
-                            <p className="text-finance-gray-600 dark:text-finance-gray-400 mb-1">Tasa anual</p>
-                            <p className="font-medium text-finance-green-600 dark:text-finance-green-400">
-                              {getSelectedAnnualRate()}%
-                            </p>
-                          </div>
-                          
-                          <div>
-                            <p className="text-finance-gray-600 dark:text-finance-gray-400 mb-1">Tasa mensual</p>
-                            <p className="font-medium text-finance-green-600 dark:text-finance-green-400">
-                              {(getSelectedAnnualRate() / 12).toFixed(2)}%
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })()}
+                  <InvestmentProjectionCard
+                    selectedPeriod={selectedPeriod}
+                    estimatedMonths={estimatedMonths}
+                    calculateForPeriod={calculateForPeriod}
+                    initialAmount={initialAmount}
+                    monthlyContribution={monthlyContribution}
+                    getSelectedAnnualRate={getSelectedAnnualRate}
+                    formatCurrency={formatCurrency}
+                  />
                   
                   <div className="mt-4 p-4 bg-finance-yellow-50 dark:bg-finance-yellow-900/20 rounded-md border border-finance-yellow-200 dark:border-finance-yellow-900 text-sm">
                     <p className="text-finance-gray-700 dark:text-finance-gray-300 flex items-center">
@@ -1962,13 +1976,6 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
           </Card>
         </Tabs>
       </div>
-      {/* Estilos globales para asegurar scroll en pestañas */}
-      {/* <style jsx global>{`
-        [role="tabpanel"] {
-          overflow-y: auto !important;
-          max-height: 70vh !important;
-        }
-      `}</style> */}
     </div>
   )
 }

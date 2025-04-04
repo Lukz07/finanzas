@@ -5,6 +5,29 @@ export interface InvestmentConfig {
   usdEquivalent?: number
 }
 
+export function calcularMesesParaObjetivo(initialAmount: number, objetivo: number, aporteMensual: any, tasaMensual: number) {  
+  let saldo = initialAmount || 0;
+  let meses = 0;
+  let totalAportado = 0;
+
+  while (saldo < objetivo) {
+    saldo += aporteMensual;
+    saldo *= (1 + tasaMensual);
+    totalAportado += aporteMensual;
+    meses++;
+  }
+
+  const gananciaPorInteres = saldo - totalAportado;
+
+  return {
+    meses,
+    totalAportado,
+    gananciaPorInteres,
+    saldoFinal: saldo
+  };
+
+}
+
 export function calculateInvestmentProgress(
   config: InvestmentConfig,
   maxMonths = 60,
@@ -196,3 +219,11 @@ export function calculateInvestmentProgress(
     exactMonthsNeeded,
   }
 }
+
+export function formatNumberWithSeparators(number: number): string {
+  return new Intl.NumberFormat('es-AR', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).format(number);
+}
+

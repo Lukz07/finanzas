@@ -42,7 +42,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-animated-gradient min-h-screen overflow-auto`}>
         <ThemeProvider>
           <div className="min-h-screen w-full overflow-visible">
-            <main className="min-h-screen pt-5 pb-16 w-full overflow-visible">{children}</main>
+            <main className="min-h-screen w-full overflow-visible">{children}</main>
             {/* <Toaster /> */}
           </div>
         </ThemeProvider>

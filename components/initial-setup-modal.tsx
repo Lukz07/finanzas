@@ -228,8 +228,7 @@ export default function InitialSetupModal({ isOpen, onClose, config }: InitialSe
     let months = 0
     let accumulated = initial
 
-    while (accumulated < target && months < 240) {
-      // Límite de 20 años
+    while (accumulated < target) {
       accumulated = accumulated * (1 + monthlyRate) + monthlyContribution
       months++
     }
