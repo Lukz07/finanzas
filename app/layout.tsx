@@ -111,6 +111,7 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <head>
         <meta name="color-scheme" content="dark light" />
+        <meta name="google-site-verification" content="google-site-verification=i5wj4CsiiDDdtsXgksK11VDocp4acTOjl0U9SQZbCb4" />
         {/* Script para sincronizar tema con localStorage */}
         <script
           dangerouslySetInnerHTML={{
