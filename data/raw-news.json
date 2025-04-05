@@ -1,0 +1,2645 @@
+[
+  {
+    "id": "5684143e99d9b03f91604d90d7b3616d",
+    "sourceId": "ft",
+    "sourceName": "Financial Times",
+    "title": "Corporate America fears wrath of Trump as it mulls tariffs response",
+    "description": "Executives unsure how far to go in re-engineering their businesses and hope they can lobby US president to ease policies",
+    "content": "Executives unsure how far to go in re-engineering their businesses and hope they can lobby US president to ease policies",
+    "url": "https://www.ft.com/content/ce9559c0-039a-4e83-98dc-a087be8051ba",
+    "publishedAt": "2025-04-05T12:13:05.000Z",
+    "fetchedAt": "2025-04-05T20:36:53.749Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": []
+  },
+  {
+    "id": "768b130127a45a9002385684f58506cb",
+    "sourceId": "ft",
+    "sourceName": "Financial Times",
+    "title": "Tariff deals with foreign governments not a priority for Trump, say US officials ",
+    "description": "After markets tumble, president reiterates that his policies ‘will never change’ in social media post",
+    "content": "After markets tumble, president reiterates that his policies ‘will never change’ in social media post ",
+    "url": "https://www.ft.com/content/b00ca913-80d2-4572-a78d-e8f123ec717f",
+    "publishedAt": "2025-04-05T12:00:38.000Z",
+    "fetchedAt": "2025-04-05T20:36:53.750Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": []
+  },
+  {
+    "id": "d355c90871fc5adaf98e592cdae10b02",
+    "sourceId": "ft",
+    "sourceName": "Financial Times",
+    "title": "In charts: winners and losers from Trump’s new tariffs",
+    "description": "Low rates on Ireland, high levies on Slovakia, Asian misery and the strange tale of St Pierre and Miquelon",
+    "content": "Low rates on Ireland, high levies on Slovakia, Asian misery and the strange tale of St Pierre and Miquelon",
+    "url": "https://www.ft.com/content/78c4bf13-cd45-456d-8ebe-4336e03f1a3a",
+    "publishedAt": "2025-04-05T04:00:38.000Z",
+    "fetchedAt": "2025-04-05T20:36:53.750Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": []
+  },
+  {
+    "id": "719b28481b39d22f85615037be31e703",
+    "sourceId": "ft",
+    "sourceName": "Financial Times",
+    "title": "Direct economics — the great Maga experiment",
+    "description": "The arbitrariness of the tariffs is a feature not a bug in the plan to short-circuit the financial establishment",
+    "content": "The arbitrariness of the tariffs is a feature not a bug in the plan to short-circuit the financial establishment",
+    "url": "https://www.ft.com/content/5d5be168-ada4-4fc2-a213-374334888514",
+    "publishedAt": "2025-04-05T04:00:38.000Z",
+    "fetchedAt": "2025-04-05T20:36:53.751Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": []
+  },
+  {
+    "id": "c091b656ed6c16bcac96c65b55dd2dff",
+    "sourceId": "ft",
+    "sourceName": "Financial Times",
+    "title": "Thousands join protests against Donald Trump and Elon Musk",
+    "description": "Demonstrations mark the first big display of public resistance to president’s frenetic second term",
+    "content": "Demonstrations mark the first big display of public resistance to president’s frenetic second term",
+    "url": "https://www.ft.com/content/4041b210-0f4a-4726-a964-6b17cfe1a6f4",
+    "publishedAt": "2025-04-05T20:07:27.000Z",
+    "fetchedAt": "2025-04-05T20:36:53.751Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": []
+  },
+  {
+    "id": "77171d05e908587f543772aac3d31966",
+    "sourceId": "ft",
+    "sourceName": "Financial Times",
+    "title": "Cruz says Republicans face midterms ‘bloodbath’ if tariffs trigger recession",
+    "description": "Warning from Texas senator comes as president’s trade war sends US markets into a tailspin",
+    "content": "Warning from Texas senator comes as president’s trade war sends US markets into a tailspin",
+    "url": "https://www.ft.com/content/00ee505e-57bb-4272-8b51-09ebb67dc5ee",
+    "publishedAt": "2025-04-04T22:14:33.000Z",
+    "fetchedAt": "2025-04-05T20:36:53.751Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": []
+  },
+  {
+    "id": "bca3bb3fc136504ca306b33c3c34cb24",
+    "sourceId": "ft",
+    "sourceName": "Financial Times",
+    "title": "US vacation hotspots brace for slump as angry Canadians cancel trips",
+    "description": "Trump’s threats of annexation and tariffs hit the country’s largest international tourist market",
+    "content": "Trump’s threats of annexation and tariffs hit the country’s largest international tourist market",
+    "url": "https://www.ft.com/content/54a3a339-e8fb-4aa3-af98-e25c13cf503b",
+    "publishedAt": "2025-04-05T04:00:38.000Z",
+    "fetchedAt": "2025-04-05T20:36:53.752Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": []
+  },
+  {
+    "id": "7dce9be00fcc2501e06fb6ac2b0979a6",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "Stocks Sink in Broad AI Rout Sparked by China's DeepSeek",
+    "description": "U.S. stocks were mostly lower, with the Nasdaq leading declines as makers of AI infrastructure suffered steep falls, many in the double digits. Nvidia was down 16%.",
+    "content": "U.S. stocks were mostly lower, with the Nasdaq leading declines as makers of AI infrastructure suffered steep falls, many in the double digits. Nvidia was down 16%.",
+    "url": "https://www.wsj.com/articles/nikkei-may-rise-as-weak-yen-raises-earnings-hopes-776a8056?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T19:26:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.316Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6d08433e69d3bf7a4d9d544c14dacc40",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "Comex Gold, Silver Settle Lower",
+    "description": "Gold settled 1.4% lower, down two of the past three sessions, and silver fell 2.5%, down three of the past four sessions.",
+    "content": "Gold settled 1.4% lower, down two of the past three sessions, and silver fell 2.5%, down three of the past four sessions.",
+    "url": "https://www.wsj.com/articles/gold-edges-lower-feds-rate-decision-in-focus-09dbfceb?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T19:01:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.316Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0f114f1fe87b43d87c14e7d9b04f3b37",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "DeepSeek Won't Sink U.S. AI Titans",
+    "description": "Panic fueling the selloff of Nvidia, Broadcom and other tech giants is overblown.",
+    "content": "Panic fueling the selloff of Nvidia, Broadcom and other tech giants is overblown.",
+    "url": "https://www.wsj.com/articles/deepseek-us-ai-stocks-nvidia-broadcom-6cdfae81?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T18:12:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.317Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "66c8560c9695a2f1c03a8b602801c2c3",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "Financial Services Roundup: Market Talk",
+    "description": "Gain insight on Experian, SoFi Technologies and more in the latest Market Talks covering Financial Services.",
+    "content": "Gain insight on Experian, SoFi Technologies and more in the latest Market Talks covering Financial Services.",
+    "url": "https://www.wsj.com/articles/financial-services-roundup-market-talk-94f52cba?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T17:27:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.317Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d281a69cb9fa64de5d15241b49a3b7d5",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "Arabica Coffee Prices Hit Record on U.S., Colombia Tariff Spat",
+    "description": "Arabica coffee prices hit a record level, as traders digested the withdrawal of President Trump’s threats to impose tariffs and economic sanctions on Colombia.",
+    "content": "Arabica coffee prices hit a record level, as traders digested the withdrawal of President Trump’s threats to impose tariffs and economic sanctions on Colombia.",
+    "url": "https://www.wsj.com/articles/arabica-coffee-prices-hit-new-high-on-u-s-colombia-tariff-spat-582446fe?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T17:20:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.318Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "769b6b0b79654d60a57627a303630d2c",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "Swiss franc, Japanese yen Rise as DeepSeek News Boosts Safe Havens",
+    "description": "The Yen and Swiss Franc were stronger against the dollar as investors sought safe havens after Chinese start-up DeepSeek’s new AI model hit U.S. tech stocks.",
+    "content": "The Yen and Swiss Franc were stronger against the dollar as investors sought safe havens after Chinese start-up DeepSeek’s new AI model hit U.S. tech stocks.",
+    "url": "https://www.wsj.com/articles/safe-haven-currencies-strengthen-amid-fears-over-global-tariffs-9964e17a?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T14:55:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.319Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "960baf1288f1a3b8f1aca60c655fb342",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "Natural Gas Falls on Shifting Weather Forecasts",
+    "description": "U.S. natural gas futures fell after weekend updates took some of the chill out of early February weather forecasts.",
+    "content": "U.S. natural gas futures fell after weekend updates took some of the chill out of early February weather forecasts.",
+    "url": "https://www.wsj.com/articles/u-s-natural-gas-futures-fall-on-shifting-weather-forecasts-1ef3e457?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T14:05:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.319Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "83c2c9c25c6750a704dd3b6c4e99afe5",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "Building-Products Distributor QXO Launches Hostile Bid for Beacon",
+    "description": "QXO is taking its offer directly to shareholders after being rebuffed on several occasions.",
+    "content": "QXO is taking its offer directly to shareholders after being rebuffed on several occasions.",
+    "url": "https://www.wsj.com/articles/building-products-distributor-qxo-launching-hostile-bid-for-beacon-de024410?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T13:28:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.320Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "183f9e8c996603630f4466ec81206b20",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "Natural-Gas Firm Diversified Energy Strikes Deal for Permian Basin Player",
+    "description": "Maverick Natural Resources has operations in Texas and Oklahoma.",
+    "content": "Maverick Natural Resources has operations in Texas and Oklahoma.",
+    "url": "https://www.wsj.com/articles/natural-gas-firm-diversified-energy-nears-deal-for-permian-basin-player-4c1c5ff5?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T11:57:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.320Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "127c128e6aaf026092b3532efac3aa45",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "What's New This Tax Season That Can Save You Money",
+    "description": "There are some new wrinkles, especially for those who sell things online or bought an EV.",
+    "content": "There are some new wrinkles, especially for those who sell things online or bought an EV.",
+    "url": "https://www.wsj.com/articles/tax-season-2024-irs-filing-dates-explained-628a8b37?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T10:30:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.321Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "03dba87202d9ecfac204a62e0004655c",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "Chinese Investors With Few Options Turn to Dividends",
+    "description": "Companies with good payouts are now the hottest bet in China markets.",
+    "content": "Companies with good payouts are now the hottest bet in China markets.",
+    "url": "https://www.wsj.com/articles/chinese-investors-with-few-options-turn-to-dividends-ad31dcc4?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T10:30:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.321Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "b1973e44817b72ae62144a618ab69a05",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "U.S. Treasury Yields Fall But Direction for Long-End Yields Still Seen Upward",
+    "description": "The 10-year U.S. Treasury yield fell and ING said the the long end of the Treasury curve will continue trading at higher yields even as Trump hasn’t delivered anything to shock markets so far.",
+    "content": "The 10-year U.S. Treasury yield fell and ING said the the long end of the Treasury curve will continue trading at higher yields even as Trump hasn’t delivered anything to shock markets so far.",
+    "url": "https://www.wsj.com/articles/jgbs-consolidate-supported-by-u-s-treasurys-gains-7edccc7d?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T10:02:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.322Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "4eae040667ccb1bb099fb05407048cea",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "Russia's Crude Exports Fairly Stable Despite U.S. Sanctions, Goldman Says",
+    "description": "Oil edged lower in early trade as Goldman Sachs said the latest round of U.S. sanctions against Russia haven’t had a significant impact on the country’s oil exports.",
+    "content": "Oil edged lower in early trade as Goldman Sachs said the latest round of U.S. sanctions against Russia haven’t had a significant impact on the country’s oil exports.",
+    "url": "https://www.wsj.com/articles/oil-futures-fall-after-trump-calls-for-tariffs-on-colombia-5b2a178c?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T09:46:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.322Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3fd8477a10d9dc8e6d059d545d8177ba",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "The Extra Reward for Owning Stocks Over Bonds Has Disappeared",
+    "description": "There is little sign of crimped demand for equities among individual investors, who remain bullish after two years of blockbuster gains.",
+    "content": "There is little sign of crimped demand for equities among individual investors, who remain bullish after two years of blockbuster gains.",
+    "url": "https://www.wsj.com/articles/the-extra-reward-for-owning-stocks-over-bonds-has-disappeared-c3f9c223?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T06:05:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.323Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e3638b3504bc6be02375c643f295dbcb",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "Heard on the Street's Stock-Picking Series",
+    "description": "Check out the stocks Heard on the Street writers favor in their eighth annual stock-picking contest.",
+    "content": "Check out the stocks Heard on the Street writers favor in their eighth annual stock-picking contest.",
+    "url": "https://www.wsj.com/articles/heard-on-the-streets-stock-picking-series-98f04640?mod=rss_markets_main",
+    "publishedAt": "2025-01-27T03:33:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.323Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "67d84526cf4397af2a35ecad0fc1c500",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "What Will It Take for Home Buyers to Start Asking for a Disaster Discount?",
+    "description": "The real costs of owning a house in neighborhoods that are vulnerable to flooding and wildfires are becoming clearer.",
+    "content": "The real costs of owning a house in neighborhoods that are vulnerable to flooding and wildfires are becoming clearer.",
+    "url": "https://www.wsj.com/articles/what-will-it-take-for-home-buyers-to-start-asking-for-a-disaster-discount-c662cb96?mod=rss_markets_main",
+    "publishedAt": "2025-01-26T11:00:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.323Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cb7dd17ffad239205d2b94d0e4f45a84",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "Now Wanted in Silicon Valley: Ho-Hum Businesses With Thin Profit Margins",
+    "description": "Venture-capital firms are bringing AI and dealmaking to accounting, property management and other unglamorous fields.",
+    "content": "Venture-capital firms are bringing AI and dealmaking to accounting, property management and other unglamorous fields.",
+    "url": "https://www.wsj.com/articles/now-wanted-in-silicon-valley-ho-hum-businesses-with-thin-profit-margins-ab07de5f?mod=rss_markets_main",
+    "publishedAt": "2025-01-26T10:30:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.324Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "eca6219716959c9759e684ec0b8d76ec",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "In China, a Cat-and-Mouse Game to Rein In Crypto",
+    "description": "Recent court cases reveal how middlemen are facilitating a booming trade, eluding a crackdown.",
+    "content": "Recent court cases reveal how middlemen are facilitating a booming trade, eluding a crackdown.",
+    "url": "https://www.wsj.com/articles/china-cryptocurrency-market-trading-restrictions-3e050cd9?mod=rss_markets_main",
+    "publishedAt": "2025-01-26T05:01:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.324Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "059a1bfb1272f9512dfbfe76d84b4422",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "One House, Three Owners: The Ballooning Cost of the American Dream",
+    "description": "The story of home affordability in the U.S. told from a single front porch.",
+    "content": "The story of home affordability in the U.S. told from a single front porch.",
+    "url": "https://www.wsj.com/articles/rising-house-mortgage-costs-north-carolina-home-468a46e5?mod=rss_markets_main",
+    "publishedAt": "2025-01-26T02:00:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.325Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0c39aaf47f72f8d25131ae9ddaa39dc9",
+    "sourceId": "wsj",
+    "sourceName": "Wall Street Journal",
+    "title": "Trump Adds Fuel to Claims That Big Banks Discriminate Against Conservatives",
+    "description": "The president has told Bank of America and JPMorgan Chase to stop cutting conservatives off from doing business.",
+    "content": "The president has told Bank of America and JPMorgan Chase to stop cutting conservatives off from doing business.",
+    "url": "https://www.wsj.com/articles/trump-big-bank-conservative-bias-accusations-168abb27?mod=rss_markets_main",
+    "publishedAt": "2025-01-25T10:30:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:54.325Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": [
+      {
+        "_": "PAID",
+        "$": {
+          "domain": "AccessClassName"
+        }
+      }
+    ]
+  },
+  {
+    "id": "40ecb5debd656b4a19f08646debbd716",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "US Inflation Is Set to Give Hints of Trump Tariff Pain to Come",
+    "description": "US households probably experienced slightly less overall inflation last month, a reprieve that economists view as temporary in the wake of President Donald Trump’s tariff tsunami.",
+    "content": "US households probably experienced slightly less overall inflation last month, a reprieve that economists view as temporary in the wake of President Donald Trump’s tariff tsunami.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/trump-tariffs-us-inflation-is-set-to-give-hints-of-trade-levy-pain-to-come",
+    "publishedAt": "2025-04-05T20:00:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.233Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Vince Golle, Craig Stirling",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ilquK.gRWVGk/v1/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "fde1f6778ed16fa1b3b52fbcd92be073",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "US Tariffs Could Cut France GDP by Over Half a Point, PM Says",
+    "description": "US tariffs on France could cost the country more than half a point off its economic output and derail efforts to close the budget deficit, French Prime Minister Francois Bayrou said in an interview with Le Parisien newspaper published late Saturday.",
+    "content": "US tariffs on France could cost the country more than half a point off its economic output and derail efforts to close the budget deficit, French Prime Minister Francois Bayrou said in an interview with Le Parisien newspaper published late Saturday.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/us-tariffs-could-cut-france-gdp-by-over-half-a-point-pm-says",
+    "publishedAt": "2025-04-05T19:30:24.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.234Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Benoit Berthelot",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ihoYcfcWqI5o/v1/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "8654f8ff91e8b7db1eca197d1a59a3e4",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "EU Answer to Trump May Involve Data Use by Big Tech, France Says",
+    "description": "The European Union’s response to US tariffs could include regulating the use of data by American big tech groups, France’s finance minister said in an interview with the JDD newspaper.",
+    "content": "The European Union’s response to US tariffs could include regulating the use of data by American big tech groups, France’s finance minister said in an interview with the JDD newspaper.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/eu-answer-to-trump-may-involve-data-use-by-big-tech-france-says",
+    "publishedAt": "2025-04-05T19:09:17.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.234Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Benoit Berthelot",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iLQXSXqzoRQA/v0/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "455b8281f838ee8cfdedeb20f7e5bc98",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Tariffs Stoke Fears That Hung Debt Will Return",
+    "description": "Deals in leveraged finance have stalled, and markets have been upended, raising the possibility that banks might once again get stuck with debt they’ve committed for acquisitions.",
+    "content": "Deals in leveraged finance have stalled, and markets have been upended, raising the possibility that banks might once again get stuck with debt they’ve committed for acquisitions.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/tariffs-stoke-fears-that-hung-debt-will-return-credit-weekly",
+    "publishedAt": "2025-04-05T19:00:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.235Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Rachel Graf, Aaron Weinman",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iGCbcQ1J0yGk/v1/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "3b7c3ffe075cdb6261b8da728b8f3262",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Wall Street Gets Rude Shock as Bessent Plays Second Fiddle on Tariffs",
+    "description": "From the moment President Donald Trump unveiled his sweeping tariffs Wednesday through the ensuing market mayhem the following day, Treasury Secretary Scott Bessent’s phone lit up with text messages from executives tied to his former industry.",
+    "content": "From the moment President Donald Trump unveiled his sweeping tariffs Wednesday through the ensuing market mayhem the following day, Treasury Secretary Scott Bessent’s phone lit up with text messages from executives tied to his former industry.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/trump-s-tariffs-give-his-wall-street-backers-a-rude-shock",
+    "publishedAt": "2025-04-05T18:51:52.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.236Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Saleha Mohsin, Dawn Lim, Katherine Burton",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iC7gQbG2zxDA/v1/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "e3a63f89f1e97e8178b98a201ce07195",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Musk Hopes US, Europe Move to Zero-Tariff Free-Trade Zone",
+    "description": "Elon Musk hopes for a “zero-tariff” system between the US and Europe that would effectively create “a free-trade zone,” he said on Saturday, days after levies set by US President Donald Trump sent global markets into a tailspin.",
+    "content": "Elon Musk hopes for a “zero-tariff” system between the US and Europe that would effectively create “a free-trade zone,” he said on Saturday, days after levies set by US President Donald Trump sent global markets into a tailspin.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/musk-hopes-us-europe-will-move-to-zero-tariff-free-trade-zone",
+    "publishedAt": "2025-04-05T16:51:16.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.237Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Donato Paolo Mancini",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i2raW1dulKTA/v0/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "a3c5c329be53a9da131c52274fdf5ae7",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Schumer Calls GOP Tariff Plan a \"Betrayal\" to Americans",
+    "description": "Senate minority leader Chuck Schumer spoke out against the Republican budget plan, saying \"Donald Trump has betrayed the American people\" and senate Republicans have joined him by giving tax breaks to billionaires. (Source: Bloomberg)",
+    "content": "Senate minority leader Chuck Schumer spoke out against the Republican budget plan, saying \"Donald Trump has betrayed the American people\" and senate Republicans have joined him by giving tax breaks to billionaires. (Source: Bloomberg)",
+    "url": "https://www.bloomberg.com/news/videos/2025-04-05/schumer-calls-gop-tariff-plan-a-betrayal-to-americans-video",
+    "publishedAt": "2025-04-05T17:35:05.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.237Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixnunfY8hzLI/v3/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "3db69d14c552a4564404c7e382983432",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Thousands Gather in Boston for \"Hands Off!\" Protest",
+    "description": "Thousands of protestors flooded in to Boston on Saturday, as part of the nationwide \"Hands Off Our Democracy!,\" protests against President Trump and in support of civil rights. (Source: Bloomberg)",
+    "content": "Thousands of protestors flooded in to Boston on Saturday, as part of the nationwide \"Hands Off Our Democracy!,\" protests against President Trump and in support of civil rights. (Source: Bloomberg)",
+    "url": "https://www.bloomberg.com/news/videos/2025-04-05/thousands-gather-in-boston-for-hands-off-protest-video",
+    "publishedAt": "2025-04-05T17:08:20.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.238Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iX1dIMj.juw4/v3/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "90e8f87cc3fbdfcce6d036ff36241645",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "China Pledges Resolute Measures to Hit Back at Trump Tariffs",
+    "description": "China pledged decisive action to defend its economy, a day after unveiling levies on American goods and export controls on rare earths in response to Donald Trump’s tariffs.",
+    "content": "China pledged decisive action to defend its economy, a day after unveiling levies on American goods and export controls on rare earths in response to Donald Trump’s tariffs.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/china-pledges-resolute-measures-to-hit-back-at-trump-tariffs",
+    "publishedAt": "2025-04-05T16:43:02.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.238Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "John Liu, Ying Tian",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iwE4ejnRsbps/v0/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "61d55b3378fb7409f049328cc9af56a5",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "US Progress Against Resilient Houthi Militants Remains Murky",
+    "description": "President Donald Trump has boasted that he’s “decimated” the Houthis, the Iran-backed militants who have attacked commercial ships transiting the Red Sea since 2023. But three weeks into a campaign of US airstrikes, his administration has offered limited evidence of weapons deployed and targets hit to back up that assertion.",
+    "content": "President Donald Trump has boasted that he’s “decimated” the Houthis, the Iran-backed militants who have attacked commercial ships transiting the Red Sea since 2023. But three weeks into a campaign of US airstrikes, his administration has offered limited evidence of weapons deployed and targets hit to back up that assertion.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/us-progress-defeating-resilient-houthi-militants-remains-murky",
+    "publishedAt": "2025-04-05T12:00:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.238Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Eric Martin, Courtney McBride",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iiwEeqNgpWPs/v1/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "519d27a4c47fac3837402323ac6d6e1b",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "The 'Trump Effect' on Europe’s Wake-Up Call to Capital Markets",
+    "description": "How has the Trump administration’s pro-growth mindset served as an alarm clock to Europe? Executive Chair of Santander Ana Botín describes how US economic policies and the war in Ukraine are drivers of European countries “lifting the brakes”, including in Germany. Former Vice Chair of the Federal Reserve Randal Quarles breaks down why there’s been a chasm between the US and EU’s GDPs in the last decade and what important things that the EU can do to accelerate growth. (Source: Bloomberg)",
+    "content": "How has the Trump administration’s pro-growth mindset served as an alarm clock to Europe? Executive Chair of Santander Ana Botín describes how US economic policies and the war in Ukraine are drivers of European countries “lifting the brakes”, including in Germany. Former Vice Chair of the Federal Reserve Randal Quarles breaks down why there’s been a chasm between the US and EU’s GDPs in the last decade and what important things that the EU can do to accelerate growth. (Source: Bloomberg)",
+    "url": "https://www.bloomberg.com/news/videos/2025-04-05/the-trump-effect-on-europe-video",
+    "publishedAt": "2025-04-05T14:05:37.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.239Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i6Jb9BmB2H.I/v3/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "4fb1d7c7e70bcf859b633d8444bb6950",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Trump Promised a Manufacturing Boom, But Industries Aren’t Sure",
+    "description": "President Donald Trump has vowed his historic tariff blitz would revive domestic manufacturing, but industry worries about his approach are raising fresh doubts about whether he can deliver on his promise of an economic boom.",
+    "content": "President Donald Trump has vowed his historic tariff blitz would revive domestic manufacturing, but industry worries about his approach are raising fresh doubts about whether he can deliver on his promise of an economic boom.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/trump-promised-a-manufacturing-boom-industries-are-not-so-sure",
+    "publishedAt": "2025-04-05T14:00:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.239Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Catherine Lucey",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iPHtYTusrD4c/v2/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "1194fa5faa1983d5bfd0d5158e187dca",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Jaguar Land Rover Is Pausing Car Exports to US on Tariffs",
+    "description": "UK automaker Jaguar Land Rover is pausing shipments of its cars to the US following the introduction of tariffs by Donald Trump’s government.",
+    "content": "UK automaker Jaguar Land Rover is pausing shipments of its cars to the US following the introduction of tariffs by Donald Trump’s government.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/jaguar-land-rover-to-pause-exports-to-us-on-tariffs-times-says",
+    "publishedAt": "2025-04-05T09:18:36.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.240Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Giulia Morpurgo",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iHSBAEXyUnpo/v0/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "413e4eb17295662eaf0a3e5174bb07bf",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Conservatives Vow Canada Businesses to See 25% Less Red Tape",
+    "description": "Conservative Leader Pierre Poilievre promised to wake up the Canadian economy from the “red-tape-induced slumber” in his latest pitch to businesses ahead of the April 28 election.",
+    "content": "Conservative Leader Pierre Poilievre promised to wake up the Canadian economy from the “red-tape-induced slumber” in his latest pitch to businesses ahead of the April 28 election.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/conservatives-vow-canada-businesses-to-see-25-less-red-tape",
+    "publishedAt": "2025-04-05T13:14:03.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.240Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Randy Thanthong-Knight",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iaXb8O9v.Xh4/v1/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "56f3924b754b4217fff5172a522a6028",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "OPEC+ Committee Repeats Need for Oil Output Quota Compliance",
+    "description": "Key OPEC+ nations reiterated the need for members to stick to oil output quotas after the group’s surprise decision to speed up an output revival battered crude prices.",
+    "content": "Key OPEC+ nations reiterated the need for members to stick to oil output quotas after the group’s surprise decision to speed up an output revival battered crude prices.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/opec-committee-repeats-need-for-oil-output-quota-compliance",
+    "publishedAt": "2025-04-05T13:06:09.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.240Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Grant Smith, Nayla Razzouk",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iI2zckMfZ0xI/v0/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "0fa454e27b42a8ecf64dee44517021f7",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Few Cinderellas Puts Sportsbooks’ March Madness Earnings at Risk",
+    "description": "This year’s March Madness was anything but mad.",
+    "content": "This year’s March Madness was anything but mad.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/predictable-march-madness-puts-draftkings-fanduel-earnings-at-risk",
+    "publishedAt": "2025-04-05T13:00:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.241Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Peyton Forte",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i1CGxkzqx9QY/v1/1200x-1.jpg",
+    "tags": [
+      {
+        "_": "NMS:DKNG",
+        "$": {
+          "domain": "stock-symbol"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d474fc51ea78325ab5a42978a4f998d5",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Summers: The White House Can't Have it Both Ways",
+    "description": "Former Treasury Secretary Lawrence H. Summers explains the implications of tariffs on the US economy. He observes that tariffs cannot simultaneously be a source of revenue and a crowbar. (Source: Bloomberg)",
+    "content": "Former Treasury Secretary Lawrence H. Summers explains the implications of tariffs on the US economy. He observes that tariffs cannot simultaneously be a source of revenue and a crowbar. (Source: Bloomberg)",
+    "url": "https://www.bloomberg.com/news/videos/2025-04-05/summers-the-white-house-can-t-have-it-both-ways-video",
+    "publishedAt": "2025-04-05T12:05:03.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.241Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ig8xUBM0JM3s/v3/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "a9a2b3261064a8f0d49640154e3e4fa5",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "The ‘Crowbars’ of Trump Tariffs and European Insecurity",
+    "description": "President Trump rocked the worlds of economy and finance this week",
+    "content": "<p>President Trump rocked the worlds of economy and finance this week&nbsp;</p>",
+    "url": "https://www.bloomberg.com/news/newsletters/2025-04-05/the-crowbars-of-trump-tariffs-and-european-insecurity",
+    "publishedAt": "2025-04-05T12:00:10.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.241Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "David Westin",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ilGZOsZTC5kY/v2/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "c5c2dca667c90332c0be15c6611e96b2",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "ECB’s Schnabel Says Trump’s Onslaught May Mark End of Free Trade",
+    "description": "European Central Bank Executive Board member Isabel Schnabel suggested that US President Donald Trump’s tariff onslaught may signify that the era of free-flowing global commerce is over.",
+    "content": "European Central Bank Executive Board member Isabel Schnabel suggested that US President Donald Trump’s tariff onslaught may signify that the era of free-flowing global commerce is over.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/ecb-s-schnabel-says-trump-s-onslaught-may-mark-end-of-free-trade",
+    "publishedAt": "2025-04-05T10:59:20.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.242Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Alessandra Migliaccio",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/isxz0OcTaGYU/v0/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "a8df9396f5cd8d7049587cf8fb0d7fa6",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Nomura, SMBC Nikko Accounts Hit by Unauthorized Trades",
+    "description": "Some of Japan’s largest brokerages are uncovering a sharp rise in unauthorized trades alongside an uptick in volatility in the country’s penny stocks.",
+    "content": "Some of Japan’s largest brokerages are uncovering a sharp rise in unauthorized trades alongside an uptick in volatility in the country’s penny stocks.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/nomura-smbc-nikko-and-monex-accounts-hit-by-unauthorized-trades",
+    "publishedAt": "2025-04-05T01:51:10.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.242Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Aya Wagatsuma",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iKumwQKCIsKA/v0/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "01e71c91efa399a9cee057d9e1b3109e",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Bank Indonesia Vows to Support Rupiah Amid Trade Tariffs Threat",
+    "description": "Indonesia’s central bank pledged to intervene in domestic markets to ensure rupiah stability as global market volatility surges amid an escalating US-led trade war.",
+    "content": "Indonesia’s central bank pledged to intervene in domestic markets to ensure rupiah stability as global market volatility surges amid an escalating US-led trade war.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/bank-indonesia-vows-to-support-rupiah-amid-trade-tariffs-threat",
+    "publishedAt": "2025-04-05T08:17:47.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.243Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Grace Sihombing, Matthew Burgess",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/imeJc9EmIgdw/v2/1200x-1.png",
+    "tags": []
+  },
+  {
+    "id": "e5a41325278b7e72a4a0ae269512ee17",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Brad Setser on the Damage From Trump's Gigantic Tariff Shock",
+    "description": "What does a good outcome look like?",
+    "content": "<p>What does a good outcome look like?</p>",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/brad-setser-cfr-on-the-damage-from-trump-s-tariffs",
+    "publishedAt": "2025-04-05T08:00:05.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.243Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Tracy Alloway, Joe Weisenthal",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iK82VwCQb2fE/v1/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "a3c3756d6ef0f5f10395e3eba01207f4",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Odd Lots: Brad Setser on Trump’s Gigantic Tariff Shock (Podcast)",
+    "description": "He needs no introduction: When trade is in the news, we speak with Brad Setser of the Council on Foreign Relations. Brad has been talking for awhile about the major imbalances of world trade, and the US-China relationship in particular. However, rather than building up a large trading bloc with our allies to counter Chinese influence, the Trump administration has chosen a path of going it alone, targeting friend and foe alike with large and wide-ranging tariffs. In this episode, we talk about th",
+    "content": "He needs no introduction: When trade is in the news, we speak with Brad Setser of the Council on Foreign Relations. Brad has been talking for awhile about the major imbalances of world trade, and the US-China relationship in particular. However, rather than building up a large trading bloc with our allies to counter Chinese influence, the Trump administration has chosen a path of going it alone, targeting friend and foe alike with large and wide-ranging tariffs. In this episode, we talk about th",
+    "url": "https://www.bloomberg.com/news/audio/2025-04-05/brad-setser-cfr-on-trump-s-gigantic-tariff-shock-odd-lots",
+    "publishedAt": "2025-04-05T08:00:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.246Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Tracy Alloway, Joe Weisenthal",
+    "tags": []
+  },
+  {
+    "id": "65ed195d4390ee5e8fc97a0cba62b887",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Southeast Asia Rushes to Avert Tariff Pain by Enticing Trump",
+    "description": "Countries in Southeast Asia, major sources of exports to the US, are angling to accommodate President Donald Trump rather than retaliate against his punishing tariffs, seeking to keep exports flowing to one of their biggest markets.",
+    "content": "Countries in Southeast Asia, major sources of exports to the US, are angling to accommodate President Donald Trump rather than retaliate against his punishing tariffs, seeking to keep exports flowing to one of their biggest markets.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/southeast-asia-rushes-to-avert-tariff-pain-by-enticing-trump",
+    "publishedAt": "2025-04-05T03:02:07.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.247Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Philip Heijmans, Kim Bhasin",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iUiDH6SJ24YU/v1/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "f1d19fea00ddb87c8b094b8f83ec9b35",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Trump Tariffs Push Staunch Critic Austria to Back Mercosur Deal",
+    "description": "President Donald Trump’s global tariffs are convincing Austria to ditch its long-time opposition to a trade deal between the European Union and the Mercosur bloc.",
+    "content": "President Donald Trump’s global tariffs are convincing Austria to ditch its long-time opposition to a trade deal between the European Union and the Mercosur bloc.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/trump-tariffs-push-staunch-critic-austria-to-back-mercosur-deal",
+    "publishedAt": "2025-04-05T07:00:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.249Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Marton Eder",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iJDcGGTUcCAw/v1/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "bcb4211046f0878a5cd41a9ca429e270",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Maybank Said to Extend CEO’s Term by Three Years, Edge Reports",
+    "description": "Malayan Banking Bhd. Chief Executive Officer Khairussaleh Ramli will remain in his job for three more years, The Edge reported Saturday, citing unidentified people.",
+    "content": "Malayan Banking Bhd. Chief Executive Officer Khairussaleh Ramli will remain in his job for three more years, The Edge reported Saturday, citing unidentified people.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/maybank-said-to-extend-ceo-s-term-by-three-years-edge-reports",
+    "publishedAt": "2025-04-05T06:53:31.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.252Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Anders Melin",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ipPfzWXJumzE/v0/1200x-1.jpg",
+    "tags": [
+      {
+        "_": "KLS:MAY",
+        "$": {
+          "domain": "stock-symbol"
+        }
+      }
+    ]
+  },
+  {
+    "id": "07982673a7d808a19151061ae8801b08",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Tata Capital Pre-Files for Potential Biggest Indian IPO in 2025",
+    "description": "Tata Capital Ltd. submitted a “Pre-filed Draft Red Herring Prospectus” with India’s capital markets regulator to seek approval for a potential initial public offering, according to an exchange filing.",
+    "content": "Tata Capital Ltd. submitted a “Pre-filed Draft Red Herring Prospectus” with India’s capital markets regulator to seek approval for a potential initial public offering, according to an exchange filing.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/tata-capital-pre-files-for-potential-biggest-indian-ipo-in-2025",
+    "publishedAt": "2025-04-05T06:05:22.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.258Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Baiju Kalesh, Sanjai P R",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iY4coy62aE3M/v0/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "4ceaaa35a07f4b8d52e04e5e9a131108",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Trump Tariff Shock Rips Up Germany’s China Strategy Under Merz",
+    "description": "German Chancellor-in-waiting Friedrich Merz faces the prospect of being forced into another pivot before he even takes office.",
+    "content": "German Chancellor-in-waiting Friedrich Merz faces the prospect of being forced into another pivot before he even takes office.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/trump-tariffs-what-it-means-for-germany-and-its-would-be-chancellor",
+    "publishedAt": "2025-04-05T05:07:35.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.260Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Arne Delfs, Michael Nienaber",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iTOSMAEfuC2Q/v0/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "411522074b0bb3d96b568c18d2b526dd",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "MTN CEO on AI, Africa Development, Nigeria, Naira",
+    "description": "Africa's young, tech-savvy population is increasingly using mobile phones to bridge gaps in services including banking. Ralph Mupita, the Group CEO of MTN - Africa's biggest wireless company by revenue - spoke to Bloomberg's Next Africa about their passion for Africa's development, Nigeria's currency devaluation, future opportunities, AI, and the impact of geopolitical competition. (Source: Bloomberg)",
+    "content": "Africa's young, tech-savvy population is increasingly using mobile phones to bridge gaps in services including banking. Ralph Mupita, the Group CEO of MTN - Africa's biggest wireless company by revenue - spoke to Bloomberg's Next Africa about their passion for Africa's development, Nigeria's currency devaluation, future opportunities, AI, and the impact of geopolitical competition. (Source: Bloomberg)",
+    "url": "https://www.bloomberg.com/news/videos/2025-04-05/mtn-ceo-on-ai-africa-development-nigeria-naira-video",
+    "publishedAt": "2025-04-05T05:06:20.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.349Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ifvC1Qpl9ezI/v3/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "95805e799aff3a596fb10a02e6aac1a1",
+    "sourceId": "bloomberg",
+    "sourceName": "Bloomberg",
+    "title": "Trump’s 10% Baseline Tariff on Most US Imports Takes Effect",
+    "description": "President Donald Trump’s 10% baseline tariffs on US trading partners around the world came into effect on Saturday as he plowed ahead with his strategy to encourage domestic investment by companies eager to avoid import taxes.",
+    "content": "President Donald Trump’s 10% baseline tariffs on US trading partners around the world came into effect on Saturday as he plowed ahead with his strategy to encourage domestic investment by companies eager to avoid import taxes.",
+    "url": "https://www.bloomberg.com/news/articles/2025-04-05/trump-s-10-baseline-tariff-on-most-us-imports-takes-effect",
+    "publishedAt": "2025-04-05T04:36:36.000Z",
+    "fetchedAt": "2025-04-05T20:36:55.367Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "author": "Shamim Adam",
+    "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i3ZSbM5Wx.QQ/v1/1200x-1.jpg",
+    "tags": []
+  },
+  {
+    "id": "2a97f83b4b84045885b0804e9b94cfdd",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "El precio de la vivienda crece por encima del 5% en 27 capitales de provincia",
+    "description": "El precio de la vivienda creció un 7,5% en el primer trimestre. Los alquileres subieron un 10,4% interanual en marzo. Leer",
+    "content": "El precio de la vivienda creció un 7,5% en el primer trimestre. Los alquileres subieron un 10,4% interanual en marzo.&nbsp;<a href=\"https://www.expansion.com/inmobiliario/2025/04/05/67f04af1e5fdea5d708b4584.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/2025/04/05/67f04af1e5fdea5d708b4584.html",
+    "publishedAt": "2025-04-05T18:09:04.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.492Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Diego S. Adelantado",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17438009371883.jpg",
+    "tags": [
+      "Guía de vivienda"
+    ]
+  },
+  {
+    "id": "8c2fe921e72a4062a991328f337c12ac",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Madrid marca máximos históricos tras dispararse el precio un 15%",
+    "description": "La capital acelera el ritmo de subida en el primer trimestre del año y el metro cuadrado supera la barrera de los 4.000 euros de media. Hasta diez distritos se encarecen por encima del 10%. Leer",
+    "content": "La capital acelera el ritmo de subida en el primer trimestre del año y el metro cuadrado supera la barrera de los 4.000 euros de media. Hasta diez distritos se encarecen por encima del 10%.&nbsp;<a href=\"https://www.expansion.com/inmobiliario/mercado/2025/04/05/67f02da7e5fdea7f6d8b4577.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/mercado/2025/04/05/67f02da7e5fdea7f6d8b4577.html",
+    "publishedAt": "2025-04-05T17:15:21.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.493Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Beatriz Amigot",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/03/17436830762558.jpg",
+    "tags": [
+      "Inmobiliario",
+      "Mercado inmobiliario",
+      "Artículos Beatriz Amigot"
+    ]
+  },
+  {
+    "id": "5405f5d558a928e553e3a5453289432e",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Madrid se queda sin alquiler asequible",
+    "description": "Las rentas en Villaverde, San Blas y Puente de Vallecas se disparan a ritmos superiores al 20% anual. Leer",
+    "content": "Las rentas en Villaverde, San Blas y Puente de Vallecas se disparan a ritmos superiores al 20% anual.&nbsp;<a href=\"https://www.expansion.com/inmobiliario/2025/04/05/67f16629e5fdeaa9228b4579.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/2025/04/05/67f16629e5fdeaa9228b4579.html",
+    "publishedAt": "2025-04-05T17:32:26.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.493Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Pablo Cerezal",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438742451609.jpg",
+    "tags": [
+      "Inmobiliario"
+    ]
+  },
+  {
+    "id": "a535073d2dd834f099807f3a3ba452f8",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "La vivienda en Barcelona sube un 8% y crece la presión fiscal",
+    "description": "La capital catalana modera las subidas intertrimestrales, con un 1,4%, pero el valor por metro cuadrado ronza los 4.000 euros y se acerca a máximos que no registraba desde la crisis inmobiliaria. Leer",
+    "content": "La capital catalana modera las subidas intertrimestrales, con un 1,4%, pero el valor por metro cuadrado ronza los 4.000 euros y se acerca a máximos que no registraba desde la crisis inmobiliaria.&nbsp;<a href=\"https://www.expansion.com/inmobiliario/mercado/2025/04/05/67f03523e5fdea6a128b4585.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/mercado/2025/04/05/67f03523e5fdea6a128b4585.html",
+    "publishedAt": "2025-04-05T17:17:19.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.494Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Rut Font",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437955558424.jpg",
+    "tags": [
+      "Cataluña",
+      "economía",
+      "Mercado inmobiliario",
+      "Inmobiliario",
+      "Artículos Rut Font"
+    ]
+  },
+  {
+    "id": "8d9ba06b3be646d677e106dcda73dec9",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Barcelona choca con la intervención del precio del alquiler",
+    "description": "El control de las mensualidades cumple un año, las rentas siguen al alza y el sector avisa de la contracción de la oferta. Leer",
+    "content": "El control de las mensualidades cumple un año, las rentas siguen al alza y el sector avisa de la contracción de la oferta.&nbsp;<a href=\"https://www.expansion.com/inmobiliario/mercado/2025/04/05/67f03312468aebe77e8b45a4.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/mercado/2025/04/05/67f03312468aebe77e8b45a4.html",
+    "publishedAt": "2025-04-05T17:33:11.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.495Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "David Casals",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437942977803.jpg",
+    "tags": [
+      "Cataluña",
+      "Artículos David Casals",
+      "Mercado inmobiliario",
+      "Inmobiliario",
+      "economía"
+    ]
+  },
+  {
+    "id": "d00e6c69f26b0a63fdc88fe3ba31a056",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Comprar casa en Valencia es un 14,5% más caro",
+    "description": "La ciudad de Valencia ha protagonizado una subida espectacular en los precios de la vivienda en los últimos 12 meses. Según los datos de Tinsa, el precio del metro cuadrado en la capital del Turia es ahora un 14,5% más caro que hace un año. La subida trimestral es del 5,2%. Leer",
+    "content": "La ciudad de Valencia ha protagonizado una subida espectacular en los precios de la vivienda en los últimos 12 meses. Según los datos de Tinsa, el precio del metro cuadrado en la capital del Turia es ahora un 14,5% más caro que hace un año. La subida trimestral es del 5,2%.&nbsp;<a href=\"https://www.expansion.com/inmobiliario/2025/04/05/67f169bae5fdeaf6018b459c.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/2025/04/05/67f169bae5fdeaf6018b459c.html",
+    "publishedAt": "2025-04-05T17:48:36.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.495Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "J.Brines",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438752598440.jpg",
+    "tags": [
+      "Inmobiliario",
+      "Valencia",
+      "Comunidad Valenciana"
+    ]
+  },
+  {
+    "id": "d449f164f557f2e683c0363e998d492b",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Sevilla registra incrementos de hasta un 8,1%",
+    "description": "Los precios de la vivienda en venta en Sevilla continúan en la senda de crecimiento de los meses precedentes, con un incremento interanual del 5,6% al término del primer trimestre del año, cotizándose el metro cuadrado promedio en 2.221 euros. Leer",
+    "content": "Los precios de la vivienda en venta en Sevilla continúan en la senda de crecimiento de los meses precedentes, con un incremento interanual del 5,6% al término del primer trimestre del año, cotizándose el metro cuadrado promedio en 2.221 euros.&nbsp;<a href=\"https://www.expansion.com/inmobiliario/2025/04/05/67f16d21468aeb9f448b458c.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/2025/04/05/67f16d21468aeb9f448b458c.html",
+    "publishedAt": "2025-04-05T17:52:24.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.496Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Sonia Mora",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/01/29/16434816096556.jpg",
+    "tags": [
+      "Inmobiliario"
+    ]
+  },
+  {
+    "id": "bd293f75830db871d5bda54cefa61cad",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Palma-Palmilla lidera la subida de precios en Málaga",
+    "description": "El mercado inmobiliario en la ciudad de Málaga mantiene una tendencia alcista en el primer trimestre de 2025, con una subida interanual del 10,4%, lo que sitúa el valor del metro cuadrado en 2.580 euros de promedio, según la información recopilada por Tinsa. Leer",
+    "content": "El mercado inmobiliario en la ciudad de Málaga mantiene una tendencia alcista en el primer trimestre de 2025, con una subida interanual del 10,4%, lo que sitúa el valor del metro cuadrado en 2.580 euros de promedio, según la información recopilada por Tinsa.&nbsp;<a href=\"https://www.expansion.com/inmobiliario/2025/04/05/67f16e1f468aeb6c588b4583.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/2025/04/05/67f16e1f468aeb6c588b4583.html",
+    "publishedAt": "2025-04-05T17:56:50.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.496Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Sonia Mora",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438757365714.jpg",
+    "tags": [
+      "Inmobiliario"
+    ]
+  },
+  {
+    "id": "935004c4beb91bb515057e2b95dadce6",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "La Almozara capitanea las alzas en Zaragoza",
+    "description": "Los precios de la vivienda subieron un 5,8% en Zaragoza en el primer trimestre respecto al mismo periodo del pasado ejercicio, una subida algo por debajo de la media española (7,5%), hasta alcanzar los 1.833 euros por metro cuadrado. Leer",
+    "content": "Los precios de la vivienda subieron un 5,8% en Zaragoza en el primer trimestre respecto al mismo periodo del pasado ejercicio, una subida algo por debajo de la media española (7,5%), hasta alcanzar los 1.833 euros por metro cuadrado.&nbsp;<a href=\"https://www.expansion.com/inmobiliario/2025/04/05/67f16f0f468aeb38488b45b6.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/2025/04/05/67f16f0f468aeb38488b45b6.html",
+    "publishedAt": "2025-04-05T18:01:05.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.497Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Pablo Cerezal",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438759994052.jpg",
+    "tags": [
+      "Inmobiliario"
+    ]
+  },
+  {
+    "id": "ffb26b02569ee734a5be0cb3d6a6b43f",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Bilbao se encarece empujado por Deusto y la periferia",
+    "description": "Sigue la salida del mercado del centro Leer",
+    "content": "Sigue la salida del mercado del centro&nbsp;<a href=\"https://www.expansion.com/inmobiliario/viviendas/2025/04/05/67f02739e5fdeafd478b4599.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/viviendas/2025/04/05/67f02739e5fdeafd478b4599.html",
+    "publishedAt": "2025-04-05T18:01:54.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.498Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Marián Fuentes",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2021/11/23/16376663401228.jpg",
+    "tags": [
+      "Guía de vivienda",
+      "Vivienda",
+      "País Vasco"
+    ]
+  },
+  {
+    "id": "6bf4a5f34a8db5359698ce3b9da2b349",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Someso y Matogrande lideran la subida en A Coruña",
+    "description": "La costa de Pontevedra dispara el precio Leer",
+    "content": "La costa de Pontevedra dispara el precio&nbsp;<a href=\"https://www.expansion.com/inmobiliario/viviendas/2025/04/05/67f024e5e5fdea684d8b4596.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/viviendas/2025/04/05/67f024e5e5fdea684d8b4596.html",
+    "publishedAt": "2025-04-05T18:03:22.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.498Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Abeta Chas",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/01/29/16434841283717.jpg",
+    "tags": [
+      "Guía de vivienda",
+      "Vivienda",
+      "Galicia",
+      "Artículos Abeta Chas"
+    ]
+  },
+  {
+    "id": "e04ac56d58e6e8ab1b168dd9d05b4da8",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "La diferente fiscalidad de la vivienda en propiedad o en alquiler",
+    "description": "La vivienda está sujeta a numerosos tributos tanto en el momento de la compra como en el de la venta y en el del alquiler, pero también existen numerosas bonificaciones que permiten aliviar la factura fiscal. Leer",
+    "content": "La vivienda está sujeta a numerosos tributos tanto en el momento de la compra como en el de la venta y en el del alquiler, pero también existen numerosas bonificaciones que permiten aliviar la factura fiscal.&nbsp;<a href=\"https://www.expansion.com/inmobiliario/2025/04/05/67f17178e5fdea86568b4587.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/2025/04/05/67f17178e5fdea86568b4587.html",
+    "publishedAt": "2025-04-05T18:42:07.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.499Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Antonio Sánchez Recio y Miguel Moreta Martínez",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438784485212.jpg",
+    "tags": [
+      "Inmobiliario",
+      "Fiscal"
+    ]
+  },
+  {
+    "id": "b0ce9c00db457329668f37561b64a41f",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Hipotecas más y más baratas a tipo fijo, variable y mixto",
+    "description": "La bajada de los tipos de interés en Europa se traslada al precio de los préstamos, que puede seguir bajando en lo que queda de año. Las mejores ofertas se encuentran en la banca digital. Leer",
+    "content": "La bajada de los tipos de interés en Europa se traslada al precio de los préstamos, que puede seguir bajando en lo que queda de año. Las mejores ofertas se encuentran en la banca digital.&nbsp;<a href=\"https://www.expansion.com/inmobiliario/viviendas/2025/04/05/67f03535468aeb2e608b45b8.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/viviendas/2025/04/05/67f03535468aeb2e608b45b8.html",
+    "publishedAt": "2025-04-04T22:06:13.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.500Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "E. Utrera",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437954895545.jpg",
+    "tags": [
+      "Vivienda",
+      "Guía de vivienda",
+      "Hipotecas"
+    ]
+  },
+  {
+    "id": "51860e478ce00299543252bc62f17bf8",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Dónde invertir con la sombra de una guerra comercial global",
+    "description": "Los expertos aconsejan rotar hacia sectores defensivos como las 'utilities', el consumo básico y las telecomunicaciones. La renta fija gana adeptos y el oro se consolida como activo refugio. Leer",
+    "content": "Los expertos aconsejan rotar hacia sectores defensivos como las 'utilities', el consumo básico y las telecomunicaciones. La renta fija gana adeptos y el oro se consolida como activo refugio.&nbsp;<a href=\"https://www.expansion.com/mercados/2025/04/05/67f03ce2468aeb0c4e8b45a7.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/mercados/2025/04/05/67f03ce2468aeb0c4e8b45a7.html",
+    "publishedAt": "2025-04-04T22:03:50.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.500Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Susana Pérez",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438805844486.jpg",
+    "tags": [
+      "Mercados"
+    ]
+  },
+  {
+    "id": "71fadef9f78c65988c52132b5441ce4b",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Fondos de inversión para defenderse en un mercado volátil",
+    "description": "Los fondos que apuestan por el oro y por el euro y los productos de renta fija ganan atractivo en momentos de repunte de la volatilidad en el mercado, como el actual. Leer",
+    "content": "Los fondos que apuestan por el oro y por el euro y los productos de renta fija ganan atractivo en momentos de repunte de la volatilidad en el mercado, como el actual.&nbsp;<a href=\"https://www.expansion.com/mercados/fondos/2025/04/05/67f12305e5fdea3c218b45ad.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/mercados/fondos/2025/04/05/67f12305e5fdea3c218b45ad.html",
+    "publishedAt": "2025-04-05T18:42:44.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.501Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Sandra Sánchez",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438576626930.jpg",
+    "tags": [
+      "Mercados",
+      "Fondos de Inversión"
+    ]
+  },
+  {
+    "id": "3d57435ef97a717960449e261689f993",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "¿Sigue habiendo oportunidades para el inversor en el mercado inmobiliario?",
+    "description": "'En Acción' analiza el sector de la vivienda en España con el experto Gonzalo Bernardos, que augura subidas de los precios superiores al 10% este año. Leer",
+    "content": "<strong>'En Acción' </strong>analiza el <strong>sector de la vivienda </strong>en España con el experto <strong>Gonzalo Bernardos, </strong>que augura subidas de los precios superiores al 10% este año.&nbsp;<a href=\"https://www.expansion.com/podcasts/en-accion/2025/04/02/67ebe592468aeb47438b458e.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/podcasts/en-accion/2025/04/02/67ebe592468aeb47438b458e.html",
+    "publishedAt": "2025-04-01T23:24:23.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.501Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "expansion.com",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/02/17435738284015.jpg",
+    "tags": [
+      "Podcast",
+      "En Acción",
+      "NEA"
+    ]
+  },
+  {
+    "id": "3c6098d3746f104c257a0b84ad404e89",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "El reventón del Río Mundo y del Torrente Trump",
+    "description": "En septiembre siguiendo en Albacete los lugares donde se rodó \"Amanece que no es poco\" tuve la oportunidad de contemplar uno de los parajes naturales más espectaculares que he podido ver, el nacimiento del río Mundo. Leer",
+    "content": "En septiembre siguiendo en Albacete los lugares donde se rodó \"Amanece que no es poco\" tuve la oportunidad de contemplar uno de los parajes naturales más espectaculares que he podido ver, el nacimiento del río Mundo.&nbsp;<a href=\"https://www.expansion.com/mercados/2025/04/05/67f128a5468aebd2038b45a9.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/mercados/2025/04/05/67f128a5468aebd2038b45a9.html",
+    "publishedAt": "2025-04-05T18:42:55.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.502Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Marcelo Casadejús",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438585386297.jpg",
+    "tags": [
+      "Mercados"
+    ]
+  },
+  {
+    "id": "8280fe33ee95b4f8fe04a21a09132769",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Cognizant impulsa la innovación digital global",
+    "description": "Cognizant Technology Solutions surgió en 1994 como división interna de Dun & Bradstreet, en su centro de desarrollo en Chennai, India, escindiéndose en 1996. Hoy es una consultora especializada en tecnología de la información, externalización de procesos y estrategias. Leer",
+    "content": "Cognizant Technology Solutions surgió en 1994 como división interna de Dun & Bradstreet, en su centro de desarrollo en Chennai, India, escindiéndose en 1996. Hoy es una consultora especializada en tecnología de la información, externalización de procesos y estrategias.&nbsp;<a href=\"https://www.expansion.com/mercados/2025/04/05/67f179e0e5fdea60028b457f.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/mercados/2025/04/05/67f179e0e5fdea60028b457f.html",
+    "publishedAt": "2025-04-05T18:57:48.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.503Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Joaquín Tamames",
+    "tags": [
+      "Mercados"
+    ]
+  },
+  {
+    "id": "4d41a33dfb40e344fcb626b0ec398254",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Déficit comercial récord de EEUU: ¿qué productos importa y de qué países?",
+    "description": "El desequilibrio entre importaciones y exportaciones ha batido en 2024 su récord: 1,2 billones de dólares. China, México y Vietnam son los que más contribuyen a este déficit. Leer",
+    "content": "El desequilibrio entre importaciones y exportaciones ha batido en 2024 su récord: 1,2 billones de dólares. China, México y Vietnam son los que más contribuyen a este déficit.&nbsp;<a href=\"https://lab.expansion.com/deficit-eeuu/\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://lab.expansion.com/deficit-eeuu/",
+    "publishedAt": "2025-04-01T23:21:26.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.504Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Javier G. Fernández",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/01/17435202070080.gif",
+    "tags": [
+      "ExpansiónLab"
+    ]
+  },
+  {
+    "id": "4bccef8ea14017d21b607dec9e3e7cc9",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "\"Todavía tengo pesadillas\": Turistas retenidos durante semanas en la frontera de EEUU",
+    "description": "Los visitantes sufren trato denigrante desde el regreso de Donald Trump a la Casa Blanca. Leer",
+    "content": "Los visitantes sufren trato denigrante desde el regreso de Donald Trump a la Casa Blanca.&nbsp;<a href=\"https://www.expansion.com/economia/financial-times/2025/03/31/67ea554fe5fdea22468b4575.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/economia/financial-times/2025/03/31/67ea554fe5fdea22468b4575.html",
+    "publishedAt": "2025-03-31T08:44:28.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.504Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Stephanie Stacey, Laura Pitel y Leila Abboud",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/03/31/17434106078504.jpg",
+    "tags": [
+      "Financial Times"
+    ]
+  },
+  {
+    "id": "0cfceb490e29779acd8c7b1c5899320b",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Máxima incertidumbre fiscal para la empresa familiar con activos inmobiliarios",
+    "description": "Una sentencia del Tribunal Superior de Justicia catalán choca con el criterio del TEAC sobre el alquiler de inmuebles a familiares y aviva el debate sobre la exención en Patrimonio y Sucesiones. Leer",
+    "content": "Una sentencia del Tribunal Superior de Justicia catalán choca con el criterio del TEAC sobre el alquiler de inmuebles a familiares y aviva el debate sobre la exención en Patrimonio y Sucesiones.&nbsp;<a href=\"https://www.expansion.com/fiscal/2025/04/02/67ec30eee5fdeaa9048b45a3.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/fiscal/2025/04/02/67ec30eee5fdeaa9048b45a3.html",
+    "publishedAt": "2025-04-01T23:49:39.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.505Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Ignacio Faes",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/02/17435808878076.jpg",
+    "tags": [
+      "Fiscal",
+      "Artículos Ignacio Faes"
+    ]
+  },
+  {
+    "id": "ca75035254dd1aeb7f065652ea6e20de",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "La Agencia Tributaria activa el formulario de devolución de los mutualistas jubilados",
+    "description": "La Agencia Tributaria habilita mañana el procedimiento para que los jubilados que reciben pensiones de aportaciones realizadas a las antiguas mutuas soliciten la devolución del exceso de IRPF en un solo pago en 2025. El cálculo será automático en la Renta 2024 y sucesivas y los potenciales contribuyentes que tengan derecho de devolución por ejercicios anteriores no prescritos podrán presentar un formulario online del que recibirán un aviso automático. Leer",
+    "content": "La Agencia Tributaria habilita mañana el procedimiento para que los jubilados que reciben pensiones de aportaciones realizadas a las antiguas mutuas soliciten la devolución del exceso de IRPF <a href=\"https://www.expansion.com/economia/2025/03/27/67e532c3468aeb18298b457f.html\">en un solo pago en 2025</a>. El cálculo será automático en la Renta 2024 y sucesivas y los potenciales contribuyentes que tengan derecho de devolución por ejercicios anteriores no prescritos podrán presentar un formulario online del que recibirán un aviso automático.&nbsp;<a href=\"https://www.expansion.com/economia/declaracion-renta/2025/04/01/67eba091468aeb427e8b457e.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/economia/declaracion-renta/2025/04/01/67eba091468aeb427e8b457e.html",
+    "publishedAt": "2025-04-01T09:50:20.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.508Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Marga Castillo",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/01/17435004250485.jpg",
+    "tags": [
+      "Renta",
+      "Declaración de la Renta",
+      "Artículos Marga Castillo"
+    ]
+  },
+  {
+    "id": "0219e37ff3aef259dd026300fa32c516",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "ESPECIAL | Escuche la entrevista completa con Carlos Torres (BBVA)",
+    "description": "EXPANSIÓN les ofrece una serie de entrevistas en pódcast con los principales ejecutivos que participaron en el 'Gran Encuentro EXPANSIÓN Catalunya'. Hoy escuchamos a Carlos Torres, presidente del BBVA, entrevistado por Salvador Arancibia, adjunto a la dirección de EXPANSIÓN. Leer",
+    "content": "<strong>EXPANSIÓN</strong> les ofrece una serie de entrevistas en pódcast con los principales ejecutivos que participaron en el '<a href=\"https://www.expansion.com/catalunya/album/2025/03/31/67ea5477468aebd8648b4592.html\" target=\"_blank\"><strong>Gran Encuentro EXPANSIÓN Catalunya</strong></a>'. Hoy escuchamos a <strong>Carlos Torres</strong>, <strong>presidente del BBVA,</strong> entrevistado por<strong> Salvador Arancibia</strong>, adjunto a la dirección de EXPANSIÓN.&nbsp;<a href=\"https://www.expansion.com/podcasts/2025/04/05/67efa530468aeb0c4e8b457d.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/podcasts/2025/04/05/67efa530468aeb0c4e8b457d.html",
+    "publishedAt": "2025-04-04T23:10:25.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.509Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "expansion.com",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437584590630.jpg",
+    "tags": [
+      "Podcast",
+      "NEA"
+    ]
+  },
+  {
+    "id": "9487adc11677c0195145feb606a1c88f",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Cuánto ganan al día los ejecutivos temporales",
+    "description": "El 66% de las empresas europeas prevé contratar un 'interim manager' en 2025. Las organizaciones recurren a estos ejecutivos con experiencia para acometer proyectos relacionados con la inteligencia artificial y ESG, fundamentalmente, y por un periodo medio de 9 meses. Leer",
+    "content": "El 66% de las empresas europeas prevé contratar un 'interim manager' en 2025. Las organizaciones recurren a estos ejecutivos con experiencia para acometer proyectos relacionados con la inteligencia artificial y ESG, fundamentalmente, y por un periodo medio de 9 meses.&nbsp;<a href=\"https://www.expansion.com/expansion-empleo/retribucion/2025/04/04/67ee784a468aeb7e488b457c.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/expansion-empleo/retribucion/2025/04/04/67ee784a468aeb7e488b457c.html",
+    "publishedAt": "2025-04-04T12:09:04.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.509Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Montse Mateos",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437685030553.jpg",
+    "tags": [
+      "Expansión y Empleo",
+      "Retribución",
+      "Artículos Montse Mateos"
+    ]
+  },
+  {
+    "id": "bcbb79a5a0e9ff9f5ecf9d03de2a3005",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "La familia que ha logrado mantener el Ponche Caballero durante 200 años",
+    "description": "A punto de cumplir 200 años, la sexta generación de esta familia de origen gallego sigue elaborando bebidas espirituosas y vinos de Jerez dentro de un contexto en el que las nuevos jóvenes apuestan menos por este tipo de productos. Leer",
+    "content": "A punto de cumplir 200 años, la sexta generación de esta familia de origen gallego sigue elaborando bebidas espirituosas y vinos de Jerez dentro de un contexto en el que las nuevos jóvenes apuestan menos por este tipo de productos.&nbsp;<a href=\"https://www.expansion.com/directivos/estilo-vida/2025/04/04/67f00aa7468aeb9b338b4586.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/directivos/estilo-vida/2025/04/04/67f00aa7468aeb9b338b4586.html",
+    "publishedAt": "2025-04-04T21:20:10.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.510Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Álvaro Pérez-Alberca",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437846339819.jpg",
+    "tags": [
+      "Artículos Álvaro Pérez-Alberca"
+    ]
+  },
+  {
+    "id": "80d0193e0c2fffdb5d6860cac58fd19c",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Así responde el mercado a los aranceles de Trump",
+    "description": "Las Bolsas mundiales sufren las consecuencias de la guerra comercial de Donald Trump, pero aún hay oportunidades para los inversores. Leer",
+    "content": "Las Bolsas mundiales sufren las consecuencias de la guerra comercial de Donald Trump, pero aún hay oportunidades para los inversores.&nbsp;<a href=\"https://www.expansion.com/podcasts/en-accion/2025/04/03/67ee930c468aeb91528b4584.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/podcasts/en-accion/2025/04/03/67ee930c468aeb91528b4584.html",
+    "publishedAt": "2025-04-03T13:57:51.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.511Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "expansion.com",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/03/17436884979018.jpg",
+    "tags": [
+      "En Acción",
+      "Podcast",
+      "NEA"
+    ]
+  },
+  {
+    "id": "415c7222bdea015ebb923d122228791f",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "La Primera de Expansión sobre aranceles, Nasdaq, Apple, Nike, Volvo, Milei, Meta y TikTok",
+    "description": "Nueva jornada de resaca económica y bursátil a costa de la imposición de nuevos aranceles por parte de la administración de Donald Trump en Estados Unidos. La Comisión Europea calcula que Europa sufrirá un golpe de 81.000 millones de euros. Leer",
+    "content": "Nueva jornada de resaca económica y bursátil a costa de la imposición de nuevos aranceles por parte de la administración de Donald Trump en Estados Unidos. La <a href=\"https://www.expansion.com/economia/2025/04/04/67eed950e5fdeaef058b4594.html\"><strong>Comisión Europea</strong></a> calcula que Europa sufrirá un golpe de <a href=\"https://www.expansion.com/economia/2025/04/04/67eed950e5fdeaef058b4594.html\"><strong>81.000 millones de euros</strong></a>.&nbsp;<a href=\"https://www.expansion.com/podcasts/la-primera-de-expansion/2025/04/04/67ef6a18468aebd3098b4581.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/podcasts/la-primera-de-expansion/2025/04/04/67ef6a18468aebd3098b4581.html",
+    "publishedAt": "2025-04-04T05:27:31.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.512Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "expansion.com",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437436722433.jpg",
+    "tags": [
+      "Podcast",
+      "NEA",
+      "La primera de Expansión",
+      "Artículos Amaia Ormaetxea",
+      "Artículos Raquel Moreno"
+    ]
+  },
+  {
+    "id": "17d0e83fe8afb812b23bc5f1dc318d71",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Cómo estar en el punto de mira de los cazatalentos",
+    "description": "La experiencia laboral y una trayectoria visible y de prestigio es el punto de partida para estar en la órbita de búsqueda de los cazatalentos, el pasaporte para acceder a un puesto directivo. Leer",
+    "content": "La experiencia laboral y una trayectoria visible y de prestigio es el punto de partida para estar en la órbita de búsqueda de los cazatalentos, el pasaporte para acceder a un puesto directivo.&nbsp;<a href=\"https://www.expansion.com/podcasts/trabajo-y-mas/2025/04/01/67ea94eb468aebd0088b4574.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/podcasts/trabajo-y-mas/2025/04/01/67ea94eb468aebd0088b4574.html",
+    "publishedAt": "2025-03-31T22:57:05.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.513Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "expansion.com",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/03/31/17434272970080.jpg",
+    "tags": [
+      "Podcast",
+      "Trabajo y más",
+      "NEA",
+      "Expansión y Empleo"
+    ]
+  },
+  {
+    "id": "cdd6f74b254866b2d1f3410a2794c331",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Bill Gates, el tímido mago detrás de Microsoft",
+    "description": "Bill Gates revolucionó la informática al contribuir a que el ordenador personal se convirtiera en una herramienta accesible para millones de personas. Leer",
+    "content": "Bill Gates revolucionó la informática al contribuir a que el ordenador personal se convirtiera en una herramienta accesible para millones de personas.&nbsp;<a href=\"https://www.expansion.com/podcasts/genios-finanzas/2025/03/31/67e6a7b5468aeb6f7e8b4570.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/podcasts/genios-finanzas/2025/03/31/67e6a7b5468aeb6f7e8b4570.html",
+    "publishedAt": "2025-03-31T05:12:44.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.513Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "expansion.com",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/03/28/17431716099120.jpg",
+    "tags": [
+      "Podcast",
+      "Genios de las finanzas",
+      "Personajes financieros",
+      "NEA",
+      "Artículos Amaia Ormaetxea",
+      "Artículos Antonio Santamaría",
+      "Artículos Tamara Vázquez"
+    ]
+  },
+  {
+    "id": "c0ce77bc1801464ae09477b54357b812",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "La Gran Guía para invertir en vivienda",
+    "description": "Todas las claves para conocer al detalle en qué punto está el mercado inmobiliario, tanto en la compraventa como en el alquiler. Leer",
+    "content": "Todas las claves para conocer al detalle en qué punto está el mercado inmobiliario, tanto en la compraventa como en el alquiler.&nbsp;<a href=\"https://www.expansion.com/inmobiliario/mercado/2025/04/01/67ebe15b468aeb05678b45ab.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/mercado/2025/04/01/67ebe15b468aeb05678b45ab.html",
+    "publishedAt": "2025-04-01T13:19:47.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.514Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Expansión",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/01/17435135397742.jpg",
+    "tags": []
+  },
+  {
+    "id": "c447de4a98a111a83deaba393ac8ca49",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Bob Iger, el directivo que revivió Disney",
+    "description": "Se ha ganado la fama de ser uno de los ejecutivos más amables de Hollywood. Su primera etapa al frente del gigante del entretenimiento, marcada por las compras de Pixar, Marvel y Lucasfilm, fue un éxito rotundo. Leer",
+    "content": "Se ha ganado la fama de ser uno de los ejecutivos más amables de Hollywood. Su primera etapa al frente del gigante del entretenimiento, marcada por las compras de Pixar, Marvel y Lucasfilm, fue un éxito rotundo.&nbsp;<a href=\"https://www.expansion.com/economia-digital/companias/2025/04/04/67f01fc1468aeb34658b4590.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/economia-digital/companias/2025/04/04/67f01fc1468aeb34658b4590.html",
+    "publishedAt": "2025-04-04T18:51:15.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.515Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Antonio Santamaría",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437895099850.jpg",
+    "tags": [
+      "Genios de las finanzas",
+      "Compañias",
+      "Artículos Antonio Santamaría"
+    ]
+  },
+  {
+    "id": "0ec94a9ad9921b203d4e35100998fa18",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Más de 14.000 millones en dividendos en pleno terremoto bursátil",
+    "description": "Llenar los bolsillos con dividendos esta primavera es un plus ante el riesgo bursátil. BBVA, CaixaBank y Unicaja son algunas de las empresas más rentables por dividendo que pagan en abril. Leer",
+    "content": "Llenar los bolsillos con dividendos esta primavera es un plus ante el riesgo bursátil. BBVA, CaixaBank y Unicaja son algunas de las empresas más rentables por dividendo que pagan en abril.&nbsp;<a href=\"https://www.expansion.com/mercados/2025/04/05/67f0418a468aeb6c588b456d.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/mercados/2025/04/05/67f0418a468aeb6c588b456d.html",
+    "publishedAt": "2025-04-04T22:04:48.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.516Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Carmen Rosique",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437990169400.jpg",
+    "tags": [
+      "Mercados"
+    ]
+  },
+  {
+    "id": "49d27aa94f82864c92014dfa8758b4ba",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Nueve claves para actuar tras la brusca caída de las bolsas",
+    "description": "Las ventas indiscriminadas que se vivieron ayer en Europa demuestran el miedo a la estanflación y se han acelerado por las órdenes automáticas, pero hay que mantener la calma. Leer",
+    "content": "Las ventas indiscriminadas que se vivieron ayer en Europa demuestran el miedo a la estanflación y se han acelerado por las órdenes automáticas, pero hay que mantener la calma.&nbsp;<a href=\"https://www.expansion.com/mercados/2025/04/05/67f04209468aebc5058b4592.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/mercados/2025/04/05/67f04209468aebc5058b4592.html",
+    "publishedAt": "2025-04-04T22:05:13.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.516Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "C. Rosique",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437989046798.jpg",
+    "tags": [
+      "Mercados",
+      "Banca",
+      "Artículos Carmen Rosique"
+    ]
+  },
+  {
+    "id": "8c47fe1b9f5663c26cfac5591c2832aa",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Así se vivió 'Liberation Day' en los pasillos de Wall Street",
+    "description": "Los 'traders' pasaron la noche en vela reajustando sus posiciones ante el desplome de los mercados. Hay consenso: los inversores creen que el anuncio \"fue peor de lo esperado\", tanto en el contenido como en las formas. Leer",
+    "content": "Los 'traders' pasaron la noche en vela reajustando sus posiciones ante el desplome de los mercados. Hay consenso: los inversores creen que el anuncio \"fue peor de lo esperado\", tanto en el contenido como en las formas.&nbsp;<a href=\"https://www.expansion.com/directivos/estilo-vida/2025/04/05/67f02a3a468aeb86138b4597.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/directivos/estilo-vida/2025/04/05/67f02a3a468aeb86138b4597.html",
+    "publishedAt": "2025-04-04T22:08:58.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.517Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Sergio Saiz",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437926591488.jpg",
+    "tags": [
+      "Artículos Sergio Saiz"
+    ]
+  },
+  {
+    "id": "e0826f42e1c03723e30e37a4aea2cb6f",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Los chefs Michelin estrenan temporada",
+    "description": "Después del cierre invernal, los restaurantes de alta cocina reabren y lanzan nuevos menús. Leer",
+    "content": "Después del cierre invernal, los restaurantes de alta cocina reabren y lanzan nuevos menús.&nbsp;<a href=\"https://www.expansion.com/directivos/estilo-vida/rincones-gastronomicos/2025/04/04/67f01a58468aeb844f8b45a6.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/directivos/estilo-vida/rincones-gastronomicos/2025/04/04/67f01a58468aeb844f8b45a6.html",
+    "publishedAt": "2025-04-04T21:18:33.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.518Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Marta Fernández Guadaño",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437897538932.jpg",
+    "tags": [
+      "Directivos",
+      "Gastronomía"
+    ]
+  },
+  {
+    "id": "8bcef2954f5d648ac0f5fe9d026c0def",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "'Déjà vu' viajero o por qué no se cansa de Nueva York y Londres",
+    "description": "Casi el 40% de los españoles quiere repetir destino para descubrir nuevas facetas de la ciudad. Leer",
+    "content": "Casi el 40% de los españoles quiere repetir destino para descubrir nuevas facetas de la ciudad.&nbsp;<a href=\"https://www.expansion.com/directivos/estilo-vida/viajes/2025/04/04/67f00b01468aebe7658b4597.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/directivos/estilo-vida/viajes/2025/04/04/67f00b01468aebe7658b4597.html",
+    "publishedAt": "2025-04-04T21:19:20.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.519Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Nerea Serrano",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437859438489.jpg",
+    "tags": [
+      "Directivos",
+      "Estilo de Vida",
+      "Viajes",
+      "Artículos Nerea Serrano"
+    ]
+  },
+  {
+    "id": "c3814af1fd4fa0086716b064a9d7125b",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Las tabletas se renuevan: más potencia y mucha inteligencia artificial",
+    "description": "Las principales compañías están anunciando nuevos modelos de sus tablets. Leer",
+    "content": "Las principales compañías están anunciando nuevos modelos de sus tablets.&nbsp;<a href=\"https://www.expansion.com/tecnologia/2025/04/04/67efb8b5e5fdeafd478b457e.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/tecnologia/2025/04/04/67efb8b5e5fdeafd478b457e.html",
+    "publishedAt": "2025-04-04T21:17:57.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.520Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "M. Juste",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437633948234.jpg",
+    "tags": [
+      "tecnología",
+      "Artículos Marta Juste"
+    ]
+  },
+  {
+    "id": "84e8b323220048b4bdeed9f89a7bb95f",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "\"España es clave para MSC Cruceros y este año reforzamos Canarias\"",
+    "description": "Leonardo Massa, Vicepresidente para el Sur de Europa de MSC Cruceros: \"En La Palma se harán escalas y embarcaremos también en Lanzarote a partir de invierno\". Leer",
+    "content": "Leonardo Massa, Vicepresidente para el Sur de Europa de MSC Cruceros: \"En La Palma se harán escalas y embarcaremos también en Lanzarote a partir de invierno\".&nbsp;<a href=\"https://www.expansion.com/catalunya/2025/04/04/67f03627e5fdea45168b45bd.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/catalunya/2025/04/04/67f03627e5fdea45168b45bd.html",
+    "publishedAt": "2025-04-04T22:11:10.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.522Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "David Casals",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437957643552.jpg",
+    "tags": [
+      "Empresas",
+      "Turismo y puertos",
+      "Transporte y Turismo",
+      "Valencia",
+      "Cataluña",
+      "Artículos David Casals"
+    ]
+  },
+  {
+    "id": "0d95647942baea91bd117ab46f904460",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "El Gobierno aprobará el martes transferir 2.084 millones de euros para gastos de Defensa",
+    "description": "El Consejo de Ministros aprobará el próximo martes una transferencia de crédito de 2.084 millones de euros al Ministerio de Defensa para cumplir con gastos previstos por este departamento. Leer",
+    "content": "El Consejo de Ministros aprobará el próximo martes una transferencia de crédito de 2.084 millones de euros al Ministerio de Defensa para cumplir con gastos previstos por este departamento.&nbsp;<a href=\"https://www.expansion.com/economia/2025/04/05/67f1043ce5fdeadc488b45a0.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/economia/2025/04/05/67f1043ce5fdeadc488b45a0.html",
+    "publishedAt": "2025-04-05T10:26:51.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.523Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Expansión",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438487759749.jpg",
+    "tags": []
+  },
+  {
+    "id": "f74dd285e57c2f2fe0948557bf92a2ef",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Trump pide a la gente que \"resista\" su guerra comercial: \"No será fácil, pero el resultado será histórico\"",
+    "description": "El presidente de Estados Unidos, Donald Trump, ha defendido este sábado la guerra arancelaria que ha terminado de desatar esta semana con la imposición generalizada de aranceles, aunque admitido que puede existir un coste previo para la población norteamericana antes de recoger sus frutos. Leer",
+    "content": "El presidente de Estados Unidos, Donald Trump, ha defendido este sábado la guerra arancelaria que ha terminado de desatar esta semana con la imposición generalizada de aranceles, aunque admitido que puede existir un coste previo para la población norteamericana antes de recoger sus frutos.&nbsp;<a href=\"https://www.expansion.com/economia/2025/04/05/67f137ede5fdea7e2d8b4597.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/economia/2025/04/05/67f137ede5fdea7e2d8b4597.html",
+    "publishedAt": "2025-04-05T14:05:29.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.526Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Expansión",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438618918029.jpg",
+    "tags": []
+  },
+  {
+    "id": "3535fd01df1c988e14ce27efee667fbe",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "La 'hucha' de pensiones supera los 10.000 millones por la cuota para pagar la jubilación del 'baby boom'",
+    "description": "El mecanismo de equidad intergeneracional aplicado a asalariados y autónomos elevará el patrimonio del Fondo de Reserva hasta los 14.000 millones este año, según prevé el Gobierno. Leer",
+    "content": "El mecanismo de equidad intergeneracional aplicado a asalariados y autónomos elevará el patrimonio del Fondo de Reserva hasta los 14.000 millones este año, según prevé el Gobierno.&nbsp;<a href=\"https://www.expansion.com/economia/2025/04/05/67f003f7e5fdead9248b45be.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/economia/2025/04/05/67f003f7e5fdead9248b45be.html",
+    "publishedAt": "2025-04-04T22:09:55.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.527Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Gonzalo D. Velarde",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437838352240.jpg",
+    "tags": [
+      "economía",
+      "Pensiones",
+      "Seguridad Social",
+      "Artículos Gonzalo D. Velarde"
+    ]
+  },
+  {
+    "id": "f92d49da8c1963a0f1dd6ccfd0e4c361",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "¿Qué mensajes envía la sentencia de Alves?",
+    "description": "Algunos intentan que el miedo sea para los jueces más importante que las propias leyes. Leer",
+    "content": "Algunos intentan que el miedo sea para los jueces más importante que las propias leyes.&nbsp;<a href=\"https://www.expansion.com/economia/politica/2025/04/04/67f03894e5fdeae8078b4571.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/economia/politica/2025/04/04/67f03894e5fdeae8078b4571.html",
+    "publishedAt": "2025-04-04T21:13:32.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.528Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Iñaki Garay",
+    "tags": [
+      "Política",
+      "Opinión"
+    ]
+  },
+  {
+    "id": "5eeef5d7520c4acb1e11ee9fa6f68024",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "¿A quién liberará Trump con sus aranceles?",
+    "description": "Leer",
+    "content": "&nbsp;<a href=\"https://www.expansion.com/opinion/2025/04/04/67eee9e3e5fdea7a738b45a2.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/opinion/2025/04/04/67eee9e3e5fdea7a738b45a2.html",
+    "publishedAt": "2025-04-03T23:44:05.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.533Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Iñaki Garay",
+    "tags": [
+      "Opinión",
+      "Aranceles"
+    ]
+  },
+  {
+    "id": "b9dd82a20facc5f170a0b4a2aa4c7816",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Bytedance advierte de \"diferencias en cuestiones clave\" en las negociaciones con EEUU sobre TikTok",
+    "description": "La empresa china Bytedance, dueña de la aplicación de vídeos TikTok, aseguró este sábado que existen \"diferencias en cuestiones clave\" en sus negociaciones con el Gobierno de Estados Unidos para que la 'app' pueda seguir operando en el país norteamericano. Leer",
+    "content": "La empresa china Bytedance, dueña de la aplicación de vídeos TikTok, aseguró este sábado que existen \"diferencias en cuestiones clave\" en sus negociaciones con el Gobierno de Estados Unidos para que la 'app' pueda seguir operando en el país norteamericano.&nbsp;<a href=\"https://www.expansion.com/economia-digital/2025/04/05/67f0e76ee5fdeaf6018b4586.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/economia-digital/2025/04/05/67f0e76ee5fdeaf6018b4586.html",
+    "publishedAt": "2025-04-05T08:23:04.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.537Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Expansión",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438413535161.jpg",
+    "tags": [
+      "Economía Digital"
+    ]
+  },
+  {
+    "id": "e94b3d2a72c789b7554f750c19fde931",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Digi: el elefante en la habitación de las redes de fibra mayorista",
+    "description": "El gran aumento de clientes y redes de fibra de Digi es el mayor riesgo para los potenciales inversores de las nuevas 'fibercos' de Vodafone, Masorange y movistar. Leer",
+    "content": "El gran aumento de clientes y redes de fibra de Digi es el mayor riesgo para los potenciales inversores de las nuevas 'fibercos' de Vodafone, Masorange y movistar.&nbsp;<a href=\"https://www.expansion.com/empresas/2025/04/05/67f036f1e5fdea4c628b45af.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/empresas/2025/04/05/67f036f1e5fdea4c628b45af.html",
+    "publishedAt": "2025-04-04T22:11:43.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.620Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Ignacio del Castillo",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437958975747.jpg",
+    "tags": [
+      "Empresas"
+    ]
+  },
+  {
+    "id": "156b004bd884a79778e14ea7d80afbe2",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Xtraice, la empresa que reinventó las pistas de patinaje",
+    "description": "La compañía creada en 2003 ha llevado sus pistas de hielo sintético a más de 100 países en todo el mundo. Leer",
+    "content": "La compañía creada en 2003 ha llevado sus pistas de hielo sintético a más de 100 países en todo el mundo.&nbsp;<a href=\"https://www.expansion.com/empresas/2025/04/04/67ef9703e5fdea45168b459a.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/empresas/2025/04/04/67ef9703e5fdea45168b459a.html",
+    "publishedAt": "2025-04-04T08:32:56.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.625Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Sonia Mora",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437551825922.jpg",
+    "tags": [
+      "Historias de éxito"
+    ]
+  },
+  {
+    "id": "714688364bddbaf417c2f77357b0f91e",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "OPEP+ exige cumplir con los recortes en medio del desplome de precios y la tensión comercial",
+    "description": "El comité de supervisión de la OPEP+ (JMMC) exigió este sábado el cumplimiento de las cuotas de producción, tras el sorpresivo anuncio del jueves de un aumento de 411.000 barriles diarios, que llevó a la caída de los precios del crudo en un mercado ya golpeado por la guerra arancelaria desatada por EEUU. Leer",
+    "content": "El comité de supervisión de la OPEP+ (JMMC) exigió este sábado el cumplimiento de las cuotas de producción, tras el sorpresivo anuncio del jueves de un aumento de 411.000 barriles diarios, que llevó a la caída de los precios del crudo en un mercado ya golpeado por la guerra arancelaria desatada por EEUU.&nbsp;<a href=\"https://www.expansion.com/economia/2025/04/05/67f15ffde5fdea3f2f8b4586.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/economia/2025/04/05/67f15ffde5fdea3f2f8b4586.html",
+    "publishedAt": "2025-04-05T17:08:29.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.643Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Expansión",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2020/04/04/15860156289342.jpg",
+    "tags": []
+  },
+  {
+    "id": "97963c3c6b63ccb057383ae2792aef47",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Las aerolíneas españolas suman un récord  de 494 aviones pese a los retrasos",
+    "description": "Vueling, Iberia, Air Europa, Air Nostrum y el resto de compañías superan globalmente las cifras pre-Covid, pero elevan la edad de las flotas por la demora en las entregas. Leer",
+    "content": "Vueling, Iberia, Air Europa, Air Nostrum y el resto de compañías superan globalmente las cifras pre-Covid, pero elevan la edad de las flotas por la demora en las entregas.&nbsp;<a href=\"https://www.expansion.com/empresas/transporte/2025/04/05/67f02d60468aebe7658b45a0.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/empresas/transporte/2025/04/05/67f02d60468aebe7658b45a0.html",
+    "publishedAt": "2025-04-04T22:10:33.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.645Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Artur Zanón",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2021/07/30/16276246055777.jpg",
+    "tags": [
+      "Empresas",
+      "Transporte y Turismo",
+      "Artículos Artur Zanón"
+    ]
+  },
+  {
+    "id": "2de5b044ee85b3fcde433080757a9845",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Los puertos se conectan a IA con 80.000 millones en juego",
+    "description": "El sistema portuario español, con Barcelona, Algeciras y Valencia a la cabeza, podría obtener unos ahorros de 3.000 millones de euros. Leer",
+    "content": "El sistema portuario español, con Barcelona, Algeciras y Valencia a la cabeza, podría obtener unos ahorros de 3.000 millones de euros.&nbsp;<a href=\"https://www.expansion.com/empresas/transporte/2025/04/05/67f03bba468aeb9f448b4577.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/empresas/transporte/2025/04/05/67f03bba468aeb9f448b4577.html",
+    "publishedAt": "2025-04-04T22:43:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.647Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "C. Morán",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2023/02/16/16765635362197.jpg",
+    "tags": [
+      "Empresas",
+      "Transporte y Turismo",
+      "Inteligencia artificial"
+    ]
+  },
+  {
+    "id": "a5a0169884acd7a7859f101faf352946",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Los fondos buscan alternativas a la venta de sus promotoras en España",
+    "description": "Fondos como Bain, Värde, Castlelake, Orion o Stoneshield abren distintas vías para hacer caja con sus promotoras ante la sequía de ofertas y de inversores industriales que tomen el relevo. Leer",
+    "content": "Fondos como Bain, Värde, Castlelake, Orion o Stoneshield abren distintas vías para hacer caja con sus promotoras ante la sequía de ofertas y de inversores industriales que tomen el relevo.&nbsp;<a href=\"https://www.expansion.com/inmobiliario/mercado/2025/04/05/67f02780468aeb38488b4597.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/inmobiliario/mercado/2025/04/05/67f02780468aeb38488b4597.html",
+    "publishedAt": "2025-04-04T22:09:26.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.649Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Rebeca Arroyo",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437916481037.jpg",
+    "tags": [
+      "Empresas",
+      "Inmobiliario y Construcción",
+      "Mercado inmobiliario",
+      "Artículos Rebeca Arroyo"
+    ]
+  },
+  {
+    "id": "a469054f914149a2a38b96b29e0b3702",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Barceló gana un 56% más y prevé nuevo récord para este año",
+    "description": "Barceló gana un 56% más, con 302 millones de euros, y logra ingresos operativos de 4.589 millones, un 16% más. El grupo turístico prevé ganar 310 millones en 2025. Leer",
+    "content": "Barceló gana un 56% más, con 302 millones de euros, y logra ingresos operativos de 4.589 millones, un 16% más. El grupo turístico prevé ganar 310 millones en 2025.&nbsp;<a href=\"https://www.expansion.com/empresas/transporte/2025/04/05/67f02b36e5fdead5338b459f.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/empresas/transporte/2025/04/05/67f02b36e5fdead5338b459f.html",
+    "publishedAt": "2025-04-04T22:11:58.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.652Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Rebeca Arroyo",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2024/01/18/17055989574725.jpg",
+    "tags": [
+      "Empresas",
+      "Transporte y Turismo",
+      "Artículos Rebeca Arroyo"
+    ]
+  },
+  {
+    "id": "3ae893b012a0aa7a120c90fc3f174bf1",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Los consejos de inversión de Buffett ante los aranceles de Trump",
+    "description": "El inversor más reputado del mundo tiene claro que los aranceles de Trump son \"un acto de guerra\". Pero insiste en que hay grandes oportunidades de inversión en estos momentos si se piensa en el largo plazo. Leer",
+    "content": "El inversor más reputado del mundo tiene claro que los aranceles de Trump son \"un acto de guerra\". Pero insiste en que hay grandes oportunidades de inversión en estos momentos si se piensa en el largo plazo.&nbsp;<a href=\"https://www.expansion.com/ahorro/2025/04/04/67ee566c468aeb41518b4576.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/ahorro/2025/04/04/67ee566c468aeb41518b4576.html",
+    "publishedAt": "2025-04-03T23:56:12.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.653Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Diana Esperanza",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/03/17436747946623.jpg",
+    "tags": [
+      "Ahorro",
+      "Mercados",
+      "Warren Buffett"
+    ]
+  },
+  {
+    "id": "e04209ffcadcff13fe21f418ea3c28a0",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Las empresas españolas revisan su estrategia por la guerra arancelaria",
+    "description": "Sidenor, Deoleo, Inditex, Mango, Puig, Freixenet y Porcelanosa, entre otras grandes empresas alertan del impacto arancelaria sobre sus valoraciones y el descenso de ventas a EEUU. Leer",
+    "content": "Sidenor, Deoleo, Inditex, Mango, Puig, Freixenet y Porcelanosa, entre otras grandes empresas alertan del impacto arancelaria sobre sus valoraciones y el descenso de ventas a EEUU.&nbsp;<a href=\"https://www.expansion.com/empresas/2025/04/04/67ef0327468aebf8788b45a4.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/empresas/2025/04/04/67ef0327468aebf8788b45a4.html",
+    "publishedAt": "2025-04-04T12:22:36.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.654Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "C. Morán, A. Zanón, C. Drake, N. San Esteban y V. Osorio",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437182228227.jpg",
+    "tags": [
+      "Empresas",
+      "economía"
+    ]
+  },
+  {
+    "id": "9d1ecbee10c3ef02e7cac8946ac768a1",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Tumbonas, sofás, cocinas y hasta alfombras para jardín",
+    "description": "Hay que ir preparando terraza, jardín, piscina y alrededores. toma nota de nuestra selección de mobiliario outdoor para aprovechar los días que vienen. Leer",
+    "content": "Hay que ir preparando terraza, jardín, piscina y alrededores. toma nota de nuestra selección de mobiliario outdoor para aprovechar los días que vienen.&nbsp;<a href=\"https://www.expansion.com/fueradeserie/arquitectura/album/2025/04/04/67cc7d18e5fdeae2058b45c3.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/fueradeserie/arquitectura/album/2025/04/04/67cc7d18e5fdeae2058b45c3.html",
+    "publishedAt": "2025-04-04T06:05:34.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.656Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "ANA RAMÍREZ",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/03/08/17414553230025.jpg",
+    "tags": [
+      "fuera de serie"
+    ]
+  },
+  {
+    "id": "1881a935940cf7c2e5de17a48629fb9a",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Balcón a las procesiones de Sevilla con torrijas a discreción",
+    "description": "El hotel Hesperia Sevilla, recién reformado, ha diseñado un programa que ofrece a sus huéspedes acceder a un balcón privado en la Carrera Oficial con vistas privilegiadas a las procesiones. Leer",
+    "content": "El hotel <a href=\"https://www.expansion.com/fueradeserie/viajes/2025/01/22/675c0546e5fdeaab298b4586.html\" target=\"_blank\">Hesperia Sevilla</a>, recién reformado, ha diseñado un programa que ofrece a sus huéspedes acceder a un balcón privado en la Carrera Oficial con vistas privilegiadas a las procesiones.&nbsp;<a href=\"https://www.expansion.com/fueradeserie/viajes/2025/04/04/67ebd2f3468aeba83f8b459a.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/fueradeserie/viajes/2025/04/04/67ebd2f3468aeba83f8b459a.html",
+    "publishedAt": "2025-04-04T06:05:37.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.657Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Sonia Aparicio",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/03/17436734795637.jpg",
+    "tags": [
+      "fuera de serie"
+    ]
+  },
+  {
+    "id": "420e179d63bb2b107fcce861ee4ffbaf",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "¿En qué ciudades españolas creció más el consumo en 2024?",
+    "description": "El ránking de las 10 ciudades donde más creció el consumo en 2024 está liderado por Estepona, Torremolinos, Benidorm, Irún y Málaga, con datos de CaixaBank Research, el servicio de estudios de la entidad. Leer",
+    "content": "El ránking de las 10 ciudades donde más creció el consumo en 2024 está liderado por Estepona, Torremolinos, Benidorm, Irún y Málaga, con datos de CaixaBank Research, el servicio de estudios de la entidad.&nbsp;<a href=\"https://www.expansion.com/economia/2025/04/05/67f0e28ce5fdeaf0508b459a.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/economia/2025/04/05/67f0e28ce5fdeaf0508b459a.html",
+    "publishedAt": "2025-04-05T08:51:17.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.659Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Expansión",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438430320948.jpg",
+    "tags": []
+  },
+  {
+    "id": "8d81096dd932348537c3e856c1b4dcb5",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Pekín abre una investigación antimonopolio a la filial de la estadounidense Dupont en China",
+    "description": "Las autoridades chinas anunciaron en la noche local del viernes la apertura de una investigación antimonopolio a la filial en China de la empresa estadounidense Dupont, como parte de la batería de represalias de Pekín por los aranceles anunciados por Washington contra sus productos. Leer",
+    "content": "Las autoridades chinas anunciaron en la noche local del viernes la apertura de una investigación antimonopolio a la filial en China de la empresa estadounidense Dupont, como parte de la batería de represalias de Pekín por los aranceles anunciados por Washington contra sus productos.&nbsp;<a href=\"https://www.expansion.com/empresas/2025/04/05/67f0ea0e468aebd2038b459f.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/empresas/2025/04/05/67f0ea0e468aebd2038b459f.html",
+    "publishedAt": "2025-04-05T09:28:03.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.660Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Expansión",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438452519124.png",
+    "tags": []
+  },
+  {
+    "id": "6edc1566ff57839e113b357b5a89a35c",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "China exige a EEUU que abandone su \"injusta\" guerra arancelaria tras el viernes negro",
+    "description": "El Gobierno chino ha insistido este sábado a Estados Unidos en que abandone una \"injusta\" guerra arancelaria que está abocando los mercados a colapsos como el ocurrido este pasado viernes, un \"abuso\", un ejercicio de \"tiranía\", y una subversión \"del orden económico y comercial existente\" al que Pekín \"se opone firmemente\", como anticipa que también hará el resto de la comunidad internacional. Leer",
+    "content": "El Gobierno chino ha insistido este sábado a Estados Unidos en que abandone una \"injusta\" guerra arancelaria que está abocando los mercados a colapsos como el ocurrido este pasado viernes, un \"abuso\", un ejercicio de \"tiranía\", y una subversión \"del orden económico y comercial existente\" al que Pekín \"se opone firmemente\", como anticipa que también hará el resto de la comunidad internacional.&nbsp;<a href=\"https://www.expansion.com/economia/2025/04/05/67f12d56468aeb6c588b4579.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/economia/2025/04/05/67f12d56468aeb6c588b4579.html",
+    "publishedAt": "2025-04-05T13:25:50.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.663Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Expansión",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438594793299.jpg",
+    "tags": []
+  },
+  {
+    "id": "627ae5a045c31260058a1fceb0622d22",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Elon Musk espera que EEUU y Europa eliminen sus aranceles en el futuro",
+    "description": "El magnate Elon Musk expresó este sábado su deseo de que Estados Unidos y Europa puedan establecer una alianza comercial más estrecha con \"aranceles cero\" en el futuro, durante su intervención en un acto del partido ultraderechista italiano Liga en Florencia. Leer",
+    "content": "El magnate Elon Musk expresó este sábado su deseo de que Estados Unidos y Europa puedan establecer una alianza comercial más estrecha con \"aranceles cero\" en el futuro, durante su intervención en un acto del partido ultraderechista italiano Liga en Florencia.&nbsp;<a href=\"https://www.expansion.com/economia/2025/04/05/67f17d5a468aebe77e8b45bd.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/economia/2025/04/05/67f17d5a468aebe77e8b45bd.html",
+    "publishedAt": "2025-04-05T19:02:32.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.665Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Expansión",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438796142151.jpg",
+    "tags": []
+  },
+  {
+    "id": "7d1fa514bdaea56d0659a6afbd8e1ca7",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Una joya inmobiliaria en el Pacífico mexicano",
+    "description": "The Pierre & Diamonds es un proyecto residencial que incluye apartamentos de lujo y villas y que se levantará en Riviera Diamante, la zona más exclusiva de Acapulco. Leer",
+    "content": "The Pierre & Diamonds es un proyecto residencial que incluye apartamentos de lujo y villas y que se levantará en Riviera Diamante, la zona más exclusiva de Acapulco.&nbsp;<a href=\"https://www.expansion.com/directivos/estilo-vida/casas/2025/04/04/67eeb44ae5fdea174e8b457d.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/directivos/estilo-vida/casas/2025/04/04/67eeb44ae5fdea174e8b457d.html",
+    "publishedAt": "2025-04-03T23:41:41.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.670Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Nerea Serrano",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/03/17436972523889.jpg",
+    "tags": [
+      "Directivos",
+      "Casas de Lujo"
+    ]
+  },
+  {
+    "id": "4653db0e219129c86135f17d27b745c7",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Jaguar Land Rover suspende por un mes sus exportaciones desde Reino Unido a EEUU",
+    "description": "El fabricante Jaguar Land Rover (JLR) ha suspendido durante un mes los envíos a EEUU de sus vehículos producidos en Reino Unido tras los aranceles del 25% impuestos por este país a las importaciones de automóviles, según el diario 'The Times'. Leer",
+    "content": "El fabricante Jaguar Land Rover (JLR) ha suspendido durante un mes los envíos a EEUU de sus vehículos producidos en Reino Unido tras los aranceles del 25% impuestos por este país a las importaciones de automóviles, según el diario 'The Times'.&nbsp;<a href=\"https://www.expansion.com/empresas/motor/2025/04/05/67f12020468aebe1738b4582.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/empresas/motor/2025/04/05/67f12020468aebe1738b4582.html",
+    "publishedAt": "2025-04-05T12:29:37.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.673Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Expansión",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/05/17438560930832.jpg",
+    "tags": []
+  },
+  {
+    "id": "a8c41e5f9cdadac9ec252bcf2374b90c",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Hasta dónde llegará el castigo a Apple y Nvidia",
+    "description": "El fabricante de iPhones y el líder de chips de IA se llevan la peor parte de la corrección que sufren los gigantes tecnológicos en plena guerra comercial. Leer",
+    "content": "El fabricante de iPhones y el líder de chips de IA se llevan la peor parte de la corrección que sufren los gigantes tecnológicos en plena guerra comercial.&nbsp;<a href=\"https://www.expansion.com/mercados/2025/04/05/67f048bae5fdea7f6d8b4585.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/mercados/2025/04/05/67f048bae5fdea7f6d8b4585.html",
+    "publishedAt": "2025-04-04T22:07:10.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.674Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Sergio Saiz",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17438004042083.jpg",
+    "tags": [
+      "Mercados"
+    ]
+  },
+  {
+    "id": "d4948b3bf046330ecbee11f38645e5c7",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Momentum, la gestora inmobiliaria líder en apartamentos con servicios",
+    "description": "Ignacio Pareja y Gabriel Fernández de Gamboa dejaron la gestión de carteras de deuda para promover nuevos desarrollos habitacionales, como los apartamentos flexibles o las viviendas para mayores sin asistencia. Leer",
+    "content": "Ignacio Pareja y Gabriel Fernández de Gamboa dejaron la gestión de carteras de deuda para promover nuevos desarrollos habitacionales, como los apartamentos flexibles o las viviendas para mayores sin asistencia.&nbsp;<a href=\"https://www.expansion.com/mercados/2025/04/04/67ee4349e5fdea7a738b4578.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/mercados/2025/04/04/67ee4349e5fdea7a738b4578.html",
+    "publishedAt": "2025-04-03T23:54:00.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.675Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Manuel de la Cruz",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/03/17436663987747.jpg",
+    "tags": [
+      "Equipos financieros",
+      "Mercados",
+      "Empresas",
+      "Artículos Manuel de la Cruz"
+    ]
+  },
+  {
+    "id": "bb63f4a7c5284bcd20af15c1006eb6b0",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Por qué los bancos del Ibex se han hundido  hasta un  10%",
+    "description": "El desplome de ayer del Nasdaq, un -6%, es más leve ya que el que registran hoy los bancos del Ibex. El índice sectorial Ibex 35 Banks supera por momentos el 7% de pérdidas, un día después de rozar el 4% de caída. Solo en la jornada de hoy Sabadell roza por momentos el 10% de descalabro. Leer",
+    "content": "El desplome de ayer del Nasdaq, un -6%, es más leve ya que el que registran hoy los bancos del Ibex. El índice sectorial Ibex 35 Banks supera por momentos el 7% de pérdidas, un día después de rozar el 4% de caída. Solo en la jornada de hoy Sabadell roza por momentos el 10% de descalabro.&nbsp;<a href=\"https://www.expansion.com/mercados/2025/04/04/67efa142e5fdea6f068b45a9.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/mercados/2025/04/04/67efa142e5fdea6f068b45a9.html",
+    "publishedAt": "2025-04-04T09:14:58.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.677Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Alejandro Sánchez",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2023/03/10/16784479627429.jpg",
+    "tags": [
+      "Mercados",
+      "Artículos Alejandro Sánchez"
+    ]
+  },
+  {
+    "id": "1e240d556867c18e3785ffd8b42fc82c",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "El sector de tecnologia sanitaria crece un 5,7% impulsado por las exportaciones a EEUU",
+    "description": "Las empresas de tecnología sanitaria en España facturaron 11.627 millones de euros en 2024, un 5,7% más. Las ventas a Estados Unidos, que crecieron un 42%, pueden verse ahora frenadas por los nuevos aranceles. Leer",
+    "content": "Las empresas de tecnología sanitaria en España facturaron 11.627 millones de euros en 2024, un 5,7% más. Las ventas a Estados Unidos, que crecieron un 42%, pueden verse ahora frenadas por los nuevos aranceles.&nbsp;<a href=\"https://www.expansion.com/empresas/industria/2025/04/04/67f009e2e5fdea45168b45b5.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/empresas/industria/2025/04/04/67f009e2e5fdea45168b45b5.html",
+    "publishedAt": "2025-04-04T21:17:26.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.679Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Ana Medina",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/04/17437837239390.jpg",
+    "tags": [
+      "Technology - English"
+    ]
+  },
+  {
+    "id": "475b3d3d7c1a0cc4fc89b1f72e184a61",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Florida responde a España: adiós al impuesto a la propiedad",
+    "description": "El Gobernador de Florida, Ron DeSantis, planea eliminar el impuesto que grava los bienes inmuebles para dinamizar el mercado y reducir el precio de la vivienda. Leer",
+    "content": "El Gobernador de Florida, Ron DeSantis, planea eliminar el impuesto que grava los bienes inmuebles para dinamizar el mercado y reducir el precio de la vivienda.&nbsp;<a href=\"https://www.expansion.com/fiscal/impuestos-y-normativas/2025/04/03/67ed4365e5fdea6f548b4571.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/fiscal/impuestos-y-normativas/2025/04/03/67ed4365e5fdea6f548b4571.html",
+    "publishedAt": "2025-04-02T23:00:15.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.680Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Sergio Saiz",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/06/21/16558359501515.jpg",
+    "tags": [
+      "Fiscal",
+      "Artículos Sergio Saiz"
+    ]
+  },
+  {
+    "id": "ecadcc9f9261323af788eb3438ffee81",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "El era del deporte femenino:  la inversión subirá un 28% este año",
+    "description": "El deporte femenino ha dejado atrás su largo período de invisibilidad para convertirse en uno de los protagonistas de la industria, también desde el punto de vista económico. Las disciplinas practicadas por mujeres -como prefieren denominarlo los expertos- están disfrutando de récords de audiencia y acuerdos de patrocinio. Leer",
+    "content": "El deporte femenino ha dejado atrás su largo período de invisibilidad para convertirse en uno de los protagonistas de la industria, también desde el punto de vista económico. Las disciplinas practicadas por mujeres -como prefieren denominarlo los expertos- están disfrutando de récords de audiencia y acuerdos de patrocinio.&nbsp;<a href=\"https://www.expansion.com/directivos/deporte-negocio/2025/04/04/67ee85e8e5fdeaef058b4580.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/directivos/deporte-negocio/2025/04/04/67ee85e8e5fdeaef058b4580.html",
+    "publishedAt": "2025-04-03T23:41:30.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.682Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Estela S. Mazo",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/03/17436849971037.jpg",
+    "tags": [
+      "deportes",
+      "Directivos"
+    ]
+  },
+  {
+    "id": "a6f0d9d746de20a35555a2e4d08f1de5",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Los taxistas recurren los autos del TSJM que ordenan conceder 8.490 licencias a Cabify",
+    "description": "La Federación Profesional del Taxi de Madrid ha recurrido cinco autos del Tribunal Superior de Justicia de Madrid (TSJM) que reconocen el derecho de la empresa Cabify a que la Comunidad de Madrid le conceda 8.490 autorizaciones de vehículos de alquiler con conductor (VTC). Leer",
+    "content": "La Federación Profesional del Taxi de Madrid ha recurrido cinco autos del Tribunal Superior de Justicia de Madrid (TSJM) que reconocen el derecho de la empresa Cabify a que la Comunidad de Madrid le conceda 8.490 autorizaciones de vehículos de alquiler con conductor (VTC).&nbsp;<a href=\"https://www.expansion.com/empresas/transporte/2025/04/05/67f10a24468aeb58508b4599.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/empresas/transporte/2025/04/05/67f10a24468aeb58508b4599.html",
+    "publishedAt": "2025-04-05T11:09:04.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.683Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "Expansión",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/05/07/16519172379561.jpg",
+    "tags": []
+  },
+  {
+    "id": "832429ffb8754379b3b2811859afbfd5",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "El boicot a Nueva York llena los teatros de Londres",
+    "description": "Los propietarios de los teatros afirman que los espectadores acuden en masa a la capital británica tras el boicot a Broadway. Leer",
+    "content": "Los propietarios de los teatros afirman que los espectadores acuden en masa a la capital británica tras el boicot a Broadway.&nbsp;<a href=\"https://www.expansion.com/economia/financial-times/2025/04/03/67eea39fe5fdea916a8b4578.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/economia/financial-times/2025/04/03/67eea39fe5fdea916a8b4578.html",
+    "publishedAt": "2025-04-03T15:12:19.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.684Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "DANIEL THOMAS",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/03/17436930243194.jpg",
+    "tags": [
+      "Financial Times"
+    ]
+  },
+  {
+    "id": "cff82cc800ce2c725e588fa13cbf1a45",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Probamos Apple Intelligence: todo lo bueno y lo malo de la nueva IA de los iPhone",
+    "description": "Leer",
+    "content": "&nbsp;<a href=\"https://videos.expansion.com/v/x9h6uus-probamos-apple-intelligence-todo-lo-bueno-y-malo-de-la-nueva-ia-de-iphone?uetv_pl=0\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://videos.expansion.com/v/x9h6uus-probamos-apple-intelligence-todo-lo-bueno-y-malo-de-la-nueva-ia-de-iphone?uetv_pl=0",
+    "publishedAt": "2025-04-03T09:29:55.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.686Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "M. Juste y R. Moreno",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/03/17436377682699.jpg",
+    "tags": [
+      "tecnología",
+      "Artículos Marta Juste"
+    ]
+  },
+  {
+    "id": "26d6ccde369fa2ada24b344895d7acec",
+    "sourceId": "expansion",
+    "sourceName": "Expansión",
+    "title": "Cataluña: el reto de ser una economía abierta en un entorno desafiante",
+    "description": "Empresarios y directivos exponen la necesidad de dar un nuevo impulso a la economía catalana mediante avances en materias como transición energética, infraestructuras, incentivos fiscales, sostenibilidad e innovación. Leer",
+    "content": "Empresarios y directivos exponen la necesidad de dar un nuevo impulso a la economía catalana mediante avances en materias como transición energética, infraestructuras, incentivos fiscales, sostenibilidad e innovación.&nbsp;<a href=\"https://www.expansion.com/catalunya/2025/04/02/67ec4018e5fdeae12b8b4598.html\">Leer</a><img src=\"http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&amp;ci=es-widgetueditorial&amp;si=https://www.expansion.com/rss/portada.xml\" alt=\"\"/>",
+    "url": "https://www.expansion.com/catalunya/2025/04/02/67ec4018e5fdeae12b8b4598.html",
+    "publishedAt": "2025-04-01T23:03:17.000Z",
+    "fetchedAt": "2025-04-05T20:36:56.687Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "author": "David Casals",
+    "imageUrl": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2025/04/01/17435366613989.jpg",
+    "tags": [
+      "Cataluña",
+      "Gran Encuentro EXPANSIÓN Catalunya",
+      "economía",
+      "Política",
+      "Empresas",
+      "Energía",
+      "Artículos David Casals"
+    ]
+  },
+  {
+    "id": "4ff31ac8c249e9204a3e9191a0e26b6a",
+    "sourceId": "eleconomista",
+    "sourceName": "El Economista",
+    "title": "El Senado de EEUU aprueba borrador de recorte de impuestos y subida del techo de deuda",
+    "description": "El Senado de Estados Unidos, de mayoría republicana, aprobó este sábado una propuesta de marco presupuestario que busca extender los recortes de impuestos impulsados en 2017 durante el primer mandato de Donald Trump y elevar el techo de endeudamiento del país.",
+    "content": "El Senado de Estados Unidos, de mayoría republicana, aprobó este sábado una propuesta de marco presupuestario que busca extender los recortes de impuestos impulsados en 2017 durante el primer mandato de Donald Trump y elevar el techo de endeudamiento del país.\r\n",
+    "url": "http://www.eleconomista.es/economia/noticias/13305094/04/25/el-senado-de-eeuu-aprueba-borrador-de-recorte-de-impuestos-y-subida-del-techo-de-deuda.html",
+    "publishedAt": "2025-04-05T16:43:49.000Z",
+    "fetchedAt": "2025-04-05T20:36:57.722Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "tags": []
+  },
+  {
+    "id": "372b38f8b4f13733614b0d28e67c3bbf",
+    "sourceId": "eleconomista",
+    "sourceName": "El Economista",
+    "title": "Trump pide a la gente que \"resista\" su guerra comercial: \"No va ser fácil, pero el resultado final será histórico\"",
+    "description": "El presidente de Estados Unidos, Donald Trump, ha defendido este sábado la guerra arancelaria que ha terminado de desatar esta semana con la imposición generalizada de aranceles, aunque admitido que puede existir un coste previo para la población norteamericana antes de recoger sus frutos.",
+    "content": "El presidente de Estados Unidos, Donald Trump, ha defendido este sábado la guerra arancelaria que ha terminado de desatar esta semana con la imposición generalizada de aranceles, aunque admitido que puede existir un coste previo para la población norteamericana antes de recoger sus frutos.\r\n",
+    "url": "http://www.eleconomista.es/economia/noticias/13304945/04/25/trump-pide-a-la-gente-que-resista-su-guerra-comercial-no-va-ser-facil-pero-el-resultado-final-sera-historico.html",
+    "publishedAt": "2025-04-05T13:35:39.000Z",
+    "fetchedAt": "2025-04-05T20:36:57.734Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "tags": []
+  },
+  {
+    "id": "ebbaebee0d2a6ac381300021ceefea3b",
+    "sourceId": "eleconomista",
+    "sourceName": "El Economista",
+    "title": "Montero dice que no hay nada \"especial\" en la transferencia de 2.084 millones a Defensa y que Sumar conoce las partidas",
+    "description": "La secretaria general del PSOE-A, vicepresidenta primera del Gobierno y ministra de Hacienda, María Jesús Montero, ha asegurado este sábado que la nueva transferencia de crédito de 2.084 millones de euros prevista para inyectar fondos al Ministerio de Defensa \"no tiene ninguna característica especial\" y deriva de que el país funciona con los presupuestos generales del Estado (PGE) prorrogados. Así, ha asegurado que se trata de una transferencia \"muy similar\" a otras acometidas anteriormente y que Sumar \"sabe perfectamente cuáles son esas partidas\".",
+    "content": "La secretaria general del PSOE-A, vicepresidenta primera del Gobierno y ministra de Hacienda, María Jesús Montero, ha asegurado este sábado que la nueva transferencia de crédito de 2.084 millones de euros prevista para inyectar fondos al Ministerio de Defensa \"no tiene ninguna característica especial\" y deriva de que el país funciona con los presupuestos generales del Estado (PGE) prorrogados. Así, ha asegurado que se trata de una transferencia \"muy similar\" a otras acometidas anteriormente y que Sumar \"sabe perfectamente cuáles son esas partidas\".\r\n",
+    "url": "http://www.eleconomista.es/economia/noticias/13304933/04/25/montero-dice-que-no-hay-nada-especial-en-la-transferencia-de-2084-millones-a-defensa-y-que-sumar-conoce-las-partidas.html",
+    "publishedAt": "2025-04-05T13:22:40.000Z",
+    "fetchedAt": "2025-04-05T20:36:57.735Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "tags": []
+  },
+  {
+    "id": "b087e696025c0a64bb20a138b2566ff1",
+    "sourceId": "eleconomista",
+    "sourceName": "El Economista",
+    "title": "Destituido un vicepresidente de Irán por hacer turismo en Polo Sur en plena crisis económica",
+    "description": "El presidente de Irán, Masud Pezeshkian, ha anunciado este sábado la destitución de su vicepresidente de asuntos parlamentarios, Shahram Dabbiri, por hacer un viaje turístico al Polo Sur en un momento en que la moneda nacional atraviesa su peor momento frente al dólar estadounidense.",
+    "content": "El presidente de Irán, Masud Pezeshkian, ha anunciado este sábado la destitución de su vicepresidente de asuntos parlamentarios, Shahram Dabbiri, por hacer un viaje turístico al Polo Sur en un momento en que la moneda nacional atraviesa su peor momento frente al dólar estadounidense.\r\n",
+    "url": "http://www.eleconomista.es/economia/noticias/13304794/04/25/destituido-un-vicepresidente-de-iran-por-hacer-turismo-en-polo-sur-en-plena-crisis-economica.html",
+    "publishedAt": "2025-04-05T11:06:44.000Z",
+    "fetchedAt": "2025-04-05T20:36:57.737Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "tags": []
+  },
+  {
+    "id": "f8060f37dac353713675671a9bcca026",
+    "sourceId": "eleconomista",
+    "sourceName": "El Economista",
+    "title": "Entra en vigor el arancel del 10% de Trump para todas las importaciones de EEUU",
+    "description": "El arancel global del 10% que el presidente estadounidense, Donald Trump, anunció esta semana entró en vigor este sábado a las 00:01 hora local del este de EE.UU. (4:01 GMT), en una medida que amenaza con provocar aún más turbulencias en las bolsas internacionales.",
+    "content": "El arancel global del 10% que el presidente estadounidense, Donald Trump, anunció esta semana entró en vigor este sábado a las 00:01 hora local del este de EE.UU. (4:01 GMT), en una medida que amenaza con provocar aún más turbulencias en las bolsas internacionales.\r\n",
+    "url": "http://www.eleconomista.es/economia/noticias/13304769/04/25/entra-en-vigor-el-arancel-del-10-de-trump-para-todas-las-importaciones.html",
+    "publishedAt": "2025-04-05T10:44:22.000Z",
+    "fetchedAt": "2025-04-05T20:36:57.738Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "tags": []
+  },
+  {
+    "id": "489006962d1c15473bb5fbf1e0931edc",
+    "sourceId": "eleconomista",
+    "sourceName": "El Economista",
+    "title": "Madrid aprueba el Plan de Cooperación para el Desarrollo 2025 con 4,8 millones de inversión",
+    "description": "El Gobierno de la Comunidad de Madrid ha aprobado el nuevo Plan de Cooperación para el Desarrollo del 2025 con una inversión de 4,8 millones de euros y mediante la convocatoria pública de subvenciones a proyectos de organizaciones no gubernamentales.",
+    "content": "El Gobierno de la Comunidad de Madrid ha aprobado el nuevo Plan de Cooperación para el Desarrollo del 2025 con una inversión de 4,8 millones de euros y mediante la convocatoria pública de subvenciones a proyectos de organizaciones no gubernamentales.\r\n",
+    "url": "http://www.eleconomista.es/economia/noticias/13304748/04/25/madrid-aprueba-el-plan-de-cooperacion-para-el-desarrollo-2025-con-48-millones-de-inversion.html",
+    "publishedAt": "2025-04-05T10:29:40.000Z",
+    "fetchedAt": "2025-04-05T20:36:57.740Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "tags": []
+  },
+  {
+    "id": "fc49ccd788dc9d9ec4cfecfb48175366",
+    "sourceId": "eleconomista",
+    "sourceName": "El Economista",
+    "title": "China suspende la importación de pollo de varias empresas de EEUU y abre una investigación a Dupont",
+    "description": "China suspendió el viernes por la noche la importación de productos de pollo y sorgo de varias empresas estadounidenses por haber detectado en ellos sustancias prohibidas o peligrosas, como parte de la batería de represalias de Pekín por los aranceles anunciados por Washington contra sus productos.",
+    "content": "China suspendió el viernes por la noche la importación de productos de pollo y sorgo de varias empresas estadounidenses por haber detectado en ellos sustancias prohibidas o peligrosas, como parte de la batería de represalias de Pekín por los aranceles anunciados por Washington contra sus productos.\r\n",
+    "url": "http://www.eleconomista.es/economia/noticias/13304580/04/25/china-suspende-la-importacion-de-pollo-de-varias-empresas-de-eeuu-y-abre-una-investigacion-a-dupont.html",
+    "publishedAt": "2025-04-05T08:16:06.000Z",
+    "fetchedAt": "2025-04-05T20:36:57.741Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "tags": []
+  },
+  {
+    "id": "e2c0c6150be5ba51d6fdaa8bcf93af3a",
+    "sourceId": "eleconomista",
+    "sourceName": "El Economista",
+    "title": "Los migrantes ecuatorianos envían 6.539 millones de dólares al país",
+    "description": "Ecuador volvió a batir en 2024 su récord de remesas recibidas al año de sus migrantes en el exterior al alcanzar los 6.539,8 millones de dólares (5.966 millones de euros), lo que equivale a aproximadamente el 5,3% del producto interior bruto (PIB) del país, según un reporte publicado este viernes por el Banco Central.",
+    "content": "Ecuador volvió a batir en 2024 su récord de remesas recibidas al año de sus migrantes en el exterior al alcanzar los 6.539,8 millones de dólares (5.966 millones de euros), lo que equivale a aproximadamente el 5,3% del producto interior bruto (PIB) del país, según un reporte publicado este viernes por el Banco Central.\r\n",
+    "url": "http://www.eleconomista.es/economia/noticias/13304556/04/25/los-migrantes-ecuatorianos-envian-6539-millones-de-dolares-al-pais.html",
+    "publishedAt": "2025-04-05T07:50:53.000Z",
+    "fetchedAt": "2025-04-05T20:36:57.743Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "tags": []
+  },
+  {
+    "id": "1580d6ed6bd5c308b8977b86a8718274",
+    "sourceId": "eleconomista",
+    "sourceName": "El Economista",
+    "title": "Maduro saca pecho ante EEUU: \"Venezuela va a ser el primer país que superará los aranceles de Trump\"",
+    "description": "El presidente de Venezuela, Nicolás Maduro, ha asegurado este viernes que el país que preside será \"el primero\" en dejar atrás los nuevos aranceles anunciados por el presidente de Estados Unidos, Donald Trump, este miércoles en el llamado 'Día de la Liberación'.",
+    "content": "El presidente de Venezuela, Nicolás Maduro, ha asegurado este viernes que el país que preside será \"el primero\" en dejar atrás los nuevos aranceles anunciados por el presidente de Estados Unidos, Donald Trump, este miércoles en el llamado 'Día de la Liberación'.\r\n",
+    "url": "http://www.eleconomista.es/economia/noticias/13304539/04/25/maduro-saca-pecho-ante-eeuu-venezuela-va-a-ser-el-primer-pais-que-superara-los-aranceles-de-trump.html",
+    "publishedAt": "2025-04-05T07:21:17.000Z",
+    "fetchedAt": "2025-04-05T20:36:57.745Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "tags": []
+  },
+  {
+    "id": "f2fd9d0a5b72497ca337325cf4479f29",
+    "sourceId": "eleconomista",
+    "sourceName": "El Economista",
+    "title": "Cuba firma 13 acuerdos \"estratégicos\" con Rusia en una reunión bilateral en La Habana",
+    "description": "Las autoridades de Cuba han subrayado este viernes el buen estado de las buenas relaciones bilaterales con Rusia tras una reunión bilateral celebrada en La Habana a la que ha asistido el vicepresidente del Gobierno ruso, Dmitri Chernychenko, y en la que se han firmado más de una decena de acuerdos de cooperación en distintos ámbitos.",
+    "content": "Las autoridades de Cuba han subrayado este viernes el buen estado de las buenas relaciones bilaterales con Rusia tras una reunión bilateral celebrada en La Habana a la que ha asistido el vicepresidente del Gobierno ruso, Dmitri Chernychenko, y en la que se han firmado más de una decena de acuerdos de cooperación en distintos ámbitos.\r\n",
+    "url": "http://www.eleconomista.es/economia/noticias/13304525/04/25/cuba-refuerza-sus-lazos-estrategicos-con-rusia-en-una-reunion-bilateral-en-la-habana.html",
+    "publishedAt": "2025-04-05T06:50:02.000Z",
+    "fetchedAt": "2025-04-05T20:36:57.751Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "economia",
+    "tags": []
+  },
+  {
+    "id": "ebf759724bba25b2f50387a0764828f8",
+    "sourceId": "ft",
+    "sourceName": "Financial Times",
+    "title": "Tens of thousands join protests against Donald Trump and Elon Musk",
+    "description": "Demonstrations mark the first big display of public resistance to president’s frenetic second term",
+    "content": "Demonstrations mark the first big display of public resistance to president’s frenetic second term",
+    "url": "https://www.ft.com/content/4041b210-0f4a-4726-a964-6b17cfe1a6f4",
+    "publishedAt": "2025-04-05T20:07:27.000Z",
+    "fetchedAt": "2025-04-05T20:56:58.715Z",
+    "processed": false,
+    "processingAttempts": 0,
+    "category": "markets",
+    "tags": []
+  }
+]

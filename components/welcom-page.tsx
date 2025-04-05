@@ -33,6 +33,9 @@ import { fetchInvestmentStrategies, type InvestmentStrategyType, type BrokerType
 import { getStrategyIcon } from "@/components/investment-icons"
 // import WelcomePageScrollFix from "@/components/welcome-page-scroll-fix"
 // import InvestmentProjectionCard from "@/components/investment-projection-card"
+import dayjs from 'dayjs'
+import 'dayjs/locale/es'
+dayjs.locale('es')
 
 interface InvestmentProjectionCardProps {
   selectedPeriod: string;
@@ -647,7 +650,7 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
 
   const handleComplete = useCallback(() => {
     // Si no se seleccionó un mes de inicio, usar el mes actual
-    const finalStartDate = startMonth || format(currentDate, "yyyy-MM")
+    const finalStartDate = startMonth || dayjs().format("YYYY-MM")
 
     const result = {
       initialAmount,

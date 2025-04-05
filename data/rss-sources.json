@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ft",
+    "name": "Financial Times",
+    "url": "https://www.ft.com/rss/home",
+    "category": "markets",
+    "language": "en",
+    "refreshInterval": 60,
+    "isActive": true
+  },
+  {
+    "id": "wsj",
+    "name": "Wall Street Journal",
+    "url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml",
+    "category": "markets",
+    "language": "en",
+    "refreshInterval": 60,
+    "isActive": true
+  },
+  {
+    "id": "bloomberg",
+    "name": "Bloomberg",
+    "url": "https://feeds.bloomberg.com/markets/news.rss",
+    "category": "markets",
+    "language": "en",
+    "refreshInterval": 60,
+    "isActive": true
+  },
+  {
+    "id": "expansion",
+    "name": "Expansión",
+    "url": "https://www.expansion.com/rss/portada.xml",
+    "category": "economia",
+    "language": "es",
+    "refreshInterval": 60,
+    "isActive": true
+  },
+  {
+    "id": "cincodias",
+    "name": "Cinco Días",
+    "url": "https://cincodias.elpais.com/seccion/rss/mercados/",
+    "category": "mercados",
+    "language": "es",
+    "refreshInterval": 60,
+    "isActive": true
+  },
+  {
+    "id": "eleconomista",
+    "name": "El Economista",
+    "url": "https://www.eleconomista.es/rss/rss-economia.php",
+    "category": "economia",
+    "language": "es",
+    "refreshInterval": 60,
+    "isActive": true
+  }
+]
