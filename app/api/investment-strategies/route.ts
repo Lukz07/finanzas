@@ -51,7 +51,7 @@ export async function GET() {
     // Agrupar los datos por estrategia de inversión
     const strategiesMap = new Map<string, InvestmentStrategyType>();
     
-    dataRows.forEach((row: any[]) => {
+    dataRows.forEach((row: string[]) => {
       const [id, label, icon, description, brokerName, annualRateStr, websiteUrl] = row;
       const annualRate = parseFloat(annualRateStr);
       
@@ -86,10 +86,11 @@ export async function GET() {
     // Retornar las estrategias como JSON
     return NextResponse.json(strategies);
     
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error al obtener datos de Google Sheets:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Error desconocido';
     return NextResponse.json(
-      { error: `Error al obtener datos: ${error.message}` },
+      { error: `Error al obtener datos: ${errorMessage}` },
       { status: 500 }
     );
   }

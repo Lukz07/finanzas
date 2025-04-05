@@ -5,7 +5,7 @@ export interface InvestmentConfig {
   usdEquivalent?: number
 }
 
-export function calcularMesesParaObjetivo(initialAmount: number, objetivo: number, aporteMensual: any, tasaMensual: number) {  
+export function calcularMesesParaObjetivo(initialAmount: number, objetivo: number, aporteMensual: number, tasaMensual: number) {  
   let saldo = initialAmount || 0;
   let meses = 0;
   let totalAportado = 0;

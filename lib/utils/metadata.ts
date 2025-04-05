@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
-import { NewsItem } from '../types/blog';
 
-export function generateMetadata(news?: NewsItem[]): Metadata {
+export function generateMetadata(): Metadata {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tudominio.com';
   
   return {

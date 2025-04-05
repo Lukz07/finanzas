@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { rssNewsService } from '@/lib/server/rss-news-service'
-import type { NewsFilters } from '@/lib/types/blog'
+import type { NewsFilters, NewsItem } from '@/lib/types/blog'
 
 export async function GET(request: NextRequest) {
   try {
@@ -88,7 +88,7 @@ export async function GET(request: NextRequest) {
           case 'views':
             return order * ((a.metrics?.views || 0) - (b.metrics?.views || 0))
           case 'engagement':
-            const getEngagement = (item: any) =>
+            const getEngagement = (item: NewsItem) =>
               (item.metrics?.engagement.likes || 0) +
               (item.metrics?.engagement.comments || 0) +
               (item.metrics?.engagement.saves || 0)
@@ -100,10 +100,11 @@ export async function GET(request: NextRequest) {
     }
     
     return NextResponse.json(filteredNews)
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error en el endpoint de noticias:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Error desconocido'
     return NextResponse.json(
-      { error: 'Error al obtener las noticias', details: error.message },
+      { error: 'Error al obtener las noticias', details: errorMessage },
       { status: 500 }
     )
   }

@@ -1,9 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from "react"
-
 import { useCallback, useMemo } from "react"
-import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -19,20 +17,13 @@ import {
   DollarSign,
   Target,
 } from "lucide-react"
-import { format, subMonths } from "date-fns"
-import { es } from "date-fns/locale"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { type InvestmentType, INVESTMENT_TYPES } from "@/components/initial-setup-modal"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { OBJECTIVE_TYPES, type ObjectiveType } from "@/lib/objective-types"
-import { calculateInvestmentProgress, calcularMesesParaObjetivo } from "@/lib/investment-calculator"
-import { ThemeToggle } from "@/components/theme-toggle"
-import AnimatedBackground from "@/components/animated-background"
-import { fetchInvestmentStrategies, type InvestmentStrategyType, type BrokerType } from "@/lib/google-sheets"
+import { type InvestmentType } from "@/components/initial-setup-modal"
+import { calcularMesesParaObjetivo } from "@/lib/investment-calculator"
+import { fetchInvestmentStrategies, type InvestmentStrategyType } from "@/lib/google-sheets"
 import { getStrategyIcon } from "@/components/investment-icons"
-// import WelcomePageScrollFix from "@/components/welcome-page-scroll-fix"
-// import InvestmentProjectionCard from "@/components/investment-projection-card"
 import dayjs from 'dayjs'
 import 'dayjs/locale/es'
 dayjs.locale('es')
@@ -80,7 +71,6 @@ function InvestmentProjectionCard({
                   localSelectedPeriod === 'total' ? estimatedMonths : 1;
     console.log("months", months)
     setData(calculateForPeriod(months));
-    console.log("data", data)
   }, [localSelectedPeriod, estimatedMonths, calculateForPeriod]);
 
   console.log("RENDERING data", data)
@@ -271,8 +261,8 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
   const [activeTab, setActiveTab] = useState("welcome")
   const [initialAmount, setInitialAmount] = useState(0)
   const [targetAmount, setTargetAmount] = useState(config?.baseTargetAmount || 0)
-  const [completedContributions, setCompletedContributions] = useState<number[]>([])
-  const [startMonth, setStartMonth] = useState<string>("")
+  const [completedContributions] = useState<number[]>([])
+  const [startMonth] = useState<string>("")
   const [investmentType, setInvestmentType] = useState<string>("moderate")
   const [selectedBroker, setSelectedBroker] = useState<string>("")
   const [monthlyContribution, setMonthlyContribution] = useState(config?.monthlyContribution || 0)
@@ -294,14 +284,14 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   // Períodos de tiempo para comparativa
-  const [selectedPeriod, setSelectedPeriod] = useState("1month")
+  const [selectedPeriod] = useState("1month")
 
   // Al iniciar, establecer el monto objetivo según el tipo de objetivo seleccionado por defecto
   useEffect(() => {
     if (OBJECTIVE_TYPES[objectiveType]) {
       setTargetAmount(OBJECTIVE_TYPES[objectiveType].defaultAmount);
     }
-  }, []);
+  }, [objectiveType]);
 
   // Obtener las estrategias de inversión al cargar el componente
   useEffect(() => {
@@ -327,8 +317,7 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
   }, [])
 
   // Obtener el mes actual
-  const currentDate = new Date()
-  const currentYear = currentDate.getFullYear()
+  // const currentDate = new Date()
 
   // Actualizar el monto objetivo cuando cambia el tipo de objetivo
   const handleObjectiveTypeChange = useCallback((value: string) => {
@@ -485,18 +474,18 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
 
   // Calcular el próximo logro
   const nextMilestone = useMemo(() => {
-    const selectedObjective = OBJECTIVE_TYPES[objectiveType] || OBJECTIVE_TYPES.custom
-    const progressPercentage = (realCapital / targetAmount) * 100
+    const selectedObjective = OBJECTIVE_TYPES[objectiveType] || OBJECTIVE_TYPES.custom;
+    const progressPercentage = (realCapital / targetAmount) * 100;
 
     const nextAchievement = selectedObjective.achievements.find(
       (achievement) => progressPercentage < achievement.threshold,
-    )
+    );
 
     if (nextAchievement) {
-      return (nextAchievement.threshold / 100) * targetAmount
+      return (nextAchievement.threshold / 100) * targetAmount;
     }
 
-    return targetAmount
+    return targetAmount;
   }, [objectiveType, realCapital, targetAmount]);
   
   // Función para alternar la visibilidad del formulario de contacto
@@ -597,20 +586,6 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
     }
   }, [initialAmount, monthlyContribution, getSelectedAnnualRate]);
   
-  // Datos para el período seleccionado
-  const periodData = useMemo(() => {
-    switch (selectedPeriod) {
-      case "1month": return calculateForPeriod(1);
-      case "6months": return calculateForPeriod(6);
-      case "1year": return calculateForPeriod(12);
-      case "3years": return calculateForPeriod(36);
-      case "5years": return calculateForPeriod(60);
-      case "10years": return calculateForPeriod(120);
-      case "total":
-      default: return calculateForPeriod(estimatedMonths);
-    }
-  }, [selectedPeriod, calculateForPeriod, estimatedMonths]);
-
   // Datos específicos para la tabla comparativa (siempre usando el tiempo total estimado)
   const comparisonData = useMemo(() => {
     return calculateForPeriod(estimatedMonths);
@@ -621,12 +596,11 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
     // Ahora calculamos cuánto se habría acumulado sin inversión 
     // en el mismo tiempo que toma alcanzar el objetivo con inversión
     return comparisonData.withoutInvestment;
-  }, [initialAmount, monthlyContribution, estimatedMonths]);
+  }, [comparisonData.withoutInvestment]);
 
   // Valor acumulado con inversión cuando se alcanza el objetivo
   const withInvestmentValue = useMemo(() => {
-    // Usar el valor calculado por comparisonData, que incluye el interés compuesto exacto
-    // al final del período estimado
+    // Usar el valor calculado por comparisonData
     return estimatedMonths === 0 ? initialAmount : comparisonData.withInvestment;
   }, [estimatedMonths, initialAmount, comparisonData.withInvestment]);
 
@@ -634,7 +608,7 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
   const investmentReturn = useMemo(() => {
     // Contribuciones totales hasta llegar al objetivo con inversión
     return withInvestmentValue - comparisonData.withoutInvestment;
-  }, [initialAmount, monthlyContribution, estimatedMonths, withInvestmentValue]);
+  }, [withInvestmentValue, comparisonData.withoutInvestment]);
 
   // Porcentaje del rendimiento sobre el capital total
   const investmentReturnPercentage = useMemo(() => {
@@ -677,7 +651,9 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
       toggleContactForm();
     }
 
-    // onComplete(result)
+    if (onComplete) {
+      onComplete(result);
+    }
   }, [
     initialAmount,
     targetAmount,
@@ -691,12 +667,11 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
     estimatedMonths,
     progress,
     nextMilestone,
-    onComplete,
-    currentDate,
     config?.baseTargetAmount,
     redirectToBroker,
-    toggleContactForm
-  ])
+    toggleContactForm,
+    onComplete
+  ]);
 
   const nextTab = useCallback(() => {
     if (activeTab === "welcome") setActiveTab("objective")
@@ -712,19 +687,10 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
 
   // Obtener el ícono del objetivo seleccionado
   const ObjectiveIcon = OBJECTIVE_TYPES[objectiveType]?.icon || Target
-
-  // Simplificar a solo lo necesario para forzar el modo oscuro
-  const { setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
   
-  // Siempre establecer el tema en modo oscuro
-  useEffect(() => {
-    setMounted(true)
-  }, []);
-
-  // Esta variable ya no se usa para estilos dinámicos pero la mantenemos por si se necesita en otras lógicas
-  const isDarkMode = true
-
+  // Usar solo theme de useTheme
+  // const { theme } = useTheme()
+  
   // Funciones para manejar cambios en el formulario de contacto
   const handleEmailChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setContactEmail(e.target.value);
@@ -765,26 +731,7 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
     try {
       setSubmitting(true);
       
-      // Simulación de envío de datos
-      // En un caso real, aquí iría el código para enviar los datos a tu API
-      // Por ejemplo:
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({
-      //     email: contactEmail,
-      //     phone: contactPhone,
-      //     message: contactMessage,
-      //     investmentType,
-      //     selectedBroker,
-      //     targetAmount,
-      //     monthlyContribution,
-      //     objectiveType,
-      //     advisor: selectedAdvisor,
-      //   }),
-      // });
-      
-      // Simulamos un retraso para mostrar el estado de envío
+      // Simulación de envío
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       // Marcar como enviado
@@ -796,7 +743,7 @@ export default function WelcomePage({ onComplete, config }: WelcomePageProps) {
     } finally {
       setSubmitting(false);
     }
-  }, [contactEmail, contactPhone, contactMessage, termsAccepted, investmentType, selectedBroker, targetAmount, monthlyContribution, objectiveType, selectedAdvisor]);
+  }, [contactEmail, termsAccepted, selectedAdvisor]);
 
   return (
     <div className="min-h-screen bg-transparent py-8 px-4 dark:bg-finance-gray-900/50 transition-colors duration-300">      

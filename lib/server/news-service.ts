@@ -1,4 +1,4 @@
-import type { NewsItem, NewsFilters } from '../types/blog';
+import type { NewsItem } from '../types/blog';
 
 export class ServerNewsService {
   private static instance: ServerNewsService;
@@ -15,7 +15,7 @@ export class ServerNewsService {
   // Usar variables de entorno o configuración basada en ambientes
   private static readonly API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
 
-  async getNews(filters: NewsFilters = {}): Promise<NewsItem[]> {
+  async getNews(): Promise<NewsItem[]> {
     try {
       // Aseguramos que usamos una URL válida con el API_BASE_URL como base
       const apiUrl = ServerNewsService.API_BASE_URL ? 
@@ -27,7 +27,7 @@ export class ServerNewsService {
         headers: {
           'Content-Type': 'application/json',
         },
-        cache: 'no-store',
+        next: { revalidate: 3600 },
       });
 
       if (!response.ok) {

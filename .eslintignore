@@ -1,0 +1,13 @@
+# Ignorar archivos autogenerados por Next.js
+.next/**
+.next
+**/.next/**
+next-env.d.ts
+
+# Ignorar archivos de build
+out/
+build/
+dist/
+
+# Ignorar archivos de configuración de terceros
+node_modules/ 

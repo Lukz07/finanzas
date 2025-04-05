@@ -63,6 +63,12 @@ export class NewsService {
     this.isRefreshing = true;
 
     try {
+      // Verificar si estamos en el navegador
+      if (typeof window === 'undefined') {
+        console.log('Saltando actualización de caché en el servidor');
+        return;
+      }
+      
       // Usar URL absoluta en lugar de relativa
       const url = new URL('/api/news/refresh', window.location.origin);
       const response = await fetch(url.toString(), {

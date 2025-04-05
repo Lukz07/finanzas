@@ -3,17 +3,21 @@ import { NewsService } from '@/lib/services/news-service';
 import { NewsSchema } from '@/components/blog/NewsSchema';
 import { formatDate } from '../../../lib/utils/date';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
-
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+// Función para obtener datos compartida entre metadata y page
+async function getArticleData(slug: string) {
   const newsService = NewsService.getInstance();
   const news = await newsService.getNews();
-  const article = news.find(item => item.id === params.slug);
+  return news.find(item => item.id === slug);
+}
+
+// Generación de metadata
+export async function generateMetadata(
+  props: { params: any }
+): Promise<Metadata> {
+  const { params } = props;
+  const article = await getArticleData(params.slug);
 
   if (!article) {
     return {
@@ -42,10 +46,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function ArticlePage({ params }: PageProps) {
-  const newsService = NewsService.getInstance();
-  const news = await newsService.getNews();
-  const article = news.find(item => item.id === params.slug);
+// Componente principal de la página
+export default async function Page(props: { params: any }) {
+  const { params } = props;
+  const article = await getArticleData(params.slug);
 
   if (!article) {
     notFound();
@@ -70,10 +74,13 @@ export default async function ArticlePage({ params }: PageProps) {
 
       {article.imageUrl && (
         <figure className="mb-8">
-          <img
+          <Image
             src={article.imageUrl}
             alt={article.title}
-            className="w-full h-[400px] object-cover rounded-lg"
+            className="w-full object-cover rounded-lg"
+            width={1200}
+            height={400}
+            priority
           />
         </figure>
       )}

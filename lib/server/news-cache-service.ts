@@ -1,6 +1,7 @@
 import OpenAI from 'openai'
 import { v4 as uuidv4 } from 'uuid'
 import type { NewsItem, NewsFilters } from '../types/blog'
+import type { LucideIcon } from 'lucide-react'
 
 class NewsCacheService {
   private static instance: NewsCacheService
@@ -114,7 +115,7 @@ class NewsCacheService {
     }
   }
 
-  private async processNewsWithImages(news: any[]): Promise<NewsItem[]> {
+  private async processNewsWithImages(news: NewsItem[]): Promise<NewsItem[]> {
     if (!this.openai) return news
 
     const processedNews = []
@@ -122,7 +123,7 @@ class NewsCacheService {
     for (let i = 0; i < news.length; i += 5) {
       const batch = news.slice(i, i + 5)
       const processedBatch = await Promise.all(
-        batch.map(async (item: any) => {
+        batch.map(async (item: NewsItem) => {
           try {
             let imageUrl
             try {
@@ -189,7 +190,7 @@ class NewsCacheService {
           name: 'Economía',
           slug: 'economia',
           description: 'Noticias sobre economía',
-          icon: {} as any
+          icon: {} as LucideIcon
         },
         source: { 
           id: 'bcra', 
@@ -208,7 +209,7 @@ class NewsCacheService {
         metrics: {
           views: 100,
           engagement: { likes: 10, comments: 5, saves: 3 }
-        } as any,
+        },
         tags: ['BCRA', 'tasas', 'política monetaria'],
         url: 'https://www.bcra.gob.ar/Noticias/tasas-de-interes.html'
       }

@@ -13,9 +13,9 @@ interface BlogContentProps {
 }
 
 export default function BlogContent({ initialNews }: BlogContentProps) {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [news, setNews] = useState<NewsItem[]>(initialNews);
+  const [loading] = useState(false);
+  const [error] = useState<string | null>(null);
+  const [news] = useState<NewsItem[]>(initialNews);
 
   return (
     <div className="container mx-auto px-4 py-8 space-y-8">

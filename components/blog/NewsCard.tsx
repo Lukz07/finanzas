@@ -3,7 +3,7 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { NewsImage } from './NewsImage';
-import { CalendarDays, Clock, ThumbsUp, MessageSquare, Bookmark } from 'lucide-react';
+import { CalendarDays, Clock } from 'lucide-react';
 import type { NewsItem } from '@/lib/types/blog';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';

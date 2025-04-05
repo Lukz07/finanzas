@@ -22,6 +22,19 @@ type CustomFeed = {
   items: CustomItem[]
 }
 
+type RssFeed = {
+  url: string;
+  source: { 
+    id: string; 
+    name: string; 
+    url?: string;
+  };
+  category: { 
+    id: string; 
+    name: string; 
+  };
+}
+
 class RssNewsService {
   private static instance: RssNewsService
   private parser: Parser<CustomFeed, CustomItem>
@@ -31,7 +44,7 @@ class RssNewsService {
   private readonly CACHE_DURATION = 5 * 60 * 1000 // 5 minutos
 
   // RSS feeds de noticias financieras argentinas
-  private readonly RSS_FEEDS = [
+  private readonly RSS_FEEDS: RssFeed[] = [
     // {
     //   url: 'https://www.cronista.com/feed/economia/',
     //   source: { id: 'cronista', name: 'El Cronista' },
@@ -182,7 +195,7 @@ class RssNewsService {
     }
   }
 
-  private convertRssItemToNewsItem(item: CustomItem, feed: any): NewsItem {
+  private convertRssItemToNewsItem(item: CustomItem, feed: RssFeed): NewsItem {
     // Determinar la URL de la imagen
     let imageUrl: string | undefined = undefined
     if (item['media:content']?.$.url) {
@@ -210,7 +223,11 @@ class RssNewsService {
       description: description || 'Sin descripción disponible',
       content: item.content || item.contentSnippet || 'Sin contenido disponible',
       category: feed.category,
-      source: feed.source,
+      source: {
+        id: feed.source.id,
+        name: feed.source.name,
+        url: feed.source.url || feed.url
+      },
       publishedAt: item.isoDate || item.pubDate || new Date().toISOString(),
       readTime,
       sentiment,

@@ -1,33 +1,38 @@
 "use client"
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { NewsGrid } from '@/components/blog/NewsGrid';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Send, TrendingUp, Newspaper, ChartBar, Bitcoin, Rss, Calculator, ArrowRight, BookOpen, TrendingDown, BrainCircuit } from 'lucide-react';
+import { Send, TrendingUp, ArrowRight, BookOpen, TrendingDown, BrainCircuit } from 'lucide-react';
 import type { NewsItem, NewsFilters } from '@/lib/types/blog';
-import { NEWS_CATEGORIES } from '@/lib/config/news-categories';
-import { NEWS_SOURCES } from '@/lib/config/news-sources';
 import { NewsService } from '@/lib/services/news-service';
 import Link from 'next/link';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
 import { PageHeader } from '@/components/ui/page-header';
-import { Card } from '@/components/ui/card';
 
 dayjs.locale('es');
-const newsService = NewsService.getInstance();
+// Evitar la inicialización en el ámbito del módulo
+// const newsService = NewsService.getInstance();
 
 export default function HomePage() {
-  const [activeTab, setActiveTab] = useState('latest');
+  // Mover la inicialización dentro del componente
+  const newsServiceRef = useRef<NewsService | null>(null);
+  
+  // Inicializar NewsService solo en el cliente
+  useEffect(() => {
+    if (!newsServiceRef.current) {
+      newsServiceRef.current = NewsService.getInstance();
+    }
+  }, []);
+  
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [news, setNews] = useState<NewsItem[]>([]);
   const [email, setEmail] = useState('');
   const [subscribeLoading, setSubscribeLoading] = useState(false);
   const [subscribeSuccess, setSubscribeSuccess] = useState(false);
-  const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
   const isFetching = useRef(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -72,32 +77,29 @@ export default function HomePage() {
     return () => clearInterval(interval);
   }, [financialTips.length]);
 
-  // Función simple para cargar noticias sin polling ni caché
-  const fetchNews = async (filters: NewsFilters = {}) => {
+  // Función para cargar noticias envuelta en useCallback
+  const fetchNews = useCallback(async (filters: NewsFilters = {}) => {
     // Evitar llamadas simultáneas
     if (isFetching.current) return;
     
     try {
+      // Solo intentar cargar noticias si ya se inicializó el servicio
+      if (!newsServiceRef.current) return;
+      
       isFetching.current = true;
       setLoading(true);
       
-      // Ajustar filtros según la pestaña activa
+      // Ajustar filtros según la categoría
       const tabFilters: NewsFilters = {
         ...filters,
-        category: activeTab === 'latest' ? undefined : 
-                 activeTab === 'trending' ? 'trending' :
-                 activeTab === 'markets' ? 'markets' :
-                 activeTab === 'crypto' ? 'crypto' :
-                 activeTab === 'feeds' ? undefined : filters.category,
-        sortBy: activeTab === 'trending' ? 'views' : 'date',
+        sortBy: 'date',
         sortOrder: 'desc'
       };
       
       console.log('Cargando noticias:', new Date().toISOString());
-      const result = await newsService.getNews(tabFilters);
+      const result = await newsServiceRef.current.getNews(tabFilters);
       
       setNews(result);
-      setLastUpdated(new Date());
       setError(null);
     } catch (err) {
       console.error('Error cargando noticias:', err);
@@ -106,12 +108,52 @@ export default function HomePage() {
       isFetching.current = false;
       setLoading(false);
     }
-  };
+  }, []);
   
-  // Cargar noticias al iniciar o cambiar de pestaña
+  // Cargar noticias solo después de que NewsService se haya inicializado
   useEffect(() => {
-    fetchNews({});
-  }, [activeTab]);
+    if (newsServiceRef.current) {
+      fetchNews({});
+    }
+  }, [fetchNews, newsServiceRef.current]);
+
+  // Contenido de fallback para SSR
+  const placeholderNews: NewsItem[] = news.length > 0 ? news : [
+    {
+      id: 'placeholder-1',
+      title: 'Cargando noticias financieras...',
+      description: 'Las últimas noticias financieras estarán disponibles en breve.',
+      content: '',
+      url: '#',
+      imageUrl: '',
+      publishedAt: new Date().toISOString(),
+      source: {
+        id: 'placeholder',
+        name: 'Finanzas App',
+        url: '/',
+        type: 'rss',
+        priority: 1,
+        category: 'economy',
+        language: 'es',
+        country: 'es',
+        updateFrequency: 60
+      },
+      category: {
+        id: 'markets',
+        name: 'Mercados',
+        slug: 'mercados',
+        description: 'Noticias sobre mercados financieros',
+        icon: null as any
+      },
+      readTime: 1,
+      sentiment: 'neutral',
+      metrics: {
+        views: 0,
+        engagement: { likes: 0, comments: 0, saves: 0 }
+      },
+      tags: ['finanzas']
+    }
+  ];
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -136,23 +178,6 @@ export default function HomePage() {
     }
   };
 
-  const getTabIcon = (tab: string) => {
-    switch (tab) {
-      case 'latest':
-        return <Newspaper className="h-4 w-4" />;
-      case 'trending':
-        return <TrendingUp className="h-4 w-4" />;
-      case 'markets':
-        return <ChartBar className="h-4 w-4" />;
-      case 'crypto':
-        return <Bitcoin className="h-4 w-4" />;
-      case 'feeds':
-        return <Rss className="h-4 w-4" />;
-      default:
-        return null;
-    }
-  };
-
   return (
     <div className="container mx-auto px-4 py-8 space-y-8 bg-finance-gray-50 dark:bg-finance-gray-900/50">
       <PageHeader
@@ -170,7 +195,7 @@ export default function HomePage() {
             width: `${financialTips.length * 100}%` 
           }}
         >
-          {financialTips.map((tip, index) => (
+          {financialTips.map((tip) => (
             <div 
               key={tip.id} 
               className={`${tip.color} p-8 flex flex-col md:flex-row items-center gap-6`} 
@@ -217,7 +242,7 @@ export default function HomePage() {
       {/* Tabs y Filtros */}
       <NewsGrid
         news={news}
-        loading={loading}
+        loading={loading || !newsServiceRef.current}
         error={error || undefined}
       />
         

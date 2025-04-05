@@ -46,7 +46,7 @@ export interface NewsSource {
   updateFrequency?: number
   credentials?: {
     apiKey?: string
-    [key: string]: any
+    [key: string]: string | undefined
   }
 }
 

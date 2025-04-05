@@ -91,16 +91,14 @@ export default function InitialSetupModal({ isOpen, onClose, config }: InitialSe
   const [investmentType, setInvestmentType] = useState<InvestmentType>("moderate")
   const [selectedBroker, setSelectedBroker] = useState<string>("")
 
-  // Obtener el mes actual
-  const currentDate = new Date()
-  const currentYear = currentDate.getFullYear()
+  // Obtener el mes actual - memoizado para evitar recreaciones
+  const currentDate = useMemo(() => new Date(), []);
+  const currentYear = useMemo(() => currentDate.getFullYear(), [currentDate]);
 
   // Crear un array con los últimos 24 meses para seleccionar el mes de inicio
   const last24Months = useMemo(() => {
     return Array.from({ length: 24 }, (_, i) => {
       const date = subMonths(currentDate, i)
-      const year = date.getFullYear()
-      const month = date.getMonth()
       const formattedDate = format(date, "yyyy-MM")
       const label = format(date, "MMMM yyyy", { locale: es })
 
