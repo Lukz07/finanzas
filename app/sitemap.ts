@@ -1,19 +1,70 @@
 import { MetadataRoute } from 'next';
-import { headers } from 'next/headers';
+import fs from 'fs';
+import path from 'path';
+import type { NewsItem } from '@/lib/types/blog';
+
+// Función auxiliar para obtener noticias de forma segura durante el build
+async function getSafeNews(): Promise<NewsItem[]> {
+  try {
+    // Intentar importar el servicio de noticias del servidor
+    // Esta importación dinámica asegura que no falle durante el build
+    const serverNewsModule = await import('@/lib/server/news-service');
+    const ServerNewsService = serverNewsModule.ServerNewsService;
+    const newsService = ServerNewsService.getInstance();
+    const news = await newsService.getNews();
+    return news;
+  } catch (error) {
+    console.log('Usando noticias de ejemplo para el sitemap en build');
+    
+    // Durante el build, intentar leer el archivo de noticias prealmacenadas
+    try {
+      const rawNewsPath = path.join(process.cwd(), 'data', 'raw-news.json');
+      if (fs.existsSync(rawNewsPath)) {
+        const rawNews = JSON.parse(fs.readFileSync(rawNewsPath, 'utf8')) as NewsItem[];
+        return rawNews;
+      }
+    } catch (fileError) {
+      console.log('No se pudo leer raw-news.json:', fileError);
+    }
+    
+    // Caer en respaldo a noticias de ejemplo si todo lo demás falla
+    return [
+      {
+        id: 'example-news-1',
+        title: 'Ejemplo de noticia 1',
+        publishedAt: new Date().toISOString(),
+        description: '',
+        content: '',
+        category: { id: '', name: '' },
+        source: { id: '', name: '', url: '' },
+        readTime: 0,
+        sentiment: 'neutral',
+        metrics: { views: 0, engagement: { likes: 0, comments: 0, saves: 0 } },
+        tags: [],
+        url: 'https://example.com/news-1'
+      },
+      {
+        id: 'example-news-2',
+        title: 'Ejemplo de noticia 2',
+        publishedAt: new Date().toISOString(),
+        description: '',
+        content: '',
+        category: { id: '', name: '' },
+        source: { id: '', name: '', url: '' },
+        readTime: 0,
+        sentiment: 'neutral',
+        metrics: { views: 0, engagement: { likes: 0, comments: 0, saves: 0 } },
+        tags: [],
+        url: 'https://example.com/news-2'
+      }
+    ];
+  }
+}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // Intenta obtener la URL base de los headers si está disponible (para renderizado dinámico)
-  let baseUrl: string;
-  
-  try {
-    const headersList = await headers();
-    const host = headersList.get('host') || '';
-    const proto = headersList.get('x-forwarded-proto') || 'https';
-    baseUrl = `${proto}://${host}`;
-  } catch (e) {
-    // Durante la compilación estática (build), los headers no estarán disponibles
-    baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tudominio.com';
-  }
+  // Usar directamente la URL base desde las variables de entorno
+  // Esto funciona tanto en tiempo de ejecución como durante el build
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tudominio.com';
   
   // Rutas estáticas
   const staticRoutes = [
@@ -31,22 +82,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // Rutas de ejemplo para noticias (en lugar de obtenerlas dinámicamente)
-  // Esto evita el error de NewsService durante el build
-  const newsRoutes = [
-    {
-      url: `${baseUrl}/blog/example-news-1`,
-      lastModified: new Date(),
-      changeFrequency: 'daily' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/example-news-2`,
-      lastModified: new Date(),
-      changeFrequency: 'daily' as const,
-      priority: 0.8,
-    }
-  ];
+  // Obtener noticias de forma segura para generar rutas dinámicas
+  const news = await getSafeNews();
+  
+  // Generar rutas para cada noticia
+  const newsRoutes = news.map((article: NewsItem) => ({
+    url: `${baseUrl}/blog/${article.internalUrl || article.id}`,
+    lastModified: new Date(article.publishedAt || new Date()),
+    changeFrequency: 'daily' as const,
+    priority: 0.8,
+  }));
 
   // Rutas de categorías
   const categoryRoutes = [

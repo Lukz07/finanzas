@@ -132,13 +132,13 @@ class RssNewsService {
     }
     
     // Obtener solo las noticias de la última media hora
-    const halfHourAgo = new Date(Date.now() - 60 * 60 * 1000);
+    const last24Hours = new Date(Date.now() - 24 * 60 * 60 * 1000);
     
-    // Filtrar por noticias recientes y limitar a 10
+    // Filtrar por noticias recientes y limitar a 15
     return this.cachedNews
-      .filter(news => new Date(news.publishedAt) >= halfHourAgo)
+      .filter(news => new Date(news.publishedAt) >= last24Hours)
       .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
-      .slice(0, 10);
+      .slice(0, 15);
   }
 
   private get shouldRefreshCache(): boolean {
@@ -217,6 +217,23 @@ class RssNewsService {
     const wordCount = content.split(/\s+/).length
     const readTime = Math.max(1, Math.ceil(wordCount / 200)) // ~200 palabras por minuto
 
+    // Generar URL interna más robusta
+    const generateSlug = (text: string): string => {
+      const base = text
+        .toLowerCase()
+        .normalize('NFD') // Normalizar acentos
+        .replace(/[\u0300-\u036f]/g, '') // Eliminar acentos
+        .replace(/[^\w\s-]/g, '') // Eliminar caracteres especiales
+        .replace(/\s+/g, '-') // Reemplazar espacios con guiones
+        .replace(/-+/g, '-') // Evitar guiones múltiples
+        .trim(); // Eliminar espacios al inicio y final
+      
+      // Generar un id corto basado en el hash del título para garantizar unicidad
+      const shortId = Buffer.from(text).toString('base64').substring(0, 8).replace(/[^a-zA-Z0-9]/g, '');
+      
+      return `${base}-${shortId}`;
+    };
+
     return {
       id: uuidv4(),
       title: item.title,
@@ -241,7 +258,8 @@ class RssNewsService {
         }
       },
       tags: item.categories || [],
-      url: item.link || ''
+      url: item.link || '',
+      internalUrl: generateSlug(item.title)
     }
   }
 

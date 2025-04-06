@@ -12,6 +12,7 @@ export type NewsItem = {
   sentiment: 'positive' | 'negative' | 'neutral'
   imageUrl?: string
   url: string
+  internalUrl?: string
   metrics: {
     views: number
     engagement: {

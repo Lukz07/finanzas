@@ -98,6 +98,9 @@ export default function HomePage() {
       
       console.log('Cargando noticias:', new Date().toISOString());
       const result = await newsServiceRef.current.getNews(tabFilters);
+
+      console.log('Noticias cargadas:', result.length);
+      console.log('Noticias cargadas:', result);
       
       setNews(result);
       setError(null);

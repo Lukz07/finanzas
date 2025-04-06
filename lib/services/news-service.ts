@@ -32,6 +32,8 @@ export class NewsService {
 
     // Si hay noticias en caché y no están obsoletas, retornarlas
     if (this.cachedNews.length > 0 && !isStale) {
+      console.log('Usando caché:', this.cachedNews.length);
+      console.log('Usando caché:', this.cachedNews);
       return this.applyFilters(this.cachedNews, filters)
     }
 
