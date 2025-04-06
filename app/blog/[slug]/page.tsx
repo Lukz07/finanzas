@@ -72,10 +72,10 @@ async function getArticleData(slug: string) {
 
 // Generación de metadata
 export async function generateMetadata(
-  props: { params: { slug: string } }
+  props: { params: Promise<{ slug: string }> }
 ): Promise<Metadata> {
-  // Asegurarnos de que params.slug está disponible
-  const slug = props.params.slug;
+  // Asegurarnos de que params.slug está disponible y esperamos su valor
+  const slug = (await props.params).slug;
   const article = await getArticleData(slug);
 
   if (!article) {
@@ -106,9 +106,9 @@ export async function generateMetadata(
 }
 
 // Componente principal de la página
-export default async function Page(props: { params: { slug: string } }) {
-  // Asegurarnos de que params.slug está disponible
-  const slug = props.params.slug;
+export default async function Page(props: { params: Promise<{ slug: string }> }) {
+  // Asegurarnos de que params.slug está disponible y esperamos su valor
+  const slug = (await props.params).slug;
   const article = await getArticleData(slug);
 
   if (!article) {
