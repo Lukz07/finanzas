@@ -1,7 +1,19 @@
 import { MetadataRoute } from 'next';
+import { headers } from 'next/headers';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tudominio.com';
+  // Intenta obtener la URL base de los headers si está disponible (para renderizado dinámico)
+  let baseUrl: string;
+  
+  try {
+    const headersList = await headers();
+    const host = headersList.get('host') || '';
+    const proto = headersList.get('x-forwarded-proto') || 'https';
+    baseUrl = `${proto}://${host}`;
+  } catch (e) {
+    // Durante la compilación estática (build), los headers no estarán disponibles
+    baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tudominio.com';
+  }
   
   // Rutas estáticas
   const staticRoutes = [
