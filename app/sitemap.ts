@@ -74,16 +74,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tudominio.com';
   console.log('🔗 URL base para sitemap:', baseUrl);
   
+  // Asegurar que la URL base tiene el protocolo
+  const formattedBaseUrl = baseUrl.startsWith('http') ? baseUrl : `https://${baseUrl}`;
+  console.log('🔗 URL base formateada:', formattedBaseUrl);
+  
   // Rutas estáticas
   const staticRoutes = [
     {
-      url: baseUrl,
+      url: formattedBaseUrl,
       lastModified: new Date(),
       changeFrequency: 'daily' as const,
       priority: 1,
     },
     {
-      url: `${baseUrl}/blog`,
+      url: `${formattedBaseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'hourly' as const,
       priority: 0.9,
@@ -96,7 +100,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     
     // Generar rutas para cada noticia
     const newsRoutes = news.map((article: NewsItem) => ({
-      url: `${baseUrl}/blog/${article.internalUrl || article.id}`,
+      url: `${formattedBaseUrl}/blog/${article.internalUrl || article.id}`,
       lastModified: new Date(article.publishedAt || new Date()),
       changeFrequency: 'daily' as const,
       priority: 0.8,
@@ -110,7 +114,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'technology',
       'companies',
     ].map((category) => ({
-      url: `${baseUrl}/blog/category/${category}`,
+      url: `${formattedBaseUrl}/blog/category/${category}`,
       lastModified: new Date(),
       changeFrequency: 'daily' as const,
       priority: 0.7,
