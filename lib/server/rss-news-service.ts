@@ -41,6 +41,8 @@ class RssNewsService {
   private cachedNews: NewsItem[] = []
   private lastFetchTime: Date | null = null
   private isFetching: boolean = false
+  private isInitialized: boolean = false
+  private initPromise: Promise<void> | null = null
   private readonly CACHE_DURATION = 5 * 60 * 1000 // 5 minutos
 
   // RSS feeds de noticias financieras argentinas
@@ -116,6 +118,36 @@ class RssNewsService {
         ]
       }
     })
+    // Inicializar el caché inmediatamente al crear la instancia
+    this.initializeCache();
+  }
+
+  // Inicialización asincrónica del caché
+  private initializeCache(): void {
+    if (!this.initPromise) {
+      console.log('📡 RSS News Service - Iniciando carga inicial del caché...');
+      this.initPromise = this.refreshCache().then(() => {
+        this.isInitialized = true;
+        console.log('✅ RSS News Service - Caché inicializado correctamente');
+      }).catch(error => {
+        console.error('❌ RSS News Service - Error inicializando caché:', error);
+      });
+    }
+  }
+
+  // Esperar a que el caché se inicialice
+  private async ensureCacheInitialized(): Promise<void> {
+    if (this.isInitialized) return;
+    if (this.initPromise) {
+      try {
+        await this.initPromise;
+      } catch (error) {
+        console.error('❌ Error esperando inicialización del caché:', error);
+      }
+    } else {
+      await this.refreshCache();
+      this.isInitialized = true;
+    }
   }
 
   static getInstance(): RssNewsService {
@@ -126,19 +158,50 @@ class RssNewsService {
   }
 
   async getNews(): Promise<NewsItem[]> {
+    // Asegurar que el caché esté inicializado
+    await this.ensureCacheInitialized();
+    
     // Si necesitamos actualizar el caché y no hay una actualización en curso
     if (this.shouldRefreshCache && !this.isFetching) {
       await this.refreshCache()
     }
     
-    // Obtener solo las noticias de la última media hora
+    // Mostrar información sobre el estado del caché
+    console.log(`📊 RSS News Service - Estado del caché: ${this.cachedNews.length} noticias disponibles`);
+    console.log(`📅 RSS News Service - Última actualización del caché: ${this.lastFetchTime ? this.lastFetchTime.toISOString() : 'Nunca'}`);
+    
+    // Si el caché está vacío, forzar una actualización
+    if (this.cachedNews.length === 0) {
+      console.log('⚠️ RSS News Service - El caché está vacío, forzando actualización');
+      await this.refreshCache();
+      
+      // Si aún está vacío después de intentar actualizarlo, devolver un arreglo vacío
+      if (this.cachedNews.length === 0) {
+        console.error('❌ RSS News Service - No se pudieron obtener noticias, caché sigue vacío');
+        return [];
+      }
+    }
+    
+    // Obtener noticias de las últimas 24 horas
     const last24Hours = new Date(Date.now() - 24 * 60 * 60 * 1000);
     
     // Filtrar por noticias recientes y limitar a 15
-    return this.cachedNews
+    const recentNews = this.cachedNews
       .filter(news => new Date(news.publishedAt) >= last24Hours)
       .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
       .slice(0, 15);
+      
+    console.log(`📰 RSS News Service - Retornando ${recentNews.length} noticias recientes`);
+    
+    // Si no hay noticias recientes, entregar las más recientes del caché
+    if (recentNews.length === 0 && this.cachedNews.length > 0) {
+      console.log('⚠️ RSS News Service - No hay noticias en las últimas 24 horas, retornando las más recientes');
+      return this.cachedNews
+        .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+        .slice(0, 15);
+    }
+    
+    return recentNews;
   }
 
   private get shouldRefreshCache(): boolean {
@@ -231,7 +294,18 @@ class RssNewsService {
       // Generar un id corto basado en el hash del título para garantizar unicidad
       const shortId = Buffer.from(text).toString('base64').substring(0, 8).replace(/[^a-zA-Z0-9]/g, '');
       
-      return `${base}-${shortId}`;
+      // Limitar la longitud de la URL para evitar problemas
+      const maxBaseLength = 60;
+      const trimmedBase = base.length > maxBaseLength 
+        ? base.substring(0, maxBaseLength) 
+        : base;
+      
+      const slug = `${trimmedBase}-${shortId}`;
+      
+      // Registrar el slug generado para depuración
+      console.log(`🔗 Generando slug para noticia: "${text.substring(0, 40)}..." -> ${slug}`);
+      
+      return slug;
     };
 
     return {

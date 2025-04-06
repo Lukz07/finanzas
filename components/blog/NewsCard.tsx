@@ -21,11 +21,22 @@ export function NewsCard({ news }: NewsCardProps) {
   }
 
   // Comprobar si internalUrl está disponible y usar id como respaldo
-  const newsUrl = `/blog/${news.internalUrl || news.id}`;
+  // Asegurar que siempre tenemos una URL válida
+  const getValidNewsUrl = () => {
+    if (!news.internalUrl && !news.id) {
+      console.error('NewsCard: Noticia sin internalUrl ni id', news.title);
+      return '/blog';
+    }
+    
+    const newsSlug = news.internalUrl || news.id;
+    return `/blog/${newsSlug}`;
+  };
+  
+  const newsUrl = getValidNewsUrl();
   
   // Imprimir para depurar
-  console.log('Generando URL para noticia:', {
-    title: news.title,
+  console.log('🔗 NewsCard - Generando URL para noticia:', {
+    title: news.title?.substring(0, 50) + '...',
     internalUrl: news.internalUrl,
     id: news.id,
     finalUrl: newsUrl
