@@ -4,11 +4,12 @@ import type { NewsItem } from '@/lib/types/blog'
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { slug: string } }
-) {
+  context: { params: Promise<{ slug: string }> }
+): Promise<NextResponse> {
   try {
+    const { slug } = await context.params
     const news = await newsService.getNews()
-    const newsItem = news.find((item: NewsItem) => item.slug === params.slug)
+    const newsItem = news.find((item: NewsItem) => item.slug === slug)
     
     if (!newsItem) {
       return NextResponse.json(

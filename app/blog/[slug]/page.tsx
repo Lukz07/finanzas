@@ -7,12 +7,13 @@ import Image from 'next/image';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
 import type { NewsItem } from '@/lib/types/blog';
+import { BlogPost } from '@/components/blog/BlogPost';
 
 dayjs.locale('es');
 
 // Forzar renderizado dinámico para evitar problemas con la generación estática
 export const dynamic = 'force-dynamic';
-export const revalidate = 60; // Revalidar cada minuto durante desarrollo
+export const revalidate = 3600; // Revalidar cada hora
 
 // Función para sanitizar HTML potencialmente peligroso
 function sanitizeHtml(html: string): string {
@@ -70,30 +71,32 @@ async function getArticleData(slug: string, retryCount = 0, maxRetries = 2): Pro
   }
 }
 
-// Generación de metadata
-export async function generateMetadata(
-  { params }: { params: { slug: string } }
-): Promise<Metadata> {
-  const resolvedParams = await Promise.resolve(params);
-  const news = await getArticleData(resolvedParams.slug);
-  
-  if (!news) {
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const news = await newsService.getNews();
+  const post = news.find(item => item.slug === slug);
+
+  if (!post) {
     return {
       title: 'Noticia no encontrada',
-      description: 'La noticia solicitada no existe o ha sido eliminada.'
+      description: 'La noticia que buscas no existe'
     };
   }
 
   return {
-    title: news.title,
-    description: news.description,
+    title: post.title,
+    description: post.description,
     openGraph: {
-      title: news.title,
-      description: news.description,
+      title: post.title,
+      description: post.description,
       type: 'article',
-      publishedTime: news.publishedAt,
-      authors: [news.source.name],
-      images: news.imageUrl ? [news.imageUrl] : []
+      publishedTime: post.publishedAt,
+      authors: [post.source.name],
+      images: post.imageUrl ? [post.imageUrl] : []
     }
   };
 }
@@ -114,74 +117,14 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   }
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const resolvedParams = await Promise.resolve(params);
-  const news = await getArticleData(resolvedParams.slug);
-  
-  if (!news) {
+export default async function BlogPostPage({ params }: PageProps) {
+  const { slug } = await params;
+  const news = await newsService.getNews();
+  const post = news.find(item => item.slug === slug);
+
+  if (!post) {
     notFound();
   }
 
-  return (
-    <article className="container mx-auto px-4 py-8">
-      <NewsSchema news={news} />
-      
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">{news.title}</h1>
-        <div className="flex items-center gap-4 text-gray-600 dark:text-gray-400">
-          <time dateTime={news.publishedAt}>
-            {dayjs(news.publishedAt).format('DD/MM/YYYY')}
-          </time>
-          <span>•</span>
-          <span>{news.source.name}</span>
-          <span>•</span>
-          <span>{news.readTime} min de lectura</span>
-        </div>
-      </header>
-
-      {news.imageUrl && (
-        <div className="relative w-full h-96 mb-8">
-          <Image
-            src={news.imageUrl}
-            alt={news.title}
-            fill
-            className="object-cover rounded-lg"
-            priority
-          />
-        </div>
-      )}
-
-      <div className="prose dark:prose-invert max-w-none">
-        <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(news.content) }} />
-      </div>
-
-      <footer className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            <span className="text-gray-600 dark:text-gray-400">
-              {news.metrics.views} vistas
-            </span>
-            <span>•</span>
-            <span className="text-gray-600 dark:text-gray-400">
-              {news.metrics.engagement.likes} me gusta
-            </span>
-            <span>•</span>
-            <span className="text-gray-600 dark:text-gray-400">
-              {news.metrics.engagement.comments} comentarios
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            {news.tags.map((tag: string) => (
-              <span
-                key={tag}
-                className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </footer>
-    </article>
-  );
+  return <BlogPost post={post} />;
 } 

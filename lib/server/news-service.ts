@@ -82,7 +82,7 @@ class NewsService {
         return [];
       }
 
-      console.log(`✅ Feed obtenido correctamente de ${sourceName} (${feed.items.length} items)`);
+      // console.log(`✅ Feed obtenido correctamente de ${sourceName} (${feed.items.length} items)`);
       
       // Limitar la cantidad de noticias por fuente
       const limitedItems = feed.items.slice(0, this.MAX_NEWS_PER_SOURCE);

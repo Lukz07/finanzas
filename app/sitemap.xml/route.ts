@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 import { NextResponse } from 'next/server';
-import { rssNewsService } from '@/lib/server/rss-news-service';
+import { newsService } from '@/lib/server/news-service';
 import type { NewsItem } from '@/lib/types/blog';
 
 // Revalidar cada hora
@@ -9,7 +9,7 @@ export const revalidate = 3600;
 // Función auxiliar para obtener noticias de forma segura
 async function getSafeNews(): Promise<NewsItem[]> {
   try {
-    const news = await rssNewsService.getNews();
+    const news = await newsService.getNews();
     return news;
   } catch (error) {
     console.error('Error obteniendo noticias para sitemap.xml:', error);
@@ -49,21 +49,21 @@ export async function GET() {
   }));
 
   // Rutas de categorías
-  const categoryRoutes = [
-    'markets',
-    'economy',
-    'crypto',
-    'technology',
-    'companies',
-  ].map((category) => ({
-    url: `${baseUrl}/blog/category/${category}`,
-    lastmod: new Date().toISOString(),
-    changefreq: 'daily',
-    priority: 0.7,
-  }));
+  // const categoryRoutes = [
+  //   'markets',
+  //   'economy',
+  //   'crypto',
+  //   'technology',
+  //   'companies',
+  // ].map((category) => ({
+  //   url: `${baseUrl}/blog/category/${category}`,
+  //   lastmod: new Date().toISOString(),
+  //   changefreq: 'daily',
+  //   priority: 0.7,
+  // }));
 
   // Combinar todas las rutas
-  const allRoutes = [...staticRoutes, ...newsRoutes, ...categoryRoutes];
+  const allRoutes = [...staticRoutes, ...newsRoutes];
 
   // Generar el XML del sitemap
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
