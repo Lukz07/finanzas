@@ -2,9 +2,16 @@ import type { NewsItem, NewsFilters } from '@/lib/types/blog'
 
 export class FrontendNewsService {
   private static instance: FrontendNewsService
-  private readonly API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || ''
+  private readonly API_BASE_URL: string
 
-  private constructor() {}
+  private constructor() {
+    // Inicializar API_BASE_URL de manera segura
+    if (typeof window !== 'undefined') {
+      this.API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || window.location.origin
+    } else {
+      this.API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || ''
+    }
+  }
 
   public static getInstance(): FrontendNewsService {
     if (!FrontendNewsService.instance) {
@@ -13,9 +20,17 @@ export class FrontendNewsService {
     return FrontendNewsService.instance
   }
 
+  private getBaseUrl(): string {
+    if (typeof window === 'undefined') {
+      return this.API_BASE_URL
+    }
+    return this.API_BASE_URL === window.location.origin ? '' : this.API_BASE_URL
+  }
+
   async getNews(filters?: NewsFilters): Promise<NewsItem[]> {
     try {
-      const url = new URL('/api/news', this.API_BASE_URL)
+      const baseUrl = this.getBaseUrl()
+      const url = new URL('/api/news', baseUrl)
       
       // Agregar filtros como parámetros de consulta
       if (filters) {
@@ -47,7 +62,9 @@ export class FrontendNewsService {
 
   async getNewsBySlug(slug: string): Promise<NewsItem | null> {
     try {
-      const url = new URL(`/api/news/${slug}`, this.API_BASE_URL)
+      const baseUrl = this.getBaseUrl()
+      const url = new URL(`/api/news/${slug}`, baseUrl)
+      
       const response = await fetch(url.toString(), {
         method: 'GET',
         headers: {
