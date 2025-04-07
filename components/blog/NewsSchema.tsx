@@ -2,7 +2,7 @@ import { NewsItem } from '@/lib/types/blog';
 import Script from 'next/script';
 
 interface NewsSchemaProps {
-  news: NewsItem[];
+  news: NewsItem | NewsItem[];
 }
 
 export function NewsSchema({ news }: NewsSchemaProps) {
@@ -32,7 +32,7 @@ export function NewsSchema({ news }: NewsSchemaProps) {
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': `${baseUrl}/blog/${newsItem.id}`
+        '@id': `${baseUrl}/blog/${newsItem.slug}`
       },
       articleBody: newsItem.content,
       keywords: newsItem.tags.join(', '),
@@ -42,19 +42,21 @@ export function NewsSchema({ news }: NewsSchemaProps) {
     };
   };
 
-  const newsListSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    itemListElement: news.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      item: generateNewsSchema(item)
-    }))
-  };
+  const schema = Array.isArray(news) 
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: news.map((item, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          item: generateNewsSchema(item)
+        }))
+      }
+    : generateNewsSchema(news);
 
   return (
     <Script id="news-schema" type="application/ld+json">
-      {JSON.stringify(newsListSchema)}
+      {JSON.stringify(schema)}
     </Script>
   );
 } 

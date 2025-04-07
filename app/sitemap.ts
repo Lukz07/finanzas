@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import fs from 'fs';
 import path from 'path';
 import type { NewsItem } from '@/lib/types/blog';
-import { rssNewsService } from '@/lib/server/rss-news-service';
+import { newsService } from '@/lib/server/news-service';
 
 // Configurar el sitemap como dinámico
 export const dynamic = 'force-dynamic';
@@ -12,7 +12,7 @@ async function getSafeNews(): Promise<NewsItem[]> {
   try {
     // Usar directamente rssNewsService
     console.log('📊 Obteniendo noticias para sitemap...');
-    const news = await rssNewsService.getNews();
+    const news = await newsService.getNews();
     console.log(`📊 Obtenidas ${news.length} noticias para sitemap`);
     return news;
   } catch (error) {
@@ -45,7 +45,8 @@ async function getSafeNews(): Promise<NewsItem[]> {
         metrics: { views: 0, engagement: { likes: 0, comments: 0, saves: 0 } },
         tags: [],
         url: 'https://example.com/news-1',
-        internalUrl: 'example-news-1'
+        internalUrl: 'example-news-1',
+        slug: 'ejemplo-de-noticia-1'
       },
       {
         id: 'example-news-2',
@@ -60,7 +61,8 @@ async function getSafeNews(): Promise<NewsItem[]> {
         metrics: { views: 0, engagement: { likes: 0, comments: 0, saves: 0 } },
         tags: [],
         url: 'https://example.com/news-2',
-        internalUrl: 'example-news-2'
+        internalUrl: 'example-news-2',
+        slug: 'ejemplo-de-noticia-2'
       }
     ];
   }
@@ -99,9 +101,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const news = await getSafeNews();
     
     // Generar rutas para cada noticia
-    const newsRoutes = news.map((article: NewsItem) => ({
-      url: `${formattedBaseUrl}/blog/${article.internalUrl || article.id}`,
-      lastModified: new Date(article.publishedAt || new Date()),
+    const newsRoutes = news.map((item) => ({
+      url: `${formattedBaseUrl}/blog/${item.slug}`,
+      lastModified: new Date(item.publishedAt),
       changeFrequency: 'daily' as const,
       priority: 0.8,
     }));

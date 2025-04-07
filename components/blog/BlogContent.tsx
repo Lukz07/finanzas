@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NewsGrid } from '@/components/blog/NewsGrid';
 import type { NewsItem } from '@/lib/types/blog';
 import dayjs from 'dayjs';
@@ -13,16 +13,24 @@ interface BlogContentProps {
 }
 
 export default function BlogContent({ initialNews }: BlogContentProps) {
-  const [loading] = useState(false);
-  const [error] = useState<string | null>(null);
-  const [news] = useState<NewsItem[]>(initialNews);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [news, setNews] = useState<NewsItem[]>(initialNews);
+
+  useEffect(() => {
+    // Simular un pequeño retraso para mostrar el skeleton
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="container mx-auto px-4 py-8 space-y-8">
       <NewsGrid
         news={news}
-        loading={loading}
-        error={error || undefined}
+        isLoading={isLoading}
       />
     </div>
   );

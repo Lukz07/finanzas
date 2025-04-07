@@ -6,27 +6,17 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Send, TrendingUp, ArrowRight, BookOpen, TrendingDown, BrainCircuit } from 'lucide-react';
 import type { NewsItem, NewsFilters } from '@/lib/types/blog';
-import { NewsService } from '@/lib/services/news-service';
+import { FrontendNewsService } from '@/lib/services/frontend-news-service';
 import Link from 'next/link';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
 import { PageHeader } from '@/components/ui/page-header';
 
 dayjs.locale('es');
-// Evitar la inicialización en el ámbito del módulo
-// const newsService = NewsService.getInstance();
+
+const newsService = FrontendNewsService.getInstance();
 
 export default function HomePage() {
-  // Mover la inicialización dentro del componente
-  const newsServiceRef = useRef<NewsService | null>(null);
-  
-  // Inicializar NewsService solo en el cliente
-  useEffect(() => {
-    if (!newsServiceRef.current) {
-      newsServiceRef.current = NewsService.getInstance();
-    }
-  }, []);
-  
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [news, setNews] = useState<NewsItem[]>([]);
@@ -83,11 +73,9 @@ export default function HomePage() {
     if (isFetching.current) return;
     
     try {
-      // Solo intentar cargar noticias si ya se inicializó el servicio
-      if (!newsServiceRef.current) return;
-      
       isFetching.current = true;
       setLoading(true);
+      setError(null);
       
       // Ajustar filtros según la categoría
       const tabFilters: NewsFilters = {
@@ -96,16 +84,11 @@ export default function HomePage() {
         sortOrder: 'desc'
       };
       
-      console.log('Cargando noticias:', new Date().toISOString());
-      const result = await newsServiceRef.current.getNews(tabFilters);
-
-      console.log('Noticias cargadas:', result.length);
-      console.log('Noticias cargadas:', result);
+      const result = await newsService.getNews(tabFilters);
       
       setNews(result);
-      setError(null);
     } catch (err) {
-      console.error('Error cargando noticias:', err);
+      console.error('❌ Error cargando noticias:', err);
       setError('Error al cargar las noticias. Por favor, intente nuevamente.');
     } finally {
       isFetching.current = false;
@@ -113,12 +96,10 @@ export default function HomePage() {
     }
   }, []);
   
-  // Cargar noticias solo después de que NewsService se haya inicializado
+  // Cargar noticias al montar el componente
   useEffect(() => {
-    if (newsServiceRef.current) {
-      fetchNews({});
-    }
-  }, [fetchNews, newsServiceRef.current]);
+    fetchNews({});
+  }, [fetchNews]);
 
   // Contenido de fallback para SSR
   const placeholderNews: NewsItem[] = news.length > 0 ? news : [
@@ -128,25 +109,17 @@ export default function HomePage() {
       description: 'Las últimas noticias financieras estarán disponibles en breve.',
       content: '',
       url: '#',
+      internalUrl: 'cargando-noticias',
       imageUrl: '',
       publishedAt: new Date().toISOString(),
       source: {
         id: 'placeholder',
         name: 'Finanzas App',
-        url: '/',
-        type: 'rss',
-        priority: 1,
-        category: 'economy',
-        language: 'es',
-        country: 'es',
-        updateFrequency: 60
+        url: '/'
       },
       category: {
         id: 'markets',
-        name: 'Mercados',
-        slug: 'mercados',
-        description: 'Noticias sobre mercados financieros',
-        icon: null as any
+        name: 'Mercados'
       },
       readTime: 1,
       sentiment: 'neutral',
@@ -154,7 +127,8 @@ export default function HomePage() {
         views: 0,
         engagement: { likes: 0, comments: 0, saves: 0 }
       },
-      tags: ['finanzas']
+      tags: ['finanzas'],
+      slug: 'cargando-noticias'
     }
   ];
 
@@ -174,7 +148,7 @@ export default function HomePage() {
         setSubscribeSuccess(false);
       }, 5000);
     } catch (err) {
-      console.error('Error subscribing:', err);
+      console.error('Error al suscribirse:', err);
       alert('Error al suscribirse. Por favor, intente nuevamente.');
     } finally {
       setSubscribeLoading(false);
@@ -245,8 +219,7 @@ export default function HomePage() {
       {/* Tabs y Filtros */}
       <NewsGrid
         news={news}
-        loading={loading || !newsServiceRef.current}
-        error={error || undefined}
+        isLoading={loading}
       />
         
       {/* Newsletter */}

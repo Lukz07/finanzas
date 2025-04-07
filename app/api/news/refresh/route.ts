@@ -1,34 +1,35 @@
 import { NextResponse } from 'next/server';
-import { rssNewsService } from '@/lib/server/rss-news-service';
+import { newsService } from '@/lib/server/news-service';
 
 export const dynamic = 'force-dynamic';
-export const revalidate = 3600; // Revalidar cada hora
+export const revalidate = 0; // No cachear
 
-// Permitir tanto POST como GET para facilitar la construcción estática
 export async function POST() {
   try {
-    const news = await rssNewsService.getNews();
+    console.log('🔄 Forzando actualización de noticias...');
+    const news = await newsService.getNews();
     
     return NextResponse.json(news, {
       headers: {
-        // Cambiamos a una política de caché que permita la construcción estática
-        'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
       },
     });
   } catch (error) {
-    console.error('Error refreshing news:', error);
+    console.error('❌ Error forzando actualización:', error);
     return NextResponse.json(
-      { error: 'Error refreshing news' },
+      { error: 'Error al forzar actualización', details: String(error) },
       { status: 500 }
     );
   }
 }
 
-// Añadimos el método GET para facilitar las operaciones durante el build
+// Endpoint para actualización normal con caché
 export async function GET() {
   try {
-    console.log('Obteniendo noticias a través de GET /api/news/refresh');
-    const news = await rssNewsService.getNews();
+    console.log('🔄 Obteniendo noticias...');
+    const news = await newsService.getNews();
     
     return NextResponse.json(news, {
       headers: {
@@ -36,9 +37,9 @@ export async function GET() {
       },
     });
   } catch (error) {
-    console.error('Error obteniendo noticias vía GET:', error);
+    console.error('❌ Error obteniendo noticias:', error);
     return NextResponse.json(
-      { error: 'Error obteniendo noticias', details: String(error) },
+      { error: 'Error al obtener noticias', details: String(error) },
       { status: 500 }
     );
   }

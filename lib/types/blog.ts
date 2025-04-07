@@ -1,18 +1,18 @@
 import type { LucideIcon } from 'lucide-react';
 
-export type NewsItem = {
+export interface NewsItem {
   id: string
   title: string
   description: string
   content: string
-  category: NewsCategory
-  source: NewsSource
-  publishedAt: string
-  readTime: number
-  sentiment: 'positive' | 'negative' | 'neutral'
-  imageUrl?: string
   url: string
   internalUrl?: string
+  imageUrl?: string
+  publishedAt: string
+  source: NewsSource
+  category: NewsCategory
+  sentiment: 'positive' | 'negative' | 'neutral'
+  readTime: number
   metrics: {
     views: number
     engagement: {
@@ -22,14 +22,15 @@ export type NewsItem = {
     }
   }
   tags: string[]
+  slug: string
 }
 
 export interface NewsCategory {
   id: string
   name: string
-  icon?: LucideIcon
-  description?: string
   slug?: string
+  description?: string
+  icon?: LucideIcon
 }
 
 export interface NewsSource {
@@ -45,6 +46,7 @@ export interface NewsSource {
   language?: string
   country?: string
   updateFrequency?: number
+  feedUrl?: string
   credentials?: {
     apiKey?: string
     [key: string]: string | undefined
@@ -56,18 +58,14 @@ export interface NewsFilters {
   category?: string
   source?: string
   sentiment?: 'positive' | 'negative' | 'neutral'
+  sortBy?: 'date' | 'views' | 'engagement'
+  sortOrder?: 'asc' | 'desc'
   dateRange?: {
     start: Date
     end: Date
   }
-  tags?: string[]
-  author?: string
-  language?: string
-  country?: string
-  page?: number
   limit?: number
-  sortBy?: 'date' | 'views' | 'engagement'
-  sortOrder?: 'asc' | 'desc'
+  offset?: number
 }
 
 export interface NewsletterSubscriber {
@@ -111,4 +109,12 @@ export interface ContentMetrics {
     impressions: number
     ctr: number
   }
+}
+
+export interface Category {
+  id: string
+  name: string
+  icon: LucideIcon
+  description: string
+  color: string
 } 
