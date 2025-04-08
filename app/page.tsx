@@ -158,9 +158,9 @@ export default function HomePage() {
 
   return (
     <div className="space-y-8">
-      <div className="w-full max-w-[970px] mx-auto px-4">
+      {/* <div className="w-full max-w-[970px] mx-auto px-4">
         <AdSenseAd />
-      </div>
+      </div> */}
       <div className="w-full py-8 space-y-8 bg-finance-gray-50 dark:bg-transparent">
         <PageHeader
           title="Finanzas Personales"
