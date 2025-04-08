@@ -2,7 +2,11 @@
 
 declare global {
   interface Window {
-    adsbygoogle: any[];
+    adsbygoogle: {
+      push: (params: any) => void;
+    }[] & {
+      push: (params: any) => void;
+    };
   }
 }
 

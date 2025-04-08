@@ -8,6 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { AdSenseScript } from "@/components/AdSenseScript"
 import { AdSenseProvider } from '@/components/blog/AdSenseContext'
 import { MainNav } from "@/components/layout/main-nav"
+import { CookieConsent } from "@/components/CookieConsent"
 // import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -120,7 +121,8 @@ export default function RootLayout({
         <head>
           <meta name="color-scheme" content="dark light" />
           <meta name="google-site-verification" content="google-site-verification=i5wj4CsiiDDdtsXgksK11VDocp4acTOjl0U9SQZbCb4" />
-          <meta name="google-adsense-account" content="ca-pub-8473965589607250"></meta>
+          <meta name="google-adsense-account" content="ca-pub-8473965589607250" />
+          <CookieConsent />
           <AdSenseScript />
           {/* Script para sincronizar tema con localStorage */}
           <script
