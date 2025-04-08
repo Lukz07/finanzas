@@ -4,6 +4,13 @@ import { slugify } from '@/lib/utils/slugify';
 import { NEWS_SOURCES } from '@/lib/config/news-sources';
 import fetch from 'node-fetch';
 
+interface CategoryObject {
+  _?: string;
+  $?: {
+    term?: string;
+  };
+}
+
 // Asegurar que solo se ejecute en el servidor
 if (typeof window !== 'undefined') {
   throw new Error('Este servicio solo puede ejecutarse en el servidor');
@@ -94,7 +101,19 @@ class NewsService {
         const link = item.link || ''
         const imageUrl = item.enclosure?.url || item['media:content']?.$.url || undefined
         const publishedAt = item.pubDate || item.isoDate || new Date().toISOString()
-        const category = item.categories?.[0] || 'general'
+        
+        // Manejo seguro de la categoría
+        let categoryValue = 'general';
+        if (item.categories && item.categories.length > 0) {
+          const firstCategory = item.categories[0];
+          if (typeof firstCategory === 'string') {
+            categoryValue = firstCategory;
+          } else if (firstCategory && typeof firstCategory === 'object') {
+            const categoryObj = firstCategory as CategoryObject;
+            categoryValue = categoryObj._ || categoryObj.$?.term || 'general';
+          }
+        }
+        
         const id = item.guid || link || Math.random().toString(36).substring(7)
         const tags = item.categories || []
         const slug = slugify(title) || slugify(id)
@@ -113,8 +132,8 @@ class NewsService {
             url: link
           },
           category: {
-            id: category.toLowerCase(),
-            name: category
+            id: categoryValue.toLowerCase(),
+            name: categoryValue
           },
           sentiment: this.analyzeSentiment(title),
           readTime: Math.ceil(content.split(' ').length / 200),
