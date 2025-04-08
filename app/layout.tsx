@@ -120,6 +120,7 @@ export default function RootLayout({
         <head>
           <meta name="color-scheme" content="dark light" />
           <meta name="google-site-verification" content="google-site-verification=i5wj4CsiiDDdtsXgksK11VDocp4acTOjl0U9SQZbCb4" />
+          <meta name="google-adsense-account" content="ca-pub-8473965589607250"></meta>
           <AdSenseScript />
           {/* Script para sincronizar tema con localStorage */}
           <script
