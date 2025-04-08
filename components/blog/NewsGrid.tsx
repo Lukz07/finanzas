@@ -3,7 +3,6 @@
 import { NewsItem } from '@/lib/types/blog';
 import { NewsCardSlider } from './NewsCardSlider';
 import { NewsCardSliderSkeleton } from './NewsCardSliderSkeleton';
-import { AdCard } from './AdCard';
 
 interface NewsGridProps {
   news: NewsItem[];
@@ -38,40 +37,12 @@ export function NewsGrid({ news, isLoading = false }: NewsGridProps) {
     );
   }
 
-  // Convertir el objeto de fuentes en un array y agregar AdCards
-  const sourcesWithAds = Object.entries(newsBySource).reduce((acc, [sourceId, { sourceName, news }], index) => {
-    acc.push({ type: 'source', id: sourceId, sourceName, news });
-    
-    // Insertar AdCard cada 3 fuentes y si es la ultima fuente no insertar nada
-    if ((index + 1) % 3 === 0) {
-      acc.push({ 
-        type: 'ad', 
-        id: `ad-${index/2}`, 
-        adSlot: `YOUR-AD-SLOT-ID-${index/2}` 
-      });
-    }
-    
-    return acc;
-  }, [] as Array<{
-    type: 'source' | 'ad';
-    id: string;
-    sourceName?: string;
-    news?: NewsItem[];
-    adSlot?: string;
-  }>);
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
-      {sourcesWithAds.map((item) => (
-        <div key={item.id} className="space-y-2">
-          {item.type === 'source' ? (
-            <>
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">{item.sourceName}</h2>
-              <NewsCardSlider news={item.news || []} sourceName={item.sourceName || ''} />
-            </>
-          ) : (
-            <AdCard adSlot={item.adSlot || ''} />
-          )}
+      {Object.entries(newsBySource).map(([sourceId, { sourceName, news }]) => (
+        <div key={sourceId} className="space-y-2">
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">{sourceName}</h2>
+          <NewsCardSlider news={news} sourceName={sourceName} />
         </div>
       ))}
     </div>

@@ -8,11 +8,18 @@ export function AdSenseScript() {
 
   return (
     <Script
-      async
+      id="adsbygoogle-script"
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8473965589607250"
       crossOrigin="anonymous"
-      strategy="lazyOnload"
-      onLoad={() => setScriptLoaded(true)}
+      strategy="afterInteractive"
+      onLoad={() => {
+        setScriptLoaded(true);
+        console.log('AdSense script loaded correctly');
+      }}
+      onError={(e) => {
+        console.error('Error loading AdSense script:', e);
+        setScriptLoaded(false);
+      }}
     />
   );
 } 

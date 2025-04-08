@@ -115,37 +115,37 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" suppressHydrationWarning>
-      <head>
-        <meta name="color-scheme" content="dark light" />
-        <meta name="google-site-verification" content="google-site-verification=i5wj4CsiiDDdtsXgksK11VDocp4acTOjl0U9SQZbCb4" />
-        <AdSenseScript />
-        {/* Script para sincronizar tema con localStorage */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Verificar tema almacenado
-              const theme = localStorage.getItem('theme');
-              
-              // Si hay un tema guardado en localStorage, usarlo
-              if (theme === 'dark') {
-                document.documentElement.classList.add('dark');
-                document.documentElement.style.colorScheme = 'dark';
-              } else if (theme === 'light') {
-                document.documentElement.classList.remove('dark');
-                document.documentElement.style.colorScheme = 'light';
-              } else {
-                // Si no hay preferencia guardada, usar dark como predeterminado
-                document.documentElement.classList.add('dark');
-                document.documentElement.style.colorScheme = 'dark';
-                localStorage.setItem('theme', 'dark');
-              }
-            `,
-          }}
-        />
-      </head>
-      <body className={`${inter.className} bg-animated-gradient min-h-screen overflow-auto`}>
-        <AdSenseProvider>
+    <AdSenseProvider>
+      <html lang="es" suppressHydrationWarning>
+        <head>
+          <meta name="color-scheme" content="dark light" />
+          <meta name="google-site-verification" content="google-site-verification=i5wj4CsiiDDdtsXgksK11VDocp4acTOjl0U9SQZbCb4" />
+          <AdSenseScript />
+          {/* Script para sincronizar tema con localStorage */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                // Verificar tema almacenado
+                const theme = localStorage.getItem('theme');
+                
+                // Si hay un tema guardado en localStorage, usarlo
+                if (theme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                  document.documentElement.style.colorScheme = 'dark';
+                } else if (theme === 'light') {
+                  document.documentElement.classList.remove('dark');
+                  document.documentElement.style.colorScheme = 'light';
+                } else {
+                  // Si no hay preferencia guardada, usar dark como predeterminado
+                  document.documentElement.classList.add('dark');
+                  document.documentElement.style.colorScheme = 'dark';
+                  localStorage.setItem('theme', 'dark');
+                }
+              `,
+            }}
+          />
+        </head>
+        <body className={`${inter.className} bg-animated-gradient min-h-screen overflow-auto`}>
           <ThemeProvider>
             <div className="min-h-screen w-full overflow-visible relative">
               <MainNav />
@@ -158,8 +158,8 @@ export default function RootLayout({
           </ThemeProvider>
           <Analytics />
           <SpeedInsights />
-        </AdSenseProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </AdSenseProvider>
   );
 }

@@ -11,6 +11,7 @@ import Link from 'next/link';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
 import { PageHeader } from '@/components/ui/page-header';
+import { AdSenseAd } from '@/components/AdSenseAd';
 
 dayjs.locale('es');
 
@@ -156,113 +157,118 @@ export default function HomePage() {
   };
 
   return (
-    <div className="w-full py-8 space-y-8 bg-finance-gray-50 dark:bg-transparent">
-      <PageHeader
-        title="Finanzas Personales"
-        description="Tu plataforma integral para gestionar tus finanzas, mantenerte informado y planificar tu futuro financiero."
-        showActions={true}
-      />
+    <div className="space-y-8">
+      <div className="w-full max-w-[970px] mx-auto px-4">
+        <AdSenseAd />
+      </div>
+      <div className="w-full py-8 space-y-8 bg-finance-gray-50 dark:bg-transparent">
+        <PageHeader
+          title="Finanzas Personales"
+          description="Tu plataforma integral para gestionar tus finanzas, mantenerte informado y planificar tu futuro financiero."
+          showActions={true}
+        />
 
-      {/* Slider de Tips Financieros */}
-      <div className="relative overflow-hidden rounded-xl shadow-md my-8">
-        <div 
-          className="flex transition-transform duration-700 ease-in-out" 
-          style={{ 
-            transform: `translateX(-${currentSlide * 100 / financialTips.length}%)`,
-            width: `${financialTips.length * 100}%` 
-          }}
-        >
-          {financialTips.map((tip) => (
-            <div 
-              key={tip.id} 
-              className={`${tip.color} p-8 flex flex-col md:flex-row items-center gap-6`} 
-              style={{ width: `${100 / financialTips.length}%` }}
-            >
-              <div className="flex-shrink-0">
-                {tip.icon}
+        {/* Slider de Tips Financieros */}
+        <div className="relative overflow-hidden rounded-xl shadow-md my-8">
+          <div 
+            className="flex transition-transform duration-700 ease-in-out" 
+            style={{ 
+              transform: `translateX(-${currentSlide * 100 / financialTips.length}%)`,
+              width: `${financialTips.length * 100}%` 
+            }}
+          >
+            {financialTips.map((tip) => (
+              <div 
+                key={tip.id} 
+                className={`${tip.color} p-8 flex flex-col md:flex-row items-center gap-6`} 
+                style={{ width: `${100 / financialTips.length}%` }}
+              >
+                <div className="flex-shrink-0">
+                  {tip.icon}
+                </div>
+                <div className="flex-1 space-y-3">
+                  <h3 className="text-2xl font-bold text-finance-gray-900 dark:text-white">{tip.title}</h3>
+                  <p className="text-finance-gray-600 dark:text-finance-gray-300">{tip.description}</p>
+                  <Link href="/tools/investment-planner" className="inline-flex">
+                    <Button className="mt-2 bg-finance-green-600 hover:bg-finance-green-700">
+                      <span>Explorar Tips Financieros</span>
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
               </div>
-              <div className="flex-1 space-y-3">
-                <h3 className="text-2xl font-bold text-finance-gray-900 dark:text-white">{tip.title}</h3>
-                <p className="text-finance-gray-600 dark:text-finance-gray-300">{tip.description}</p>
-                <Link href="/tools/investment-planner" className="inline-flex">
-                  <Button className="mt-2 bg-finance-green-600 hover:bg-finance-green-700">
-                    <span>Explorar Tips Financieros</span>
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Botones de navegación */}
+          <button 
+            onClick={() => setCurrentSlide((prev) => (prev - 1 + financialTips.length) % financialTips.length)}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-finance-gray-800/50 hover:bg-finance-gray-800/70 rounded-full p-2 text-white focus:outline-none focus:ring-2 focus:ring-finance-green-500"
+            aria-label="Slide anterior"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button 
+            onClick={() => setCurrentSlide((prev) => (prev + 1) % financialTips.length)}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-finance-gray-800/50 hover:bg-finance-gray-800/70 rounded-full p-2 text-white focus:outline-none focus:ring-2 focus:ring-finance-green-500"
+            aria-label="Siguiente slide"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
 
-        {/* Botones de navegación */}
-        <button 
-          onClick={() => setCurrentSlide((prev) => (prev - 1 + financialTips.length) % financialTips.length)}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-finance-gray-800/50 hover:bg-finance-gray-800/70 rounded-full p-2 text-white focus:outline-none focus:ring-2 focus:ring-finance-green-500"
-          aria-label="Slide anterior"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button 
-          onClick={() => setCurrentSlide((prev) => (prev + 1) % financialTips.length)}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-finance-gray-800/50 hover:bg-finance-gray-800/70 rounded-full p-2 text-white focus:outline-none focus:ring-2 focus:ring-finance-green-500"
-          aria-label="Siguiente slide"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Tabs y Filtros */}
-      <NewsGrid
-        news={news}
-        isLoading={loading}
-      />
+        {/* Tabs y Filtros */}
+        <NewsGrid
+          news={news}
+          isLoading={loading}
+        />
         
-      {/* Newsletter */}
-      <div className="max-w-2xl mx-auto bg-finance-green-50 dark:bg-finance-green-900/20 p-8 rounded-lg space-y-4">
-        <h2 className="text-2xl font-semibold text-center text-finance-gray-900 dark:text-white">
-          Suscríbete a nuestro Newsletter
-        </h2>
-        <p className="text-center text-finance-gray-600 dark:text-finance-gray-300">
-          Recibe las mejores noticias financieras directamente en tu bandeja de entrada.
-        </p>
-        <form onSubmit={handleSubscribe} className="flex gap-4">
-          <Input
-            type="email"
-            placeholder="Tu correo electrónico"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="flex-1"
-            disabled={subscribeLoading || subscribeSuccess}
-          />
-          <Button 
-            type="submit" 
-            disabled={subscribeLoading || subscribeSuccess}
-            className={subscribeSuccess ? 'bg-finance-green-500' : ''}
-          >
-            {subscribeLoading ? (
-              <>
-                <div className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-                Enviando...
-              </>
-            ) : subscribeSuccess ? (
-              <>
-                ¡Suscrito!
-                <Send className="ml-2 h-4 w-4" />
-              </>
-            ) : (
-              <>
-                Suscribirse
-                <Send className="ml-2 h-4 w-4" />
-              </>
-            )}
-          </Button>
-        </form>
+        {/* Newsletter */}
+        <div className="max-w-2xl mx-auto bg-finance-green-50 dark:bg-finance-green-900/20 p-8 rounded-lg space-y-4">
+          <h2 className="text-2xl font-semibold text-center text-finance-gray-900 dark:text-white">
+            Suscríbete a nuestro Newsletter
+          </h2>
+          <p className="text-center text-finance-gray-600 dark:text-finance-gray-300">
+            Recibe las mejores noticias financieras directamente en tu bandeja de entrada.
+          </p>
+          <form onSubmit={handleSubscribe} className="flex gap-4">
+            <Input
+              type="email"
+              placeholder="Tu correo electrónico"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="flex-1"
+              disabled={subscribeLoading || subscribeSuccess}
+            />
+            <Button 
+              type="submit" 
+              disabled={subscribeLoading || subscribeSuccess}
+              className={subscribeSuccess ? 'bg-finance-green-500' : ''}
+            >
+              {subscribeLoading ? (
+                <>
+                  <div className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                  Enviando...
+                </>
+              ) : subscribeSuccess ? (
+                <>
+                  ¡Suscrito!
+                  <Send className="ml-2 h-4 w-4" />
+                </>
+              ) : (
+                <>
+                  Suscribirse
+                  <Send className="ml-2 h-4 w-4" />
+                </>
+              )}
+            </Button>
+          </form>
+        </div>
       </div>
     </div>
   );

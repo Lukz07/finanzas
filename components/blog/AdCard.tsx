@@ -7,7 +7,7 @@ declare global {
 }
 
 import { Card } from '@/components/ui/card';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useAdSense } from './AdSenseContext';
 
 interface AdCardProps {
@@ -17,6 +17,7 @@ interface AdCardProps {
 export function AdCard({ adSlot }: AdCardProps) {
   const adRef = useRef<HTMLModElement>(null);
   const { initializedSlots, isScriptLoaded } = useAdSense();
+  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
     const currentAd = adRef.current;
@@ -24,23 +25,33 @@ export function AdCard({ adSlot }: AdCardProps) {
     if (
       typeof window === 'undefined' || 
       !currentAd || 
-      initializedSlots.has(adSlot) ||
-      !isScriptLoaded
+      !isScriptLoaded ||
+      isInitialized ||
+      initializedSlots.has(adSlot)
     ) {
       return;
     }
 
     try {
+      // Verificar si el elemento ya tiene un anuncio
+      if (currentAd.getAttribute('data-adsbygoogle-status') === 'done') {
+        setIsInitialized(true);
+        return;
+      }
+
+      // Inicializar el anuncio
       (window.adsbygoogle = window.adsbygoogle || []).push({});
       initializedSlots.add(adSlot);
+      setIsInitialized(true);
     } catch (err) {
       console.error('Error loading ad:', err);
     }
 
     return () => {
-      initializedSlots.delete(adSlot);
+      // No limpiamos el slot aquí para evitar problemas de re-inicialización
+      // initializedSlots.delete(adSlot);
     };
-  }, [adSlot, initializedSlots, isScriptLoaded]);
+  }, [adSlot, initializedSlots, isScriptLoaded, isInitialized]);
 
   return (
     <Card className="overflow-hidden h-[400px]">
