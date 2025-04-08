@@ -4,6 +4,7 @@ import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 export function ThemeToggle() {
   const { setTheme, theme, resolvedTheme } = useTheme()
@@ -18,11 +19,11 @@ export function ThemeToggle() {
   if (!mounted) {
     return (
       <Button
-        variant="outline"
+        variant="ghost"
         size="icon"
-        className="rounded-full hover:bg-finance-green-100 dark:hover:bg-finance-green-900/30 transition-all duration-200"
+        className="h-9 w-9 rounded-md hover:bg-accent"
       >
-        <Sun className="h-[1.2rem] w-[1.2rem] text-finance-green-600" />
+        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
         <span className="sr-only">Cambiar tema</span>
       </Button>
     )
@@ -32,9 +33,9 @@ export function ThemeToggle() {
 
   return (
     <Button
-      variant="outline"
+      variant="ghost"
       size="icon"
-      className="rounded-full hover:bg-finance-green-100 dark:hover:bg-finance-green-900/30 transition-all duration-200"
+      className="h-9 w-9 rounded-md hover:bg-accent"
       onClick={() => {
         const newTheme = currentTheme === "dark" ? "light" : "dark";
         
@@ -46,11 +47,18 @@ export function ThemeToggle() {
       }}
       aria-label="Cambiar tema"
     >
-      {currentTheme === "dark" ? (
-        <Sun className="h-[1.2rem] w-[1.2rem] text-finance-green-400" />
-      ) : (
-        <Moon className="h-[1.2rem] w-[1.2rem] text-finance-green-600" />
-      )}
+      <Sun
+        className={cn(
+          "h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all",
+          currentTheme === "dark" ? "rotate-90 scale-0" : "rotate-0 scale-100"
+        )}
+      />
+      <Moon
+        className={cn(
+          "absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all",
+          currentTheme === "dark" ? "rotate-0 scale-100" : "rotate-90 scale-0"
+        )}
+      />
       <span className="sr-only">Cambiar tema</span>
     </Button>
   )

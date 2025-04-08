@@ -2,10 +2,12 @@ import type React from "react"
 import "@/app/globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
-import { ThemeToggle } from "@/components/theme-toggle"
 import { Metadata, Viewport } from "next"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { AdSenseScript } from "@/components/AdSenseScript"
+import { AdSenseProvider } from '@/components/blog/AdSenseContext'
+import { MainNav } from "@/components/layout/main-nav"
 // import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -56,6 +58,8 @@ export const metadata: Metadata = {
     canonical: '/',
     languages: {
       'es-ES': '/',
+      'en-US': '/en',
+      'pt-BR': '/pt'
     },
   },
   openGraph: {
@@ -64,6 +68,7 @@ export const metadata: Metadata = {
     url: '/',
     siteName: 'Finanzas',
     locale: 'es_ES',
+    alternateLocale: ['en_US', 'pt_BR'],
     type: 'website',
     images: [
       {
@@ -139,18 +144,21 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} bg-animated-gradient min-h-screen overflow-auto`}>
-        <ThemeProvider>
-          <div className="min-h-screen w-full overflow-visible relative">
-            <div className="absolute right-4 top-4 z-50">
-              <ThemeToggle />
+        <AdSenseProvider>
+          <ThemeProvider>
+            <div className="min-h-screen w-full overflow-visible relative">
+              <MainNav />
+              <main className="min-h-screen w-full overflow-visible dark:bg-finance-gray-900/50">
+                <div className="mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 max-w-[2000px]">
+                  {children}
+                </div>
+              </main>
             </div>
-            <main className="min-h-screen w-full overflow-visible dark:bg-finance-gray-900/50">{children}</main>
-            {/* <Toaster /> */}
-          </div>
-        </ThemeProvider>
-        <Analytics />
-        <SpeedInsights />
+          </ThemeProvider>
+          <Analytics />
+          <SpeedInsights />
+        </AdSenseProvider>
       </body>
     </html>
-  )
+  );
 }

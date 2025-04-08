@@ -7,7 +7,7 @@ export default function InvestmentPlannerPage() {
     <main className="min-h-screen overflow-auto w-full bg-transparent">
       <AnimatedBackground />
       <MainNav />
-      <div className="container mx-auto px-4 py-8">
+      <div className="w-full py-8">
         <WelcomePage config={{
           baseTargetAmount: 100000,
           monthlyContribution: 100000,

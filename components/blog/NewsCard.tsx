@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { NewsImage } from './NewsImage';
 import { CalendarDays, Clock } from 'lucide-react';
 import type { NewsItem } from '@/lib/types/blog';
+import { getCountryFlag } from '@/lib/config/countries';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
 import Link from 'next/link';
@@ -31,6 +32,7 @@ export function NewsCard({ news }: NewsCardProps) {
   };
   
   const newsUrl = getValidNewsUrl();
+  const countryFlag = getCountryFlag(news.source.country || 'global');
   
   // Imprimir para depurar
   // console.log('🔗 NewsCard - news:', news);
@@ -38,20 +40,22 @@ export function NewsCard({ news }: NewsCardProps) {
   return (
     <Link href={newsUrl} className="block">
       <Card className="overflow-hidden group hover:shadow-lg transition-shadow duration-300 h-full">
-        <div className="relative">
+        <div className="relative aspect-[16/9]">
           <NewsImage
             src={news?.imageUrl || null}
             alt={news.title}
             title={news.title}
             category={news.category.name}
-            width={400}
-            height={225}
-            className="w-full h-48 object-cover"
+            className="w-full h-full"
           />
           <div className="absolute top-2 right-2">
             {news.url === news.source.url && (
-              <Badge variant="secondary" className="bg-finance-green-500/90 text-white dark:text-finance-gray-900">
-                {news.source.name}
+              <Badge 
+                variant="secondary" 
+                className="bg-finance-green-500/90 text-white dark:text-finance-gray-900 flex items-center gap-1"
+              >
+                <span>{countryFlag}</span>
+                <span>{news.source.name}</span>
               </Badge>
             )}
           </div>

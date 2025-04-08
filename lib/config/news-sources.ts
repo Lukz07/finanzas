@@ -31,7 +31,7 @@ export const NEWS_SOURCES: NewsSource[] = [
     url: 'https://www.ambito.com',
     type: 'rss',
     priority: 2,
-    category: 'economía',
+    category: 'economia',
     language: 'es',
     country: 'ar',
     updateFrequency: 30,
@@ -67,7 +67,7 @@ export const NEWS_SOURCES: NewsSource[] = [
     url: 'https://www.clarin.com',
     type: 'rss',
     priority: 2,
-    category: 'economía',
+    category: 'economia',
     language: 'es',
     country: 'ar',
     updateFrequency: 30,
@@ -79,7 +79,7 @@ export const NEWS_SOURCES: NewsSource[] = [
     url: 'https://es.cointelegraph.com',
     type: 'rss',
     priority: 1,
-    category: 'crypto',
+    category: 'criptomonedas',
     language: 'es',
     country: 'global',
     updateFrequency: 15,
@@ -91,7 +91,7 @@ export const NEWS_SOURCES: NewsSource[] = [
     url: 'https://finance.yahoo.com',
     type: 'rss',
     priority: 1,
-    category: 'finance',
+    category: 'finanzas',
     language: 'en',
     country: 'us',
     updateFrequency: 15,
@@ -103,9 +103,9 @@ export const NEWS_SOURCES: NewsSource[] = [
     url: 'https://www.alphavantage.co/query',
     type: 'api',
     priority: 1,
-    category: 'markets',
+    category: 'mercados',
     language: 'en',
-    country: 'us',
+    country: 'global',
     updateFrequency: 60,
     credentials: {
       apiKey: process.env.ALPHA_VANTAGE_API_KEY
@@ -117,14 +117,86 @@ export const NEWS_SOURCES: NewsSource[] = [
     url: 'https://finnhub.io/api/v1',
     type: 'api',
     priority: 1,
-    category: 'markets',
+    category: 'mercados',
     language: 'en',
-    country: 'us',
+    country: 'global',
     updateFrequency: 60,
     credentials: {
       apiKey: process.env.FINNHUB_API_KEY
     }
   },
+  {
+    id: 'expansion',
+    name: 'Expansión',
+    url: 'https://www.expansion.com',
+    type: 'rss',
+    priority: 2,
+    category: 'economia',
+    language: 'es',
+    country: 'es',
+    updateFrequency: 30,
+    feedUrl: 'https://www.expansion.com/rss/portada.xml'
+  },
+  {
+    id: 'cincodias',
+    name: 'Cinco Días',
+    url: 'https://cincodias.elpais.com',
+    type: 'rss',
+    priority: 2,
+    category: 'mercados',
+    language: 'es',
+    country: 'es',
+    updateFrequency: 30,
+    feedUrl: 'https://cincodias.elpais.com/seccion/rss/mercados/'
+  },
+  {
+    id: 'ft',
+    name: 'Financial Times',
+    url: 'https://www.ft.com',
+    type: 'rss',
+    priority: 1,
+    category: 'mercados',
+    language: 'en',
+    country: 'uk',
+    updateFrequency: 15,
+    feedUrl: 'https://www.ft.com/rss/home'
+  },
+  {
+    id: 'cnnespanol',
+    name: 'CNN',
+    url: 'https://cnnespanol.cnn.com',
+    type: 'rss',
+    priority: 1,
+    category: 'economia',
+    language: 'es',
+    country: 'us',
+    updateFrequency: 30,
+    feedUrl: 'https://cnnespanol.cnn.com/category/economia/feed/'
+  },
+  {
+    id: 'nytimes',
+    name: 'New York Times',
+    url: 'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml',
+    type: 'rss',
+    priority: 1,
+    category: 'finanzas',
+    language: 'en',
+    country: 'us',
+    updateFrequency: 30,
+    feedUrl: 'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml'
+  },
+  {
+    id: 'nytimes',
+    name: 'New York Times',
+    url: 'https://rss.nytimes.com/services/xml/rss/nyt/YourMoney.xml',
+    type: 'rss',
+    priority: 1,
+    category: 'finanzas',
+    language: 'en',
+    country: 'us',
+    updateFrequency: 30,
+    feedUrl: 'https://rss.nytimes.com/services/xml/rss/nyt/YourMoney.xml'
+  }
 ]
 
 // Categorías disponibles
@@ -134,8 +206,13 @@ export const NEWS_CATEGORIES = [
   'finanzas',
   'negocios',
   'tecnologia',
-  'politica',
-  'argentina',
+  'inmobiliario',
+  'banca',
+  'regulacion',
+  'criptomonedas',
+  'materias-primas',
+  'internacional',
+  'inversiones'
 ]
 
 // Fuentes por idioma

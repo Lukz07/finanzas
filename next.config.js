@@ -57,6 +57,31 @@ const nextConfig = {
         hostname: '*.cointelegraph.com',
         pathname: '**',
       },
+      {
+        protocol: 'http',
+        hostname: '*.bwbx.io',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.uecdn.es',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.cnn.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.warnermediacdn.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.nyt.com',
+        pathname: '**',
+      },
     ],
   },
   env: {

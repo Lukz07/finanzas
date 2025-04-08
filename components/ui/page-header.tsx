@@ -25,7 +25,7 @@ export function PageHeader({
         {description}
       </p>
       
-      {showActions && (
+      {/* {showActions && (
         <div className="flex justify-center gap-4">
           <Link href="/tools/investment-planner">
             <Button className="bg-finance-green-500 hover:bg-finance-green-600">
@@ -40,7 +40,7 @@ export function PageHeader({
             </Button>
           </Link>
         </div>
-      )}
+      )} */}
 
       {children}
     </div>

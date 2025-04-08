@@ -94,6 +94,12 @@ class NewsService {
       // Limitar la cantidad de noticias por fuente
       const limitedItems = feed.items.slice(0, this.MAX_NEWS_PER_SOURCE);
       
+      // Encontrar la configuración de la fuente
+      const sourceConfig = NEWS_SOURCES.find(source => 
+        source.name.toLowerCase() === sourceName.toLowerCase() && 
+        source.feedUrl === url
+      );
+
       const items = limitedItems.map(item => {
         const title = item.title || ''
         const content = item.content || item.description || ''
@@ -129,7 +135,8 @@ class NewsService {
           source: {
             id: sourceName.toLowerCase().replace(/\s+/g, '-'),
             name: sourceName,
-            url: link
+            url: link,
+            country: sourceConfig?.country || 'global'
           },
           category: {
             id: categoryValue.toLowerCase(),

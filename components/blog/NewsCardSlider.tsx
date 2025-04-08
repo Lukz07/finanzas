@@ -26,7 +26,7 @@ export function NewsCardSlider({ news, sourceName }: NewsCardSliderProps) {
   if (news.length === 0) return null;
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden">
+    <div className="relative w-full aspect-[3/4] overflow-hidden">
       <div 
         className="absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-in-out"
         style={{ transform: `translateY(-${currentIndex * 100}%)` }}

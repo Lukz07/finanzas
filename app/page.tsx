@@ -156,7 +156,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 space-y-8 bg-finance-gray-50 dark:bg-finance-gray-900/50">
+    <div className="w-full py-8 space-y-8 bg-finance-gray-50 dark:bg-transparent">
       <PageHeader
         title="Finanzas Personales"
         description="Tu plataforma integral para gestionar tus finanzas, mantenerte informado y planificar tu futuro financiero."

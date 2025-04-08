@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import type { NewsItem } from '@/lib/types/blog';
 import { newsService } from '@/lib/server/news-service';
+import { SUPPORTED_LANGUAGES } from '@/lib/config/languages';
 
 // Configurar el sitemap como dinámico
 export const dynamic = 'force-dynamic';
@@ -71,56 +72,63 @@ async function getSafeNews(): Promise<NewsItem[]> {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   console.log('🗺️ Generando sitemap usando sitemap.ts');
   
-  // Usar directamente la URL base desde las variables de entorno
-  // Esto funciona tanto en tiempo de ejecución como durante el build
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tudominio.com';
-  console.log('🔗 URL base para sitemap:', baseUrl);
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
+    process.env.VERCEL_URL ? 
+    `https://${process.env.VERCEL_URL}` : 
+    'https://mifinanzas.com';
   
-  // Asegurar que la URL base tiene el protocolo
-  const formattedBaseUrl = baseUrl.startsWith('http') ? baseUrl : `https://${baseUrl}`;
-  console.log('🔗 URL base formateada:', formattedBaseUrl);
-  
-  // Rutas estáticas
-  const staticRoutes = [
-    {
-      url: formattedBaseUrl,
+  const formattedBaseUrl = baseUrl.replace(/\/$/, '');
+
+  // Rutas estáticas base
+  const baseStaticPaths = [
+    '',
+    '/blog',
+    '/about',
+    '/contact',
+  ];
+
+  // Generar rutas estáticas para cada idioma
+  const staticRoutes = Object.values(SUPPORTED_LANGUAGES).flatMap(lang => {
+    return baseStaticPaths.map(path => ({
+      url: `${formattedBaseUrl}${lang.path}${path}`,
       lastModified: new Date(),
       changeFrequency: 'daily' as const,
-      priority: 1,
-    },
-    {
-      url: `${formattedBaseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'hourly' as const,
-      priority: 0.9,
-    },
-  ];
+      priority: 1.0,
+    }));
+  });
 
   try {
     // Obtener noticias de forma segura para generar rutas dinámicas
     const news = await getSafeNews();
     
-    // Generar rutas para cada noticia
-    const newsRoutes = news.map((item) => ({
-      url: `${formattedBaseUrl}/blog/${item.slug}`,
-      lastModified: new Date(item.publishedAt),
-      changeFrequency: 'daily' as const,
-      priority: 0.8,
-    }));
+    // Generar rutas para cada noticia en cada idioma
+    const newsRoutes = Object.values(SUPPORTED_LANGUAGES).flatMap(lang => 
+      news.map((item) => ({
+        url: `${formattedBaseUrl}${lang.path}/blog/${item.slug}`,
+        lastModified: new Date(item.publishedAt),
+        changeFrequency: 'daily' as const,
+        priority: 0.8,
+      }))
+    );
 
-    // Rutas de categorías
-    const categoryRoutes = [
+    // Categorías base
+    const baseCategories = [
       'markets',
       'economy',
       'crypto',
       'technology',
       'companies',
-    ].map((category) => ({
-      url: `${formattedBaseUrl}/blog/category/${category}`,
-      lastModified: new Date(),
-      changeFrequency: 'daily' as const,
-      priority: 0.7,
-    }));
+    ];
+
+    // Rutas de categorías para cada idioma
+    const categoryRoutes = Object.values(SUPPORTED_LANGUAGES).flatMap(lang =>
+      baseCategories.map((category) => ({
+        url: `${formattedBaseUrl}${lang.path}/blog/category/${category}`,
+        lastModified: new Date(),
+        changeFrequency: 'daily' as const,
+        priority: 0.7,
+      }))
+    );
 
     console.log(`🗺️ Sitemap generado con ${staticRoutes.length + newsRoutes.length + categoryRoutes.length} URLs`);
     return [...staticRoutes, ...newsRoutes, ...categoryRoutes];

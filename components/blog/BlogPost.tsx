@@ -12,7 +12,7 @@ interface BlogPostProps {
 
 export function BlogPost({ post }: BlogPostProps) {
   return (
-    <article className="container mx-auto px-4 py-8">
+    <article className="w-full py-8">
       <NewsSchema news={post} />
       
       <header className="mb-8">
@@ -45,26 +45,26 @@ export function BlogPost({ post }: BlogPostProps) {
       </div>
 
       <footer className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-4">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             <span className="text-gray-600 dark:text-gray-400">
               {post.metrics.views} vistas
             </span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span className="text-gray-600 dark:text-gray-400">
               {post.metrics.engagement.likes} me gusta
             </span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span className="text-gray-600 dark:text-gray-400">
               {post.metrics.engagement.comments} comentarios
             </span>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <a
               href={post.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white text-center rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               tabIndex={0}
               aria-label="Visitar fuente original de la noticia"
               onKeyDown={(e) => {
@@ -75,7 +75,7 @@ export function BlogPost({ post }: BlogPostProps) {
             >
               Fuente original
             </a>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               {post.tags.map((tag: string) => (
                 <span
                   key={tag}
