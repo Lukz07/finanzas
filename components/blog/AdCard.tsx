@@ -16,12 +16,17 @@ interface AdCardProps {
 
 export function AdCard({ adSlot }: AdCardProps) {
   const adRef = useRef<HTMLModElement>(null);
-  const { initializedSlots } = useAdSense();
+  const { initializedSlots, isScriptLoaded } = useAdSense();
 
   useEffect(() => {
     const currentAd = adRef.current;
     
-    if (typeof window === 'undefined' || !currentAd || initializedSlots.has(adSlot)) {
+    if (
+      typeof window === 'undefined' || 
+      !currentAd || 
+      initializedSlots.has(adSlot) ||
+      !isScriptLoaded
+    ) {
       return;
     }
 
@@ -35,7 +40,7 @@ export function AdCard({ adSlot }: AdCardProps) {
     return () => {
       initializedSlots.delete(adSlot);
     };
-  }, [adSlot, initializedSlots]);
+  }, [adSlot, initializedSlots, isScriptLoaded]);
 
   return (
     <Card className="overflow-hidden h-[400px]">
