@@ -43,7 +43,7 @@ export function AdSenseAd() {
           minWidth: '300px'
         }}
         data-ad-client="ca-pub-8473965589607250"
-        data-ad-slot=""
+        data-ad-slot="7862229446"
         data-ad-format="auto"
         data-full-width-responsive="true"
       />
