@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Calculator, Newspaper, Menu } from "lucide-react";
+import { Calculator, Newspaper, Menu, LineChart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -21,7 +21,11 @@ const navItems: NavItem[] = [
     href: "/tools/investment-planner",
     icon: Calculator,
   },
-  
+  {
+    title: "Análisis",
+    href: "/analysis",
+    icon: LineChart,
+  },
 ];
 
 export function MainNav() {

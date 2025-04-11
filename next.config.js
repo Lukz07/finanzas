@@ -82,6 +82,14 @@ const nextConfig = {
         hostname: '*.nyt.com',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'ejemplo.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.example.com',
+      },
     ],
   },
   env: {

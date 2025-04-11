@@ -1,42 +1,47 @@
 import { MetadataRoute } from 'next';
-import { getBaseUrl } from '@/lib/config/urls';
-import { ServerNewsService } from '@/lib/services/server-news-service';
-import type { NewsItem } from '@/lib/types/blog';
+import { GoogleSheetsService } from '@/lib/services/google-sheets-service';
 
 // Configurar el sitemap como dinámico
 export const dynamic = 'force-dynamic';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  console.log('🗺️ Generando sitemap usando sitemap.ts');
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
   
-  const baseUrl = getBaseUrl();
-  const formattedBaseUrl = baseUrl.replace(/\/$/, '');
+  // Obtener URLs de análisis
+  const sheetsService = GoogleSheetsService.getInstance();
+  const analysisUrls = await sheetsService.getAnalysisUrls();
 
-  // Solo la página principal
-  const homeRoute = {
-    url: formattedBaseUrl,
-    lastModified: new Date(),
-    changeFrequency: 'hourly' as const,
-    priority: 1.0,
-  };
-
-  try {
-    // Obtener noticias del servicio del servidor
-    const newsService = ServerNewsService.getInstance();
-    const news = await newsService.getNews();
-    
-    // Generar rutas para cada noticia
-    const newsRoutes = news.map((item: NewsItem) => ({
-      url: `${formattedBaseUrl}/blog/${item.slug}`,
-      lastModified: new Date(item.publishedAt),
-      changeFrequency: 'weekly' as const,
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
       priority: 0.8,
-    }));
-
-    console.log(`🗺️ Sitemap generado con ${1 + newsRoutes.length} URLs`);
-    return [homeRoute, ...newsRoutes];
-  } catch (error) {
-    console.error('❌ Error generando sitemap:', error);
-    return [homeRoute];
-  }
+    },
+    {
+      url: `${baseUrl}/tools/investment-planner`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/analysis`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+    // Agregar URLs de análisis
+    ...analysisUrls.map(item => ({
+      url: `${baseUrl}${item.url}`,
+      lastModified: new Date(item.lastmod),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+  ];
 } 
