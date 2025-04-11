@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getBaseUrl } from '@/lib/config/urls';
-import { getSafeNews } from '@/lib/services/news-service';
+import { ServerNewsService } from '@/lib/services/server-news-service';
+import type { NewsItem } from '@/lib/types/blog';
 
 // Configurar el sitemap como dinámico
 export const dynamic = 'force-dynamic';
@@ -20,11 +21,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   };
 
   try {
-    // Obtener noticias de forma segura para generar rutas dinámicas
-    const news = await getSafeNews();
+    // Obtener noticias del servicio del servidor
+    const newsService = ServerNewsService.getInstance();
+    const news = await newsService.getNews();
     
     // Generar rutas para cada noticia
-    const newsRoutes = news.map((item) => ({
+    const newsRoutes = news.map((item: NewsItem) => ({
       url: `${formattedBaseUrl}/blog/${item.slug}`,
       lastModified: new Date(item.publishedAt),
       changeFrequency: 'weekly' as const,

@@ -21,11 +21,7 @@ const navItems: NavItem[] = [
     href: "/tools/investment-planner",
     icon: Calculator,
   },
-  {
-    title: "Ver Noticias",
-    href: "/blog",
-    icon: Newspaper,
-  },
+  
 ];
 
 export function MainNav() {

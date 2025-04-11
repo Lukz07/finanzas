@@ -220,4 +220,18 @@ class NewsService {
   }
 }
 
-export const newsService = NewsService.getInstance(); 
+export const newsService = NewsService.getInstance();
+
+// Función específica para el sitemap que maneja errores de forma segura
+export async function getSafeNews(): Promise<NewsItem[]> {
+  try {
+    console.log('📊 Obteniendo noticias para sitemap...');
+    const news = await newsService.getNews();
+    console.log(`📊 Obtenidas ${news.length} noticias para sitemap`);
+    return news;
+  } catch (error) {
+    console.log('❌ Error al obtener noticias para el sitemap:', error);
+    console.log('⚠️ Retornando array vacío para el sitemap');
+    return [];
+  }
+} 
