@@ -94,10 +94,20 @@ export class GoogleSheetsService {
     return Array.from(new Set(items.flatMap((item) => item.tags)));
   }
 
+  // Función para crear slugs amigables
+  private createSlug(text: string): string {
+    return text
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '') // Eliminar acentos
+      .replace(/[^a-z0-9]+/g, '-') // Reemplazar caracteres no alfanuméricos por guiones
+      .replace(/(^-|-$)/g, ''); // Eliminar guiones al inicio y final
+  }
+
   public async getAnalysisUrls(): Promise<{ url: string; lastmod: string }[]> {
     const items = await this.getAnalysisItems();
     return items.map(item => ({
-      url: `/analysis/${item.id}`,
+      url: `/analysis/${this.createSlug(item.translations.es.title)}`,
       lastmod: item.date
     }));
   }

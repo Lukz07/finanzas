@@ -1,15 +1,25 @@
 import { MetadataRoute } from 'next';
 import { GoogleSheetsService } from '@/lib/services/google-sheets-service';
+import { getSafeNews } from '@/lib/workers/news-service';
 
 // Configurar el sitemap como dinámico
 export const dynamic = 'force-dynamic';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   
   // Obtener URLs de análisis
   const sheetsService = GoogleSheetsService.getInstance();
   const analysisUrls = await sheetsService.getAnalysisUrls();
+
+  // Obtener URLs de noticias
+  const news = await getSafeNews();
+  const newsUrls = news.map(item => ({
+    url: `${baseUrl}/blog/${item.slug}`,
+    lastModified: new Date(item.publishedAt),
+    changeFrequency: 'daily' as const,
+    priority: 0.7,
+  }));
 
   return [
     {
@@ -43,5 +53,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly' as const,
       priority: 0.7,
     })),
+    // Agregar URLs de noticias
+    ...newsUrls,
   ];
 } 
