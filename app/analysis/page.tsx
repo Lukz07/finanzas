@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { PageHeader } from "@/components/ui/page-header";
 import { AnalysisItem } from "@/lib/types/analysis";
-import { GoogleSheetsService } from '@/app/api/google-sheets/google-sheets-service';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -45,11 +44,12 @@ export default function AnalysisPage() {
   useEffect(() => {
     const fetchAnalysis = async () => {
       try {
-        const service = GoogleSheetsService.getInstance();
-        const items = await service.getAnalysisItems();
+        const response = await fetch('/api/google-sheets');
+        if (!response.ok) throw new Error('Error al obtener los análisis');
+        const items = await response.json();
         setAnalysisItems(items);
       } catch (err) {
-        setError("Error al cargar los análisis");
+        setError('Error al cargar los análisis');
         console.error(err);
       } finally {
         setLoading(false);

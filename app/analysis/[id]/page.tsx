@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { PageHeader } from "@/components/ui/page-header";
 import { AnalysisItem } from "@/lib/types/analysis";
-import { GoogleSheetsService } from '@/app/api/google-sheets/google-sheets-service';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -49,29 +48,26 @@ export default function AnalysisDetailPage({ params }: { params: Promise<{ id: s
   useEffect(() => {
     const fetchAnalysis = async () => {
       try {
-        const service = GoogleSheetsService.getInstance();
-        const items = await service.getAnalysisItems();
+        const response = await fetch('/api/google-sheets');
+        if (!response.ok) throw new Error('Error al obtener los análisis');
+        const items = await response.json();
         
         // Buscar el item que coincida con el slug en cualquier idioma
-        const item = items.find(item => {
-          // Intentar encontrar coincidencia en el idioma actual
+        const item = items.find((item: AnalysisItem) => {
           const currentTranslation = item.translations[langCode] || item.translations.es;
           const currentSlug = createSlug(currentTranslation.title);
-          
-          // Intentar encontrar coincidencia en el idioma alternativo
           const alternateTranslation = item.translations[alternateLang] || item.translations.es;
           const alternateSlug = createSlug(alternateTranslation.title);
-          
           return currentSlug === resolvedParams.id || alternateSlug === resolvedParams.id;
         });
 
         if (item) {
           setAnalysisItem(item);
         } else {
-          setError("Análisis no encontrado");
+          setError('Análisis no encontrado');
         }
       } catch (err) {
-        setError("Error al cargar el análisis");
+        setError('Error al cargar el análisis');
         console.error(err);
       } finally {
         setLoading(false);
