@@ -9,30 +9,10 @@ import { AdSenseScript } from "@/components/AdSenseScript"
 import { AdSenseProvider } from '@/components/blog/AdSenseContext'
 import { MainNav } from "@/components/layout/main-nav"
 import { CookieConsent } from "@/components/CookieConsent"
+import { getBaseUrl, createUrl } from "@/lib/config/urls"
 // import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
-
-// Función para obtener el dominio base de la aplicación
-const getBaseUrl = () => {
-  if (process.env.NEXT_PUBLIC_SITE_URL) {
-    return process.env.NEXT_PUBLIC_SITE_URL;
-  }
-  
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`;
-  }
-  
-  return process.env.NODE_ENV === 'development' 
-    ? 'http://localhost:3000' 
-    : 'https://mifinanzas.com'; // Dominio de producción por defecto
-};
-
-// Función para crear URLs absolutas
-const createUrl = (path: string) => {
-  const baseUrl = getBaseUrl();
-  return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
-};
 
 export const viewport: Viewport = {
   width: 'device-width',

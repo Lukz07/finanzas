@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
+import { getBaseUrl, createUrl } from '@/lib/config/urls';
 
 export function generateMetadata(): Metadata {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tudominio.com';
+  const baseUrl = getBaseUrl();
   
   return {
     title: 'Blog Financiero | Últimas Noticias del Mercado',
@@ -38,7 +39,7 @@ export function generateMetadata(): Metadata {
       siteName: 'Tu Empresa',
       images: [
         {
-          url: `${baseUrl}/og-image.jpg`,
+          url: createUrl('og-image.jpg'),
           width: 1200,
           height: 630,
           alt: 'Blog Financiero'
@@ -50,7 +51,7 @@ export function generateMetadata(): Metadata {
       card: 'summary_large_image',
       title: 'Blog Financiero | Últimas Noticias del Mercado',
       description: 'Mantente informado sobre las últimas noticias financieras, análisis de mercados y tendencias económicas.',
-      images: [`${baseUrl}/og-image.jpg`],
+      images: [createUrl('og-image.jpg')],
       creator: '@tuempresa',
       site: '@tuempresa',
     }

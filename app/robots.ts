@@ -1,11 +1,8 @@
 import { MetadataRoute } from 'next'
+import { getBaseUrl } from '@/lib/config/urls'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
-    process.env.VERCEL_URL ? 
-    `https://${process.env.VERCEL_URL}` : 
-    'https://mifinanzas.com';
-  
+  const baseUrl = getBaseUrl();
   const formattedBaseUrl = baseUrl.replace(/\/$/, '');
 
   return {
