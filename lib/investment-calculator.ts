@@ -6,26 +6,90 @@ export interface InvestmentConfig {
 }
 
 export function calcularMesesParaObjetivo(initialAmount: number, objetivo: number, aporteMensual: number, tasaMensual: number) {  
-  let saldo = initialAmount || 0;
-  let meses = 0;
-  let totalAportado = 0;
+  // let saldo = initialAmount || 0;
+  // let meses = 0;
+  // let totalAportado = 0;
 
-  while (saldo < objetivo) {
-    saldo += aporteMensual;
-    saldo *= (1 + tasaMensual);
-    totalAportado += aporteMensual;
-    meses++;
+  // while (saldo < objetivo) {
+  //   saldo += aporteMensual;
+  //   saldo *= (1 + tasaMensual);
+  //   totalAportado += aporteMensual;
+  //   meses++;
+  // }
+
+  // // VF = VP * ( (1+r)^n -1 ) / r
+
+  // const gananciaPorInteres = saldo - totalAportado;
+
+  // return {
+  //   meses,
+  //   totalAportado,
+  //   gananciaPorInteres,
+  //   saldoFinal: saldo
+  // };
+
+  // Si no hay aporte mensual, usamos la fórmula de interés compuesto simple
+  if (aporteMensual === 0) {
+    const meses = Math.log(objetivo / initialAmount) / Math.log(1 + tasaMensual);
+    return {
+      meses: Math.ceil(meses),
+      totalAportado: 0,
+      gananciaPorInteres: objetivo - initialAmount,
+      saldoFinal: objetivo
+    };
   }
 
-  const gananciaPorInteres = saldo - totalAportado;
+  // Fórmula para calcular n (número de períodos)
+  // n = ln(1 + (VF * r / P)) / ln(1 + r)
+  const meses = Math.log(1 + ((objetivo - initialAmount) * tasaMensual / aporteMensual)) / Math.log(1 + tasaMensual);
+
+  
+  
+  // Calculamos el saldo final exacto
+  const saldoFinal = initialAmount * Math.pow(1 + tasaMensual, meses) + 
+                    aporteMensual * (Math.pow(1 + tasaMensual, meses) - 1) / tasaMensual;
+  
+  const totalAportado = aporteMensual * Math.ceil(meses);
+  const gananciaPorInteres = saldoFinal - totalAportado - initialAmount;
 
   return {
-    meses,
+    meses: Math.ceil(meses),
     totalAportado,
     gananciaPorInteres,
-    saldoFinal: saldo
+    saldoFinal
   };
 
+}
+
+export function calcularMesesParaObjetivoFormula(initialAmount: number, objetivo: number, aporteMensual: number, tasaMensual: number) {
+  // Si no hay aporte mensual, usamos la fórmula de interés compuesto simple
+  if (aporteMensual === 0) {
+    const meses = Math.log(objetivo / initialAmount) / Math.log(1 + tasaMensual);
+    return {
+      meses: Math.ceil(meses),
+      totalAportado: 0,
+      gananciaPorInteres: objetivo - initialAmount,
+      saldoFinal: objetivo
+    };
+  }
+
+  // Fórmula para calcular n (número de períodos)
+  // n = ln(1 + (VF * r / P)) / ln(1 + r)
+  const meses = Math.log(1 + ((objetivo - initialAmount) * tasaMensual / aporteMensual)) / Math.log(1 + tasaMensual);
+  
+  // Calculamos el saldo final exacto
+  const saldoFinal = initialAmount * Math.pow(1 + tasaMensual, meses) + 
+                    aporteMensual * (Math.pow(1 + tasaMensual, meses) - 1) / tasaMensual;
+  
+  const totalAportado = aporteMensual * Math.ceil(meses);
+  const gananciaPorInteres = saldoFinal - totalAportado - initialAmount;
+
+  return {
+    meses: Math.ceil(meses),
+    totalAportado,
+    gananciaPorInteres,
+    saldoFinal
+  };
 }
 
 export function calculateInvestmentProgress(

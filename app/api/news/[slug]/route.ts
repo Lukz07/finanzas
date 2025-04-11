@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { newsService } from '@/lib/server/news-service'
+import { newsService } from '@/lib/workers/news-service'
 import type { NewsItem } from '@/lib/types/blog'
 
 export async function GET(

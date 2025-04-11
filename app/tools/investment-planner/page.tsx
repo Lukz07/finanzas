@@ -5,8 +5,8 @@ import { MainNav } from "@/components/layout/main-nav";
 export default function InvestmentPlannerPage() {
   return (
     <main className="min-h-screen overflow-auto w-full bg-transparent">
-      <AnimatedBackground />
-      <MainNav />
+      {/* <AnimatedBackground />
+      <MainNav /> */}
       <div className="w-full py-8">
         <WelcomePage config={{
           baseTargetAmount: 100000,

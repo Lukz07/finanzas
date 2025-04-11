@@ -1,19 +1,60 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  // Usar la misma URL base que en el sitemap.ts
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://tudominio.com';
-  const formattedBaseUrl = baseUrl.startsWith('http') ? baseUrl : `https://${baseUrl}`;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
+    process.env.VERCEL_URL ? 
+    `https://${process.env.VERCEL_URL}` : 
+    'https://mifinanzas.com';
   
+  const formattedBaseUrl = baseUrl.replace(/\/$/, '');
+
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: [
-        '/api/', 
-        '/admin/',
-      ],
-    },
+    rules: [
+      // Regla general para todos los robots
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: [
+          '/api/',
+          '/admin/',
+          '/_next/',
+          '/private/',
+          '/auth/',
+          '/dashboard/',
+          '/profile/',
+          '/settings/',
+          '/*?*',
+          '/*.json$',
+          '/*.js$',
+          '/*.css$'
+        ],
+        crawlDelay: 1
+      },
+      // Reglas específicas para Googlebot
+      {
+        userAgent: 'Googlebot',
+        allow: [
+          '/$',
+          '/blog/',
+          '/tools/'
+        ],
+        crawlDelay: 1
+      },
+      // Reglas para Googlebot-Image
+      {
+        userAgent: 'Googlebot-Image',
+        allow: [
+          '/images/',
+          '/public/images/'
+        ]
+      },
+      // Reglas para Googlebot-Mobile
+      {
+        userAgent: 'Googlebot-Mobile',
+        allow: '/$'
+      }
+    ],
     sitemap: `${formattedBaseUrl}/sitemap.xml`,
+    host: formattedBaseUrl.replace('https://', '')
   }
 } 

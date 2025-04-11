@@ -11,19 +11,64 @@ interface NewsCardSliderProps {
 
 export function NewsCardSlider({ news, sourceName }: NewsCardSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const delayRef = useRef(Math.random() * 4000); // Delay aleatorio entre 0 y 2 segundos
+  const delayRef = useRef(Math.random() * 7000);
+  const [preloadedImages, setPreloadedImages] = useState<Set<string>>(new Set());
+
+  // Función para precargar la siguiente imagen
+  const preloadNextImage = (nextIndex: number) => {
+    const imageUrl = news[nextIndex]?.imageUrl;
+    if (imageUrl) {
+      const img = new window.Image();
+      img.src = imageUrl;
+      setPreloadedImages(prev => {
+        const newSet = new Set(prev);
+        newSet.add(imageUrl);
+        return newSet;
+      });
+    }
+  };
 
   useEffect(() => {
     if (news.length <= 1) return;
 
+    // Precargar la siguiente imagen
+    const nextIndex = (currentIndex + 1) % news.length;
+    preloadNextImage(nextIndex);
+
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % news.length);
-    }, 8500 + delayRef.current); // 4.5s base + delay aleatorio
+      setCurrentIndex((prevIndex) => {
+        const newIndex = (prevIndex + 1) % news.length;
+        // Precargar la siguiente imagen antes de cambiar
+        preloadNextImage((newIndex + 1) % news.length);
+        return newIndex;
+      });
+    }, 8500 + delayRef.current);
 
     return () => clearInterval(interval);
-  }, [news.length]);
+  }, [news.length, currentIndex]);
 
   if (news.length === 0) return null;
+
+  // Determinar qué noticias mostrar
+  const getVisibleNews = () => {
+    const visibleIndices = new Set<number>();
+    
+    // Siempre mostrar la actual
+    visibleIndices.add(currentIndex);
+    
+    // Mostrar la siguiente
+    visibleIndices.add((currentIndex + 1) % news.length);
+    
+    // Mostrar la anterior (para transiciones suaves)
+    visibleIndices.add((currentIndex - 1 + news.length) % news.length);
+
+    return Array.from(visibleIndices).map(index => ({
+      index,
+      news: news[index]
+    }));
+  };
+
+  const visibleNews = getVisibleNews();
 
   return (
     <div className="relative w-full aspect-[3/4] overflow-hidden">
@@ -31,7 +76,7 @@ export function NewsCardSlider({ news, sourceName }: NewsCardSliderProps) {
         className="absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-in-out"
         style={{ transform: `translateY(-${currentIndex * 100}%)` }}
       >
-        {news.map((item, index) => (
+        {visibleNews.map(({ index, news: item }) => (
           <div 
             key={`${item.id}-${item.slug}-${index}`} 
             className="absolute w-full h-full"

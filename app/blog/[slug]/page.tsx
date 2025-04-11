@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { newsService } from '@/lib/server/news-service';
+import { newsService } from '@/lib/workers/news-service';
 import { NewsSchema } from '@/components/blog/NewsSchema';
 import { formatDate } from '@/lib/utils/date';
 import { notFound } from 'next/navigation';

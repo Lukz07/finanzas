@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 interface NewsImageProps {
@@ -17,6 +17,19 @@ export function NewsImage({
   className 
 }: NewsImageProps) {
   const [error, setError] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    if (src) {
+      const img = new window.Image()
+      img.src = src
+      img.onload = () => setIsLoading(false)
+      img.onerror = () => {
+        setError(true)
+        setIsLoading(false)
+      }
+    }
+  }, [src])
 
   if (!src || error) {
     return (
@@ -37,15 +50,19 @@ export function NewsImage({
 
   return (
     <div className={`relative ${className}`}>
+      {isLoading && (
+        <div className="absolute inset-0 bg-finance-green-100 dark:bg-finance-green-900/20 animate-pulse" />
+      )}
       <Image
         src={src}
         alt={alt}
         fill
-        className="object-cover"
+        className={`object-cover ${isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-300'}`}
         onError={() => setError(true)}
         priority={false}
         quality={75}
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        unoptimized={src.includes('warnermediacdn.com')} // Desactivar optimización para videos
       />
     </div>
   )

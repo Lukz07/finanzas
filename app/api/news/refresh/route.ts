@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { newsService } from '@/lib/server/news-service';
+import { newsService } from '@/lib/workers/news-service';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0; // No cachear

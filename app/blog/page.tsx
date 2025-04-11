@@ -1,7 +1,7 @@
 import React from 'react';
 import BlogContent from '../../components/blog/BlogContent';
 import { metadata } from './metadata';
-import { newsService } from '@/lib/server/news-service';
+import { newsService } from '@/lib/workers/news-service';
 
 // Indicar a Next.js que esta página debe renderizarse dinámicamente
 export const dynamic = 'force-dynamic';
