@@ -6,8 +6,9 @@ import { Calculator, Newspaper, Menu, LineChart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useNewAnalysis } from "@/lib/hooks/use-new-analysis";
 
 interface NavItem {
   title: string;
@@ -31,6 +32,14 @@ const navItems: NavItem[] = [
 export function MainNav() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const { hasNewAnalysis, markAsRead } = useNewAnalysis();
+
+  // Marcar como leído cuando se visita la página de análisis
+  useEffect(() => {
+    if (pathname === '/analysis') {
+      markAsRead();
+    }
+  }, [pathname, markAsRead]);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -46,7 +55,7 @@ export function MainNav() {
               key={item.href}
               href={item.href}
               className={cn(
-                "flex items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent",
+                "flex items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent relative",
                 pathname === item.href
                   ? "bg-accent text-accent-foreground"
                   : "text-muted-foreground hover:text-foreground"
@@ -54,11 +63,14 @@ export function MainNav() {
             >
               <item.icon className="mr-2 h-4 w-4" />
               {item.title}
+              {item.href === '/analysis' && hasNewAnalysis && (
+                <span className="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-finance-green-500 animate-pulse" />
+              )}
             </Link>
           ))}
         </nav>
 
-        <div className="flex flex-1 items-center justify-end gap-2">
+        <div className="flex items-center gap-4 ml-auto">
           <ThemeToggle />
           
           {/* Menú móvil */}
@@ -77,7 +89,7 @@ export function MainNav() {
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "flex items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent",
+                      "flex items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent relative",
                       pathname === item.href
                         ? "bg-accent text-accent-foreground"
                         : "text-muted-foreground hover:text-foreground"
@@ -85,6 +97,9 @@ export function MainNav() {
                   >
                     <item.icon className="mr-2 h-4 w-4" />
                     {item.title}
+                    {item.href === '/analysis' && hasNewAnalysis && (
+                      <span className="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-finance-green-500 animate-pulse" />
+                    )}
                   </Link>
                 ))}
               </nav>

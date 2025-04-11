@@ -12,7 +12,7 @@ interface BlogPostProps {
 
 export function BlogPost({ post }: BlogPostProps) {
   return (
-    <article className="w-full py-8">
+    <article className="max-w-[970px] mx-auto py-8">
       <NewsSchema news={post} />
       
       <header className="mb-8">
