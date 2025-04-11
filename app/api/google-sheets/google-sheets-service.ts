@@ -1,7 +1,7 @@
 import { AnalysisItem } from "@/lib/types/analysis";
 
-const SPREADSHEET_ID = process.env.NEXT_PUBLIC_GOOGLE_SHEET_ID;
-const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
+const SPREADSHEET_ID = process.env.GOOGLE_SHEET_ID;
+const API_KEY = process.env.GOOGLE_API_KEY;
 
 export class GoogleSheetsService {
   private static instance: GoogleSheetsService;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { GoogleSheetsService } from '@/lib/services/google-sheets-service';
+import { GoogleSheetsService } from '@/app/api/google-sheets/google-sheets-service';
 import { AnalysisItem } from '@/lib/types/news-analysis';
 
 const sheetsService = GoogleSheetsService.getInstance();

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { PageHeader } from "@/components/ui/page-header";
 import { AnalysisItem } from "@/lib/types/analysis";
-import { GoogleSheetsService } from "@/lib/services/google-sheets-service";
+import { GoogleSheetsService } from '@/app/api/google-sheets/google-sheets-service';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";

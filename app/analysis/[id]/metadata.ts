@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { GoogleSheetsService } from "@/lib/services/google-sheets-service";
+import { GoogleSheetsService } from '@/app/api/google-sheets/google-sheets-service';
 import { AnalysisItem } from "@/lib/types/analysis";
 
 // Función para crear slugs amigables

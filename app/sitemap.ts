@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { GoogleSheetsService } from '@/lib/services/google-sheets-service';
+import { GoogleSheetsService } from '@/app/api/google-sheets/google-sheets-service';
 import { getSafeNews } from '@/lib/workers/news-service';
 
 // Configurar el sitemap como dinámico
