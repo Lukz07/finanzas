@@ -3,6 +3,14 @@
     {
       "path": "/api/news/refresh",
       "schedule": "*/30 * * * *"
+    },
+    {
+      "path": "/api/sitemap/regenerate",
+      "schedule": "*/35 * * * *"
+    },
+    {
+      "path": "/sitemap.xml",
+      "schedule": "0 */6 * * *"
     }
   ]
 } 
