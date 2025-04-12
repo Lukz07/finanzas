@@ -10,6 +10,7 @@ import { AdSenseProvider } from '@/components/blog/AdSenseContext'
 import { MainNav } from "@/components/layout/main-nav"
 import { CookieConsent } from "@/components/CookieConsent"
 import { getBaseUrl, createUrl } from "@/lib/config/urls"
+import { FooterGlobal } from "@/components/ui/footer-global"
 // import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -130,13 +131,14 @@ export default function RootLayout({
         </head>
         <body className={`${inter.className} bg-animated-gradient min-h-screen overflow-auto`}>
           <ThemeProvider>
-            <div className="min-h-screen w-full overflow-visible relative">
+            <div className="min-h-screen w-full overflow-visible relative flex flex-col">
               <MainNav />
-              <main className="min-h-screen w-full overflow-visible dark:bg-finance-gray-900/50">
+              <main className="flex-grow w-full overflow-visible dark:bg-finance-gray-900/50">
                 <div className="mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 max-w-[2000px]">
                   {children}
                 </div>
               </main>
+              <FooterGlobal />
             </div>
           </ThemeProvider>
           <Analytics />

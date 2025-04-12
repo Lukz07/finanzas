@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { NewsGrid } from '@/components/blog/NewsGrid';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Send, TrendingUp, ArrowRight, BookOpen, TrendingDown, BrainCircuit, LineChart } from 'lucide-react';
+import { Send, TrendingUp, ArrowRight, BookOpen, TrendingDown, BrainCircuit, LineChart, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import type { NewsItem, NewsFilters } from '@/lib/types/blog';
 import { FrontendNewsService } from '@/lib/services/frontend-news-service';
 import Link from 'next/link';
@@ -22,10 +22,6 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [news, setNews] = useState<NewsItem[]>([]);
-  const [email, setEmail] = useState('');
-  const [subscribeLoading, setSubscribeLoading] = useState(false);
-  const [subscribeSuccess, setSubscribeSuccess] = useState(false);
-  const isFetching = useRef(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Los tips financieros a mostrar en el slider
@@ -143,28 +139,7 @@ export default function HomePage() {
     }
   ];
 
-  const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    
-    try {
-      setSubscribeLoading(true);
-      // Simular llamada a API
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      setSubscribeSuccess(true);
-      setEmail('');
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubscribeSuccess(false);
-      }, 5000);
-    } catch (err) {
-      console.error('Error al suscribirse:', err);
-      alert('Error al suscribirse. Por favor, intente nuevamente.');
-    } finally {
-      setSubscribeLoading(false);
-    }
-  };
+  const isFetching = useRef(false);
 
   return (
     <div className="space-y-8">
@@ -236,49 +211,6 @@ export default function HomePage() {
           news={news}
           isLoading={loading}
         />
-        
-        {/* Newsletter */}
-        <div className="max-w-2xl mx-auto bg-finance-green-50 dark:bg-finance-green-900/20 p-8 rounded-lg space-y-4">
-          <h2 className="text-2xl font-semibold text-center text-finance-gray-900 dark:text-white">
-            Suscríbete a nuestro Newsletter
-          </h2>
-          <p className="text-center text-finance-gray-600 dark:text-finance-gray-300">
-            Recibe las mejores noticias financieras directamente en tu bandeja de entrada.
-          </p>
-          <form onSubmit={handleSubscribe} className="flex gap-4">
-            <Input
-              type="email"
-              placeholder="Tu correo electrónico"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="flex-1"
-              disabled={subscribeLoading || subscribeSuccess}
-            />
-            <Button 
-              type="submit" 
-              disabled={subscribeLoading || subscribeSuccess}
-              className={subscribeSuccess ? 'bg-finance-green-500' : ''}
-            >
-              {subscribeLoading ? (
-                <>
-                  <div className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-                  Enviando...
-                </>
-              ) : subscribeSuccess ? (
-                <>
-                  ¡Suscrito!
-                  <Send className="ml-2 h-4 w-4" />
-                </>
-              ) : (
-                <>
-                  Suscribirse
-                  <Send className="ml-2 h-4 w-4" />
-                </>
-              )}
-            </Button>
-          </form>
-        </div>
       </div>
       {/* <AnalysisContainer /> */}
     </div>
