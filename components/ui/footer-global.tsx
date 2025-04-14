@@ -4,10 +4,15 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import { Send, Instagram, Mail, Phone, MapPin, AtSign } from "lucide-react";
+import { AtSign } from "lucide-react";
+import { Instagram } from "lucide-react";
+import { Mail } from "lucide-react";
+import { MapPin } from "lucide-react";
+import { Phone } from "lucide-react";
+import { Send } from "lucide-react";
 
 export function FooterGlobal() {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [subscribeLoading, setSubscribeLoading] = useState(false);
   const [subscribeSuccess, setSubscribeSuccess] = useState(false);
   
@@ -22,18 +27,46 @@ export function FooterGlobal() {
       // Simular llamada a API
       await new Promise(resolve => setTimeout(resolve, 1500));
       setSubscribeSuccess(true);
-      setEmail('');
+      setEmail("");
       
       // Reset success message after 5 seconds
       setTimeout(() => {
         setSubscribeSuccess(false);
       }, 5000);
     } catch (err) {
-      console.error('Error al suscribirse:', err);
-      alert('Error al suscribirse. Por favor, intente nuevamente.');
+      console.error("Error al suscribirse:", err);
+      alert("Error al suscribirse. Por favor, intente nuevamente.");
     } finally {
       setSubscribeLoading(false);
     }
+  };
+  
+  // Renderizar el contenido del botón según el estado
+  const renderButtonContent = () => {
+    if (subscribeLoading) {
+      return (
+        <>
+          <div className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+          Enviando...
+        </>
+      );
+    }
+    
+    if (subscribeSuccess) {
+      return (
+        <>
+          ¡Suscrito!
+          <Send className="ml-2 h-4 w-4" />
+        </>
+      );
+    }
+    
+    return (
+      <>
+        Suscribirse
+        <Send className="ml-2 h-4 w-4" />
+      </>
+    );
   };
   
   return (
@@ -48,7 +81,7 @@ export function FooterGlobal() {
             </p>
             <div className="flex space-x-4 mt-6">
               <a 
-                href="https://instagram.com/cheeinverti/" 
+                href="https://instagram.com/cheeinverti" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-finance-gray-200 dark:bg-finance-gray-800 p-2 rounded-full hover:bg-finance-green-100 dark:hover:bg-finance-green-900/20 transition-colors"
@@ -89,24 +122,9 @@ export function FooterGlobal() {
               <Button 
                 type="submit" 
                 disabled={subscribeLoading || subscribeSuccess}
-                className={subscribeSuccess ? 'bg-finance-green-500' : ''}
+                className={subscribeSuccess ? "bg-finance-green-500" : ""}
               >
-                {subscribeLoading ? (
-                  <>
-                    <div className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-                    Enviando...
-                  </>
-                ) : subscribeSuccess ? (
-                  <>
-                    ¡Suscrito!
-                    <Send className="ml-2 h-4 w-4" />
-                  </>
-                ) : (
-                  <>
-                    Suscribirse
-                    <Send className="ml-2 h-4 w-4" />
-                  </>
-                )}
+                {renderButtonContent()}
               </Button>
             </form>
           </div>
@@ -137,9 +155,6 @@ export function FooterGlobal() {
                 </span>
               </div>
             </div>
-            {/* <Button className="mt-4 w-full sm:w-auto bg-finance-green-600 hover:bg-finance-green-700">
-              Agendar Asesoría
-            </Button> */}
           </div>
         </div>
 

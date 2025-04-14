@@ -11,6 +11,7 @@ import { MainNav } from "@/components/layout/main-nav"
 import { CookieConsent } from "@/components/CookieConsent"
 import { getBaseUrl, createUrl } from "@/lib/config/urls"
 import { FooterGlobal } from "@/components/ui/footer-global"
+import Script from "next/script"
 // import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -109,25 +110,32 @@ export default function RootLayout({
           <script
             dangerouslySetInnerHTML={{
               __html: `
-                // Verificar tema almacenado
-                const theme = localStorage.getItem('theme');
-                
-                // Si hay un tema guardado en localStorage, usarlo
-                if (theme === 'dark') {
-                  document.documentElement.classList.add('dark');
-                  document.documentElement.style.colorScheme = 'dark';
-                } else if (theme === 'light') {
-                  document.documentElement.classList.remove('dark');
-                  document.documentElement.style.colorScheme = 'light';
-                } else {
-                  // Si no hay preferencia guardada, usar dark como predeterminado
-                  document.documentElement.classList.add('dark');
-                  document.documentElement.style.colorScheme = 'dark';
-                  localStorage.setItem('theme', 'dark');
-                }
-              `,
+                (function() {
+                  try {
+                    const theme = localStorage.getItem('theme');
+                    if (theme === 'dark') {
+                      document.documentElement.classList.add('dark');
+                      document.documentElement.style.colorScheme = 'dark';
+                    } else if (theme === 'light') {
+                      document.documentElement.classList.remove('dark');
+                      document.documentElement.style.colorScheme = 'light';
+                    } else {
+                      document.documentElement.classList.add('dark');
+                      document.documentElement.style.colorScheme = 'dark';
+                      localStorage.setItem('theme', 'dark');
+                    }
+                  } catch (e) {
+                    console.error('Error al inicializar tema:', e);
+                  }
+                })();
+              `
             }}
           />
+          
+          {/* Script para Vercel Analytics con soporte para eventos personalizados */}
+          {process.env.NODE_ENV === 'production' && (
+            <Script id="vercel-analytics-events" strategy="afterInteractive" src="https://va.vercel-scripts.com/v1/script.js" />
+          )}
         </head>
         <body className={`${inter.className} bg-animated-gradient min-h-screen overflow-auto`}>
           <ThemeProvider>
@@ -141,8 +149,12 @@ export default function RootLayout({
               <FooterGlobal />
             </div>
           </ThemeProvider>
-          <Analytics />
-          <SpeedInsights />
+          {process.env.NODE_ENV === 'production' ? (
+            <>
+              <Analytics mode="auto" debug={false} />
+              <SpeedInsights />
+            </>
+          ) : null}
         </body>
       </html>
     </AdSenseProvider>

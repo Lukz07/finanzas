@@ -9,6 +9,9 @@ import { getCountryFlag } from '@/lib/config/countries';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
 import Link from 'next/link';
+import { memo, useState, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
+import { ProxiedImage } from '@/components/ui/proxied-image';
 
 dayjs.locale('es');
 
@@ -16,7 +19,10 @@ interface NewsCardProps {
   news: NewsItem;
 }
 
-export function NewsCard({ news }: NewsCardProps) {
+export const NewsCard = memo(function NewsCard({ news }: NewsCardProps) {
+  const router = useRouter();
+  const [isHovering, setIsHovering] = useState(false);
+  
   if (!news) {
     return null;
   }
@@ -34,20 +40,65 @@ export function NewsCard({ news }: NewsCardProps) {
   const newsUrl = getValidNewsUrl();
   const countryFlag = getCountryFlag(news.source.country || 'global');
   
-  // Imprimir para depurar
-  // console.log('🔗 NewsCard - news:', news);
+  // Manejar navegación manualmente para mejor control
+  const handleClick = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    router.push(newsUrl);
+  }, [router, newsUrl]);
+  
+  // Optimizar eventos de hover
+  const handleMouseEnter = useCallback(() => {
+    setIsHovering(true);
+  }, []);
+  
+  const handleMouseLeave = useCallback(() => {
+    setIsHovering(false);
+  }, []);
+
+  // Renderizar imagen con ProxiedImage que maneja fallbacks automáticamente
+  const renderImage = () => {
+    if (!news.imageUrl) {
+      return (
+        <div className="relative flex items-center justify-center bg-finance-green-100/60 dark:bg-finance-green-900/20 w-full h-full">
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+            <span className="text-xs font-medium text-finance-green-800 dark:text-finance-green-200 mb-2">
+              {news.category.name}
+            </span>
+            <h3 className="text-sm font-semibold text-finance-gray-900 dark:text-white line-clamp-2">
+              {news.title}
+            </h3>
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="relative w-full h-full">
+        <ProxiedImage
+          src={news.imageUrl}
+          alt={news.title}
+          fill
+          className="object-cover"
+          priority={false}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          quality={65}
+        />
+      </div>
+    );
+  };
 
   return (
-    <Link href={newsUrl} className="block">
-      <Card className="overflow-hidden group hover:shadow-lg transition-shadow duration-300 h-full">
+    <a 
+      href={newsUrl} 
+      onClick={handleClick}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className={`block cursor-pointer ${isHovering ? 'cursor-pointer' : ''}`}
+      aria-label={`Ver noticia: ${news.title}`}
+    >
+      <Card className={`overflow-hidden group hover:shadow-lg transition-shadow duration-300 h-full ${isHovering ? 'shadow-lg' : ''}`}>
         <div className="relative aspect-[16/9]">
-          <NewsImage
-            src={news?.imageUrl || null}
-            alt={news.title}
-            title={news.title}
-            category={news.category.name}
-            className="w-full h-full"
-          />
+          {renderImage()}
           <div className="absolute top-2 right-2">
             {news.url === news.source.url && (
               <Badge 
@@ -61,7 +112,7 @@ export function NewsCard({ news }: NewsCardProps) {
           </div>
         </div>
         <div className="p-4 space-y-2">
-          <h3 className="font-semibold text-lg line-clamp-2 group-hover:text-finance-green-600 transition-colors">
+          <h3 className={`font-semibold text-lg line-clamp-2 transition-colors ${isHovering ? 'text-finance-green-600' : ''}`}>
             {news.title}
           </h3>
           <p className="text-finance-gray-600 dark:text-finance-gray-300 text-sm line-clamp-3">
@@ -79,6 +130,6 @@ export function NewsCard({ news }: NewsCardProps) {
           </div>
         </div>
       </Card>
-    </Link>
+    </a>
   );
-} 
+}); 

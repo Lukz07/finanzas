@@ -50,10 +50,22 @@ export default function AnalysisDetailPage({ params }: { params: Promise<{ id: s
       try {
         const response = await fetch('/api/google-sheets');
         if (!response.ok) throw new Error('Error al obtener los análisis');
-        const items = await response.json();
+        const data = await response.json();
+        
+        // Extraer items del objeto de respuesta
+        let analysisItems: AnalysisItem[] = [];
+        
+        // Verificar formato de la respuesta
+        if (data.success && Array.isArray(data.items)) {
+          analysisItems = data.items;
+        } else if (Array.isArray(data)) {
+          analysisItems = data;
+        } else {
+          throw new Error('Formato de respuesta inesperado');
+        }
         
         // Buscar el item que coincida con el slug en cualquier idioma
-        const item = items.find((item: AnalysisItem) => {
+        const item = analysisItems.find((item: AnalysisItem) => {
           const currentTranslation = item.translations[langCode] || item.translations.es;
           const currentSlug = createSlug(currentTranslation.title);
           const alternateTranslation = item.translations[alternateLang] || item.translations.es;

@@ -1,7 +1,11 @@
 import { AnalysisItem } from "@/lib/types/analysis";
 
+// Solo usar variables de servidor (sin NEXT_PUBLIC_)
 const SPREADSHEET_ID = process.env.GOOGLE_SHEET_ID;
 const API_KEY = process.env.GOOGLE_API_KEY;
+
+// Determinar si se está ejecutando en el lado del cliente
+const isClient = typeof window !== 'undefined';
 
 export class GoogleSheetsService {
   private static instance: GoogleSheetsService;
@@ -19,8 +23,29 @@ export class GoogleSheetsService {
   }
 
   private async fetchFromGoogleSheets(): Promise<AnalysisItem[]> {
-
+    // Si estamos en el cliente, hacer la solicitud a nuestra propia API en lugar de directamente a Google
+    if (isClient) {
+      const response = await fetch('/api/google-sheets');
+      
+      if (!response.ok) {
+        throw new Error(`Error fetching from API: ${response.status} ${response.statusText}`);
+      }
+      
+      const data = await response.json();
+      
+      if (!data.success) {
+        throw new Error(data.error || 'Unknown error');
+      }
+      
+      return data.items;
+    }
+    
+    // Código del lado del servidor que usa las claves API directamente
     if (!SPREADSHEET_ID || !API_KEY) {
+      console.error("Google Sheets configuration is missing:", { 
+        hasSpreadsheetId: !!SPREADSHEET_ID, 
+        hasApiKey: !!API_KEY 
+      });
       throw new Error("Google Sheets configuration is missing");
     }
 

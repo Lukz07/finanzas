@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { GoogleSheetsService } from '@/app/api/google-sheets/google-sheets-service';
-import { AnalysisItem } from '@/lib/types/news-analysis';
+import { AnalysisItem } from '@/lib/types/analysis';
 
 const sheetsService = GoogleSheetsService.getInstance();
 const LAST_CHECKED_KEY = 'last_analysis_check';

@@ -5,6 +5,7 @@ import { NewsGrid } from '@/components/blog/NewsGrid';
 import type { NewsItem } from '@/lib/types/blog';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
+import { VariantSwitcher } from './VariantSwitcher';
 
 dayjs.locale('es');
 
@@ -32,6 +33,9 @@ export default function BlogContent({ initialNews }: BlogContentProps) {
         news={news}
         isLoading={isLoading}
       />
+      
+      {/* Selector de variante (solo visible en desarrollo) */}
+      <VariantSwitcher />
     </div>
   );
 } 
