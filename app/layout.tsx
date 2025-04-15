@@ -151,7 +151,7 @@ export default function RootLayout({
           </ThemeProvider>
           {process.env.NODE_ENV === 'production' ? (
             <>
-              <Analytics mode="production" />
+              <Analytics />
               <SpeedInsights />
             </>
           ) : null}

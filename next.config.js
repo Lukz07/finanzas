@@ -50,12 +50,12 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: `
               default-src 'self';
-              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://*.google.com https://*.googleadservices.com https://*.google-analytics.com https://*.googletagservices.com https://*.googletagmanager.com https://*.doubleclick.net https://*.vercel-scripts.com https://*.vercel-insights.com https://*.vercel.app https://*.vercel.com https://*.adtrafficquality.google;
+              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.google.com https://*.googleadservices.com https://*.google-analytics.com https://*.googletagservices.com https://*.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.adtrafficquality.google https://*.vercel-scripts.com https://*.vercel-insights.com https://*.vercel.app https://*.vercel.com;
               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com data:;
               img-src 'self' data: https: http:;
-              font-src 'self' https://fonts.gstatic.com data:;
-              frame-src 'self' https://*.google.com https://*.doubleclick.net;
-              connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.google.com https://*.adtrafficquality.google https://adservice.google.com https://*.googlesyndication.com https://*.vercel-scripts.com https://*.vercel-insights.com https://*.vercel.app https://*.vercel.com https://sheets.googleapis.com;
+              font-src 'self' data: https://fonts.gstatic.com;
+              frame-src 'self' https://*.google.com https://*.doubleclick.net https://*.adtrafficquality.google;
+              connect-src 'self' https://*.google.com https://*.googleapis.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.adtrafficquality.google https://*.googlesyndication.com https://*.vercel-scripts.com https://*.vercel-insights.com https://*.vercel.app https://*.vercel.com;
               object-src 'none';
               base-uri 'self';
               form-action 'self';
