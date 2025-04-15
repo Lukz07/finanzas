@@ -147,7 +147,9 @@ export default function AnalysisPage() {
                     <CardHeader>
                       <CardTitle>{translation.title}</CardTitle>
                       <CardDescription>
-                        {format(new Date(item.date), "PPP", { locale })} • {item.author}
+                        {item.date && /^\d{4}-\d{2}-\d{2}/.test(item.date) 
+                          ? format(new Date(item.date), "PPP", { locale }) 
+                          : item.date || 'Fecha no disponible'} • {item.author}
                       </CardDescription>
                     </CardHeader>
                     <CardContent>

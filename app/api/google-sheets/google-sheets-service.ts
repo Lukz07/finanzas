@@ -60,26 +60,32 @@ export class GoogleSheetsService {
     }
 
     const data = await response.json();
-    return data.values.map((row: any[], index: number) => ({
-      id: `analysis-${index + 1}`,
-      translations: {
-        es: {
-          title: row[0] || "",
-          description: row[1] || "",
-          content: row[2] || "",
+    return data.values.map((row: any[], index: number) => {
+      // Validar formato de fecha
+      const rawDate = row[6] || "";
+      const validDate = /^\d{4}-\d{2}-\d{2}/.test(rawDate) ? rawDate : new Date().toISOString().split('T')[0];
+      
+      return {
+        id: `analysis-${index + 1}`,
+        translations: {
+          es: {
+            title: row[0] || "",
+            description: row[1] || "",
+            content: row[2] || "",
+          },
+          en: {
+            title: row[3] || "",
+            description: row[4] || "",
+            content: row[5] || "",
+          }
         },
-        en: {
-          title: row[3] || "",
-          description: row[4] || "",
-          content: row[5] || "",
-        }
-      },
-      date: row[6] || "",
-      category: row[7] || "",
-      author: row[8] || "",
-      imageUrl: row[9] || undefined,
-      tags: (row[10] || "").split(",").map((tag: string) => tag.trim()),
-    }));
+        date: validDate,
+        category: row[7] || "",
+        author: row[8] || "",
+        imageUrl: row[9] || undefined,
+        tags: (row[10] || "").split(",").map((tag: string) => tag.trim()),
+      };
+    });
   }
 
   public async getAnalysisItems(): Promise<AnalysisItem[]> {
