@@ -3,6 +3,7 @@ import { NewsItem, NewsFilters } from '@/lib/types/blog';
 import { slugify } from '@/lib/utils/slugify';
 import { NEWS_SOURCES } from '@/lib/config/news-sources';
 import fetch from 'node-fetch';
+import { track } from '@vercel/analytics/server';
 
 interface CategoryObject {
   _?: string;
@@ -207,14 +208,28 @@ class NewsService {
         this.lastFetchTime = new Date();
         
         console.log(`📊 Total de noticias en caché: ${this.cachedNews.length}`);
+        
+        await track('newsServiceWorker_getNews_refresh_cache_and_return_news', {
+          news_count: this.cachedNews.length,
+          timestamp: new Date().toISOString(),
+        });
       }
 
       let filteredNews = this.applyFilters(this.cachedNews, filters);
       filteredNews.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
 
+      await track('newsServiceWorker_getNews_return_news_from_cache', {
+        news_count: filteredNews.length,
+        timestamp: new Date().toISOString(),
+      });
+
       return filteredNews;
     } catch (error) {
       console.error('❌ Error general al obtener noticias:', error);
+      await track('newsServiceWorker_getNews_error', {
+        error: String(error),
+        timestamp: new Date().toISOString(),
+      });
       return [];
     }
   }

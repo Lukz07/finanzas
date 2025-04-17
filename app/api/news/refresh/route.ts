@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { newsService } from '@/lib/workers/news-service';
-
+import { track } from '@vercel/analytics/server';
 export const dynamic = 'force-dynamic';
 export const revalidate = 0; // No cachear
 
@@ -9,6 +9,11 @@ export async function POST() {
     console.log('🔄 Forzando actualización de noticias...');
     const news = await newsService.getNews();
     
+    await track('news_refresh_api_cache_updated', {
+      news_count: news.length,
+      timestamp: new Date().toISOString(),
+    });
+
     return NextResponse.json(news, {
       headers: {
         'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
@@ -18,6 +23,10 @@ export async function POST() {
     });
   } catch (error) {
     console.error('❌ Error forzando actualización:', error);
+    await track('news_refresh_api_error', {
+      error: String(error),
+      timestamp: new Date().toISOString(),
+    });
     return NextResponse.json(
       { error: 'Error al forzar actualización', details: String(error) },
       { status: 500 }

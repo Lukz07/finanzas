@@ -3,7 +3,7 @@
 import type { NewsItem, NewsFilters } from '../types/blog'
 import dayjs from 'dayjs'
 import 'dayjs/locale/es'
-
+import { track } from '@vercel/analytics/server';
 dayjs.locale('es')
 
 export class NewsService {
@@ -34,17 +34,31 @@ export class NewsService {
     if (this.cachedNews.length > 0 && !isStale) {
       console.log('Usando caché:', this.cachedNews.length);
       console.log('Usando caché:', this.cachedNews);
+      
+      await track('newsService_getNews_return_news_from_cache', {
+        news_count: this.cachedNews.length,
+        timestamp: new Date().toISOString(),
+      });
+
       return this.applyFilters(this.cachedNews, filters)
     }
 
     // Si necesitamos actualizar pero tenemos caché, iniciar actualización en background
     if (shouldRefresh && this.cachedNews.length > 0) {
       this.refreshCache().catch(console.error)
+      await track('newsService_getNews_refresh_cache_and_return_news', {
+        news_count: this.cachedNews.length,
+        timestamp: new Date().toISOString(),
+      });
       return this.applyFilters(this.cachedNews, filters)
     }
 
     // Si no hay caché o está obsoleta, esperar la actualización
     await this.refreshCache()
+    await track('newsService_getNews_refresh_cache_and_return_news', {
+      news_count: this.cachedNews.length,
+      timestamp: new Date().toISOString(),
+    });
     return this.applyFilters(this.cachedNews, filters)
   }
 
