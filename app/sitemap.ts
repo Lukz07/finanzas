@@ -17,15 +17,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const newsUrls = news.map(item => ({
     url: `${baseUrl}/blog/${item.slug}`,
     lastModified: new Date(item.publishedAt),
-    changeFrequency: 'daily' as const,
-    priority: 0.7,
   }));
 
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'daily',
+      changeFrequency: 'hourly',
       priority: 1,
     },
     {
