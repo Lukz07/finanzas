@@ -9,7 +9,7 @@ export async function POST() {
     console.log('🔄 Forzando actualización de noticias...');
     const news = await newsService.getNews();
     
-    await track('news_refresh_api_cache_updated', {
+    await track('news_refresh_api_POST_cache_updated', {
       news_count: news.length,
       timestamp: new Date().toISOString(),
     });
@@ -23,7 +23,7 @@ export async function POST() {
     });
   } catch (error) {
     console.error('❌ Error forzando actualización:', error);
-    await track('news_refresh_api_error', {
+    await track('news_refresh_api_POST_error', {
       error: String(error),
       timestamp: new Date().toISOString(),
     });
@@ -40,6 +40,11 @@ export async function GET() {
     console.log('🔄 Obteniendo noticias...');
     const news = await newsService.getNews();
     
+  await track('news_get_api_GET_cache_updated', {
+      news_count: news.length,
+      timestamp: new Date().toISOString(),
+    });
+
     return NextResponse.json(news, {
       headers: {
         'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
@@ -47,6 +52,10 @@ export async function GET() {
     });
   } catch (error) {
     console.error('❌ Error obteniendo noticias:', error);
+    await track('news_get_api_GET_error', {
+      error: String(error),
+      timestamp: new Date().toISOString(),
+    });
     return NextResponse.json(
       { error: 'Error al obtener noticias', details: String(error) },
       { status: 500 }
