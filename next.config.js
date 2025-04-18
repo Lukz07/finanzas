@@ -54,7 +54,7 @@ const nextConfig = {
               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com data:;
               img-src 'self' data: https: http:;
               font-src 'self' data: https://fonts.gstatic.com;
-              frame-src 'self' https://*.google.com https://*.doubleclick.net https://*.adtrafficquality.google;
+              frame-src 'self' https://*.google.com https://*.doubleclick.net https://*.adtrafficquality.google https://www.tradingview-widget.com;
               connect-src 'self' https://*.google.com https://*.googleapis.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.adtrafficquality.google https://*.googlesyndication.com https://*.vercel-scripts.com https://*.vercel-insights.com https://*.vercel.app https://*.vercel.com;
               object-src 'none';
               base-uri 'self';

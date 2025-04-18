@@ -38,6 +38,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'daily',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/tools/stocks-heatmap`,
+      lastModified: new Date(),      
+    },
     // Agregar URLs de análisis
     ...analysisUrls.map(item => ({
       url: `${baseUrl}${item.url}`,
