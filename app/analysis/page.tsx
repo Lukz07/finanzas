@@ -131,10 +131,10 @@ export default function AnalysisPage() {
           ? "Explora análisis detallados y tendencias del mercado financiero"
           : "Explore detailed analysis and financial market trends"}
       />
-      <div className="mt-8 grid gap-6">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {/* Comprobar que analysisItems es un array antes de llamar a map */}
         {Array.isArray(analysisItems) && analysisItems.length > 0 ? (
-          analysisItems.map((item) => {
+          [...analysisItems].reverse().map((item) => {
             const translation = item.translations[langCode] || item.translations.es;
             const alternateTranslation = item.translations[alternateLang] || item.translations.es;
             const slug = createSlug(translation.title);
@@ -149,7 +149,7 @@ export default function AnalysisPage() {
                 >
                   <Card className="hover:bg-muted transition-colors flex flex-col">
                     <CardHeader className="flex-grow">
-                      <CardTitle className="pr-10">{translation.title}</CardTitle>
+                      <CardTitle className="pr-10 text-3xl">{translation.title}</CardTitle>
                       <CardDescription>
                         {item.date && /^\d{4}-\d{2}-\d{2}/.test(item.date) 
                           ? format(new Date(item.date), "PPP", { locale }) 
@@ -165,7 +165,7 @@ export default function AnalysisPage() {
                         onError={(e) => {
                           e.currentTarget.src = "/banners/noticias/default-banner.png";
                         }}
-                        className="object-cover mx-auto p-5"
+                        className="object-cover mx-auto p-5 w-full"
                       />
                       <p className="text-muted-foreground mb-4">{translation.description}</p>
                       <div className="flex flex-wrap gap-2">

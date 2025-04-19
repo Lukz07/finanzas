@@ -13,6 +13,8 @@ import { getLanguageByPath } from "@/lib/config/languages";
 import { use } from "react";
 import Image from "next/image";
 import { processImageUrl } from "@/lib/utils/image";
+import parse  from "html-react-parser";
+
 type LanguageCode = 'es' | 'en';
 
 // Función para crear slugs amigables
@@ -135,13 +137,17 @@ export default function AnalysisDetailPage({ params }: { params: Promise<{ id: s
 
   // Función para procesar el contenido y dividirlo en párrafos
   const processContent = (content: string) => {
-    // Reemplazar /n/n por \n\n para estandarizar
-    const standardizedContent = content.replace(/\/n\/n/g, '\n\n');
-    // Dividir por doble salto de línea y filtrar párrafos vacíos
-    return standardizedContent
-      .split(/\n\n+/)
-      .map(paragraph => paragraph.trim())
-      .filter(paragraph => paragraph.length > 0);
+    // // Reemplazar /n/n por \n\n para estandarizar
+    // const standardizedContent = content.replace(/\/n\/n/g, '\n\n');
+    // // Dividir por doble salto de línea y filtrar párrafos vacíos
+    // return standardizedContent
+    //   .split(/\n\n+/)
+    //   .map(paragraph => paragraph.trim())
+    //   .filter(paragraph => paragraph.length > 0);
+
+    console.log("processContent", content);
+
+    return parse(content);
   };
 
   return (
@@ -202,12 +208,8 @@ export default function AnalysisDetailPage({ params }: { params: Promise<{ id: s
                 onError={() => setImageError(true)}
               />
             </div>
-            <div className="prose dark:prose-invert max-w-none">
-              {processContent(translation.content).map((paragraph, index) => (
-                <p key={index} className="mb-4">
-                  {paragraph}
-                </p>
-              ))}
+            <div className="font-thin max-w-none">
+              {processContent(translation.content)}
             </div>
           </CardContent>
         </Card>
