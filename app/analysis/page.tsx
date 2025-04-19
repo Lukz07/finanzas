@@ -10,6 +10,8 @@ import Link from "next/link";
 import { format } from "date-fns";
 import { es, enUS } from "date-fns/locale";
 import { getLanguageByPath } from "@/lib/config/languages";
+import Image from "next/image";
+import { processImageUrl } from "@/lib/utils/image";
 
 type LanguageCode = 'es' | 'en';
 
@@ -136,6 +138,8 @@ export default function AnalysisPage() {
             const translation = item.translations[langCode] || item.translations.es;
             const alternateTranslation = item.translations[alternateLang] || item.translations.es;
             const slug = createSlug(translation.title);
+
+            console.log(item.imageUrl);
             
             return (
               <div key={item.id} className="relative">
@@ -143,16 +147,26 @@ export default function AnalysisPage() {
                   href={`/analysis/${slug}`}
                   className="block"
                 >
-                  <Card className="hover:bg-muted transition-colors">
-                    <CardHeader>
-                      <CardTitle>{translation.title}</CardTitle>
+                  <Card className="hover:bg-muted transition-colors flex flex-col">
+                    <CardHeader className="flex-grow">
+                      <CardTitle className="pr-10">{translation.title}</CardTitle>
                       <CardDescription>
                         {item.date && /^\d{4}-\d{2}-\d{2}/.test(item.date) 
                           ? format(new Date(item.date), "PPP", { locale }) 
                           : item.date || 'Fecha no disponible'} • {item.author}
                       </CardDescription>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="flex-grow">
+                      <Image
+                        src={processImageUrl(item.imageUrl)}
+                        alt={translation.title}
+                        width={400}
+                        height={300}
+                        onError={(e) => {
+                          e.currentTarget.src = "/banners/noticias/default-banner.png";
+                        }}
+                        className="object-cover mx-auto p-5"
+                      />
                       <p className="text-muted-foreground mb-4">{translation.description}</p>
                       <div className="flex flex-wrap gap-2">
                         <Badge variant="secondary">{item.category}</Badge>

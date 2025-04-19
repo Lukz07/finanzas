@@ -12,7 +12,7 @@ import { es, enUS } from "date-fns/locale";
 import { getLanguageByPath } from "@/lib/config/languages";
 import { use } from "react";
 import Image from "next/image";
-
+import { processImageUrl } from "@/lib/utils/image";
 type LanguageCode = 'es' | 'en';
 
 // Función para crear slugs amigables
@@ -194,9 +194,7 @@ export default function AnalysisDetailPage({ params }: { params: Promise<{ id: s
           <CardContent>
             <div className="mb-8">
               <Image
-                src={!analysisItem.imageUrl || imageError 
-                  ? "/banners/noticias/default-banner.png" 
-                  : analysisItem.imageUrl}
+                src={imageError ? "/banners/noticias/default-banner.png" : processImageUrl(analysisItem.imageUrl)}
                 alt={translation.title}
                 width={1200}
                 height={630}
