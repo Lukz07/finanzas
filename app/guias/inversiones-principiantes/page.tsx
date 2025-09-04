@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { Card } from '@/components/ui/card';
-import { AlertTriangle, CheckCircle, TrendingUp, DollarSign, Shield, Clock } from 'lucide-react';
+import { AlertTriangle, CheckCircle, TrendingUp, DollarSign, Shield, Clock, Calculator } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Guía Completa de Inversiones para Principiantes 2024 | Finanzas Argentina',
