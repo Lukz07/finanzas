@@ -16,4 +16,9 @@ interface Window {
     showRevocationMessage: () => void;
   };
   googletag: any;
+  gtag: (
+    command: 'config' | 'event' | 'js' | 'set',
+    targetId: string | Date,
+    config?: any
+  ) => void;
 } 

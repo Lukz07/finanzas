@@ -56,4 +56,33 @@ Si la API de Google Sheets no está disponible o retorna un error, la aplicació
 
 - La clave de API de Google Sheets debe tener restricciones adecuadas (dominio, referrer)
 - La hoja debe estar configurada como "pública en la web" para que pueda ser accedida
-- No se deben almacenar datos sensibles en esta hoja 
+- No se deben almacenar datos sensibles en esta hoja
+
+## Google Analytics 4 - Integración Añadida
+
+### Estado de la Integración
+✅ **Google Analytics 4 (GA4) integrado** en el proyecto con tracking completo.
+
+### Configuración GA4
+Añade a tu archivo `.env.local`:
+```env
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+### Eventos de Tracking Disponibles
+El sistema incluye eventos predefinidos para finanzas:
+```tsx
+import { FinanceEvents } from '@/lib/utils/analytics';
+
+// Ejemplos de uso
+FinanceEvents.viewGuide('Inversiones para Principiantes');
+FinanceEvents.useCalculator('investment_planner');
+FinanceEvents.requestAnalysis('market_analysis');
+FinanceEvents.viewNewsArticle('Título del artículo');
+```
+
+### Archivos de GA4 Implementados
+- `components/GoogleAnalytics.tsx` - Componente principal
+- `lib/utils/analytics.ts` - Utilidades de tracking
+- `app/layout.tsx` - Integrado en layout principal
+- `types/global.d.ts` - Tipos TypeScript actualizados 

@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { AdSenseScript } from "@/components/AdSenseScript"
 import { AdSenseProvider } from '@/components/blog/AdSenseContext'
+import { GoogleAnalytics } from "@/components/GoogleAnalytics"
 import { MainNav } from "@/components/layout/main-nav"
 import { CookieConsent } from "@/components/CookieConsent"
 import { getBaseUrl, createUrl } from "@/lib/config/urls"
@@ -162,6 +163,7 @@ export default function RootLayout({
             <>
               <Analytics />
               <SpeedInsights />
+              <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
             </>
           ) : null}
         </body>
