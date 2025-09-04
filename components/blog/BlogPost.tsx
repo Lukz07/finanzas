@@ -5,15 +5,24 @@ import dayjs from 'dayjs';
 import { NewsItem } from '@/lib/types/blog';
 import { NewsSchema } from './NewsSchema';
 import { sanitizeHtml } from '@/lib/utils/sanitize';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 
 interface BlogPostProps {
   post: NewsItem;
 }
 
 export function BlogPost({ post }: BlogPostProps) {
+  const breadcrumbItems = [
+    { label: 'Blog', href: '/blog' },
+    { label: post.category?.name || 'Noticias', href: `/blog?category=${post.category?.id}` },
+    { label: post.title }
+  ];
+
   return (
     <article className="max-w-[970px] mx-auto py-8">
       <NewsSchema news={post} />
+      
+      <Breadcrumbs items={breadcrumbItems} className="mb-6" />
       
       <header className="mb-8">
         <h1 className="text-4xl font-bold mb-4">{post.title}</h1>

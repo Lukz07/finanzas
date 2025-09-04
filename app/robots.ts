@@ -20,7 +20,6 @@ export default function robots(): MetadataRoute.Robots {
           '/dashboard/',
           '/profile/',
           '/settings/',
-          '/*?*',
           '/*.json$',
           '/*.js$',
           '/*.css$'

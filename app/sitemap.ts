@@ -17,6 +17,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const newsUrls = news.map(item => ({
     url: `${baseUrl}/blog/${item.slug}`,
     lastModified: new Date(item.publishedAt),
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
   }));
 
   return [
@@ -40,7 +42,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${baseUrl}/tools/stocks-heatmap`,
-      lastModified: new Date(),      
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/guias`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/guias/inversiones-principiantes`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     // Agregar URLs de análisis
     ...analysisUrls.map(item => ({

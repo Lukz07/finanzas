@@ -23,11 +23,26 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Finanzas - Tu asistente financiero personal',
-  description: 'Mantente informado sobre las últimas noticias financieras y gestiona tus inversiones de manera inteligente.',
+  title: 'Finanzas Personales Argentina - Noticias, Inversiones y Análisis Económico',
+  description: 'Plataforma líder en finanzas personales con noticias financieras actualizadas, herramientas de inversión, análisis económico y calculadoras financieras para Argentina y Latinoamérica.',
   generator: 'lukz.dev',
   applicationName: 'Finanzas',
-  keywords: ['finanzas personales', 'inversiones', 'educación financiera', 'ahorro', 'presupuesto'],
+  keywords: [
+    'finanzas personales argentina', 
+    'noticias financieras argentina', 
+    'inversiones argentina', 
+    'calculadora financiera', 
+    'planificador inversiones', 
+    'análisis económico', 
+    'mercado valores argentina', 
+    'educación financiera', 
+    'ahorro familiar', 
+    'presupuesto personal', 
+    'dólar blue argentina', 
+    'bolsa valores buenos aires', 
+    'plazo fijo argentina', 
+    'fondos comunes inversión'
+  ],
   authors: [{ name: 'Finanzas Team' }],
   creator: 'Finanzas Team',
   publisher: 'Finanzas',
@@ -39,23 +54,17 @@ export const metadata: Metadata = {
   metadataBase: new URL(getBaseUrl()),
   alternates: {
     canonical: '/',
-    languages: {
-      'es-ES': '/',
-      'en-US': '/en',
-      'pt-BR': '/pt'
-    },
   },
   openGraph: {
-    title: 'Finanzas - Tu asistente financiero personal',
-    description: 'Mantente informado sobre las últimas noticias financieras y gestiona tus inversiones de manera inteligente.',
+    title: 'Finanzas Personales Argentina - Noticias, Inversiones y Análisis Económico',
+    description: 'Plataforma líder en finanzas personales con noticias financieras actualizadas, herramientas de inversión, análisis económico y calculadoras financieras para Argentina y Latinoamérica.',
     url: '/',
     siteName: 'Finanzas',
     locale: 'es_ES',
-    alternateLocale: ['en_US', 'pt_BR'],
     type: 'website',
     images: [
       {
-        url: createUrl('og-image.jpg'),
+        url: createUrl('/og-image.svg'),
         width: 1200,
         height: 630,
         alt: 'Finanzas - Tu asistente financiero personal',
@@ -64,10 +73,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Finanzas - Tu asistente financiero personal',
-    description: 'Mantente informado sobre las últimas noticias financieras y gestiona tus inversiones de manera inteligente.',
+    title: 'Finanzas Personales Argentina - Noticias, Inversiones y Análisis Económico',
+    description: 'Plataforma líder en finanzas personales con noticias financieras actualizadas, herramientas de inversión, análisis económico y calculadoras financieras para Argentina y Latinoamérica.',
     creator: '@finanzas',
-    images: [createUrl('og-image.jpg')],
+    images: [createUrl('/og-image.svg')],
   },
   robots: {
     index: true,

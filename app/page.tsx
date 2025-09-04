@@ -174,7 +174,7 @@ export default function HomePage() {
                 <div className="flex-1 space-y-3">
                   <h3 className="text-2xl font-bold text-finance-gray-900 dark:text-white">{tip.title}</h3>
                   <p className="text-finance-gray-600 dark:text-finance-gray-300">{tip.description}</p>
-                  <Link href={tip.isAnalysis ? tip.link : "/tools/investment-planner"} className="inline-flex">
+                  <Link href={tip.isAnalysis ? tip.link : (tip.id === 0 ? "/analysis" : "/guias")} className="inline-flex">
                     <Button className="mt-2 bg-finance-green-600 hover:bg-finance-green-700">
                       <span>{tip.isAnalysis ? "Ver Análisis" : "Explorar Tips Financieros"}</span>
                       <ArrowRight className="ml-2 h-4 w-4" />
